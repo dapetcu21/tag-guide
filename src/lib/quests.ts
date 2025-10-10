@@ -1,38 +1,39 @@
-enum QuestType {
+export enum QuestType {
   Scannable,
   TextInput,
   Questions,
 }
 
-type Question = {
+export type Question = {
+  id: string;
   text: string;
   answers: Array<string>;
   correctAnswer?: number; // 0-3. Omit to not require validation
   scanToken?: string; // Add this to hide the question until scanned. Omit to always display.
 };
 
-type Quest = {
+export type Quest = {
   id: string;
   text: string;
   image?: string;
   completionText: string;
   completionImage?: string;
 } & (
-  | {
+    | {
       type: QuestType.Scannable;
       scanToken: string;
     }
-  | {
+    | {
       type: QuestType.TextInput;
-      correctInputs: Array<string>;
+      correctInputs?: Array<string>; // Omit to allow free answer
       typoTolerance: number; // Number of allowable mistyped characters
     }
-  | {
+    | {
       type: QuestType.Questions;
       questions: Array<Question>;
       numRequiredQuestions?: number; // Number of questions required to complete the quest. Omit to require all questions
     }
-);
+  );
 
 export const quests: Array<Quest> = [
   {
@@ -57,11 +58,13 @@ export const quests: Array<Quest> = [
     type: QuestType.Questions,
     questions: [
       {
+        id: "q1",
         text: "2 + 2 = ?",
         answers: ["1", "2", "3", "4"],
         correctAnswer: 3,
       },
       {
+        id: "q2",
         text: "2 - 2 = ?",
         answers: ["1", "2", "0", "4"],
         correctAnswer: 2,
@@ -76,11 +79,13 @@ export const quests: Array<Quest> = [
     numRequiredQuestions: 1,
     questions: [
       {
+        id: "color",
         text: "What is your favorite color?",
         answers: ["Red", "Green", "Blue", "Yellow"],
         scanToken: "q1",
       },
       {
+        id: "author",
         text: "What is your favorite fantasy author?",
         answers: [
           "Neil Gaiman",
@@ -93,3 +98,7 @@ export const quests: Array<Quest> = [
     ],
   },
 ];
+
+export const questsById: Map<string, Quest> = new Map(
+  quests.map((quest) => [quest.id, quest]),
+);
