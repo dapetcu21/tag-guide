@@ -1,5 +1,11 @@
 import classNames from "classnames";
-import { type ChangeEvent, type FormEvent, useCallback, useState } from "react";
+import {
+  type ChangeEvent,
+  type FocusEventHandler,
+  type FormEvent,
+  useCallback,
+  useState,
+} from "react";
 import type { Quest, QuestType } from "@/lib/quests";
 import type { QuestSaveGame, QuestSolution } from "@/lib/saveGame";
 
@@ -7,6 +13,21 @@ function validate(input: string, correctInputs: Array<string>): number | null {
   // TODO: fuzzy search
   const index = correctInputs.indexOf(input);
   return index >= 0 ? index : null;
+}
+
+function getSolution(
+  quest: Quest & { type: QuestType.TextInput },
+  questSaveGame: QuestSaveGame,
+) {
+  if (typeof questSaveGame.solution === "string") {
+    return questSaveGame.solution;
+  }
+
+  if (typeof questSaveGame.solution === "number" && quest.correctInputs) {
+    return quest.correctInputs[questSaveGame.solution];
+  }
+
+  return "Invalid solution";
 }
 
 export function QuestInput({
@@ -22,19 +43,19 @@ export function QuestInput({
   const handleEditClick = useCallback(() => setEditing(true), []);
 
   if (editing)
-    return <QuestInputEditing quest={quest} onCompletion={onCompletion} />;
-
-  let solution: string;
-
-  if (typeof questSaveGame.solution === "string")
-    solution = questSaveGame.solution;
-  else if (typeof questSaveGame.solution === "number" && quest.correctInputs)
-    solution = quest.correctInputs[questSaveGame.solution];
-  else solution = "Invalid solution";
+    return (
+      <QuestInputEditing
+        quest={quest}
+        initialValue={
+          questSaveGame.isCompleted ? getSolution(quest, questSaveGame) : ""
+        }
+        onCompletion={onCompletion}
+      />
+    );
 
   return (
     <div>
-      <div>{solution}</div>
+      <div>{getSolution(quest, questSaveGame)}</div>
       <button type="button" onClick={handleEditClick}>
         Edit
       </button>
@@ -42,14 +63,20 @@ export function QuestInput({
   );
 }
 
+const handleFocus: FocusEventHandler<HTMLInputElement> = (e) => {
+  e.currentTarget.select();
+};
+
 export function QuestInputEditing({
   quest,
+  initialValue,
   onCompletion,
 }: {
   quest: Quest & { type: QuestType.TextInput };
+  initialValue: string;
   onCompletion: (solution: QuestSolution) => void;
 }) {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(initialValue);
   const [isValid, setIsValid] = useState(true);
 
   const handleChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
@@ -84,6 +111,9 @@ export function QuestInputEditing({
           isValid ? "border-white" : "border-red-800",
         )}
         value={value}
+        // biome-ignore lint/a11y/noAutofocus: <is requested by the user when they press edit>
+        autoFocus={initialValue !== ""}
+        onFocus={handleFocus}
         onChange={handleChange}
       />
       <button type="submit">Submit</button>
