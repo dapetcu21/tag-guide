@@ -53,46 +53,6 @@ export function getPreviousAvailableQuestion(
   return -1;
 }
 
-export function getNextDiscoveredQuestion(
-  quest: Quest,
-  questSaveGame: QuestSaveGame,
-  start: number,
-) {
-  if (quest.type !== QuestType.Questions) {
-    return -1;
-  }
-
-  const { questions } = quest;
-
-  for (let i = start; i < questions.length; i++) {
-    if (isQuestionDiscovered(questions[i], questSaveGame)) {
-      return i;
-    }
-  }
-
-  return -1;
-}
-
-export function getPreviousDiscoveredQuestion(
-  quest: Quest,
-  questSaveGame: QuestSaveGame,
-  start: number,
-) {
-  if (quest.type !== QuestType.Questions) {
-    return -1;
-  }
-
-  const { questions } = quest;
-
-  for (let i = start; i >= 0; i--) {
-    if (isQuestionDiscovered(questions[i], questSaveGame)) {
-      return i;
-    }
-  }
-
-  return -1;
-}
-
 export function hasUnavailableQuestions(
   quest: Quest,
   questSaveGame: QuestSaveGame,
