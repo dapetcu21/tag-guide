@@ -11,6 +11,7 @@ import {
   useSaveGame,
 } from "@/lib/saveGame";
 import { QuestBrief } from "./QuestBrief";
+import { QuestDebrief } from "./QuestDebrief";
 
 export default function QuestPage({
   params,
@@ -69,6 +70,13 @@ export default function QuestPage({
         />
       );
     case PageType.Debrief:
+      return (
+        <QuestDebrief
+          quest={quest}
+          questSaveGame={questSaveGame}
+          setPage={setPage}
+        />
+      );
     case PageType.Question:
       return notFound();
   }

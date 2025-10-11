@@ -55,6 +55,8 @@ export function setSaveGame(saveGame: SaveGame) {
   }
 }
 
+export const resetSaveGame = () => setSaveGame(defaultSaveGame);
+
 const getServerSnapshot = () => defaultSaveGame;
 export function useSaveGame(): [SaveGame, (saveGame: SaveGame) => void] {
   return [

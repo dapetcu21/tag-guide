@@ -34,7 +34,11 @@ export function QuestBrief({
       <div>{quest.text}</div>
       {quest.image != null && <Image src={quest.image} alt={quest.text} />}
       {quest.type === QuestType.TextInput && (
-        <QuestInput quest={quest} onCompletion={onCompletion} />
+        <QuestInput
+          quest={quest}
+          questSaveGame={questSaveGame}
+          onCompletion={onCompletion}
+        />
       )}
       {((quest.type === QuestType.Scannable && !questSaveGame.isCompleted) ||
         hasUnavailableQuestions(quest, questSaveGame)) && (
