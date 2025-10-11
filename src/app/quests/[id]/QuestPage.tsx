@@ -1,5 +1,6 @@
 "use client";
 
+import classNames from "classnames";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -23,12 +24,26 @@ import { QuestBrief } from "./QuestBrief";
 import { QuestDebrief } from "./QuestDebrief";
 import { QuestionPage } from "./QuestionPage";
 
-// biome-ignore lint/correctness/noUnusedFunctionParameters: <not implemented>
-const PageDot = ({ page, onClick }: { page: PageKey; onClick: () => void }) => (
-  <button type="button" className="w-2 h-2" onClick={onClick}>
-    {"*"}
-  </button>
-);
+const PageDot = ({
+  page,
+  selected,
+  setPage,
+}: {
+  page: PageKey;
+  selected: boolean;
+  setPage: (_: PageKey) => void;
+}) => {
+  const handleClick = useCallback(() => setPage(page), [setPage, page]);
+  return (
+    <button
+      type="button"
+      className={classNames("w-2", "h-2", { "font-bold": selected })}
+      onClick={handleClick}
+    >
+      {"*"}
+    </button>
+  );
+};
 
 function QuestContainer({
   children,
@@ -49,7 +64,9 @@ function QuestContainer({
         currentPage.type !== PageType.Question ||
         pageKey.questionIndex === currentPage.questionIndex);
 
-    if (selected) currentPageIndex = index;
+    if (selected) {
+      currentPageIndex = index;
+    }
 
     return (
       <PageDot
@@ -59,7 +76,8 @@ function QuestContainer({
             : pageKey.type
         }
         page={pageKey}
-        onClick={() => setPage(pageKey)}
+        setPage={setPage}
+        selected={selected}
       />
     );
   });

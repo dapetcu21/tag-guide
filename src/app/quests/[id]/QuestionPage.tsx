@@ -1,7 +1,33 @@
 import classNames from "classnames";
+import { useCallback } from "react";
 import type { Quest, Question } from "@/lib/quests";
 import type { QuestSaveGame } from "@/lib/saveGame";
 import { validateQuestionsQuestSolution } from "@/lib/util";
+
+const AnswerButton = ({
+  index,
+  answer,
+  selected,
+  onClick,
+}: {
+  index: number;
+  answer: string;
+  selected: boolean;
+  onClick: (index: number) => void;
+}) => {
+  const handleClick = useCallback(() => onClick(index), [onClick, index]);
+  return (
+    <button
+      type="button"
+      className={classNames({
+        "font-bold": selected,
+      })}
+      onClick={handleClick}
+    >
+      {answer}
+    </button>
+  );
+};
 
 export function QuestionPage({
   quest,
@@ -19,35 +45,36 @@ export function QuestionPage({
   const selectedAnswer =
     (questSaveGame.solution as Record<string, number>)?.[question.id] ?? -1;
 
+  const handleClickAnswer = useCallback(
+    (answerIndex: number) => {
+      setQuestSaveGame((s) => {
+        const solution = {
+          ...((typeof s.solution === "object" ? s.solution : null) ?? {}),
+          [question.id]: answerIndex,
+        };
+        return {
+          ...s,
+          isCompleted:
+            s.isCompleted || validateQuestionsQuestSolution(quest, solution),
+          solution,
+        };
+      });
+    },
+    [quest, question, setQuestSaveGame],
+  );
+
   return (
     <div>
       <div>{question.text}</div>
       {question.answers.map((answer, answerIndex) => (
-        <button
+        <AnswerButton
           // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
           key={answerIndex}
-          type="button"
-          className={classNames({
-            "font-bold": selectedAnswer === answerIndex,
-          })}
-          onClick={() => {
-            setQuestSaveGame((s) => {
-              const solution = {
-                ...((typeof s.solution === "object" ? s.solution : null) ?? {}),
-                [question.id]: answerIndex,
-              };
-              return {
-                ...s,
-                isCompleted:
-                  s.isCompleted ||
-                  validateQuestionsQuestSolution(quest, solution),
-                solution,
-              };
-            });
-          }}
-        >
-          {answer}
-        </button>
+          index={answerIndex}
+          answer={answer}
+          selected={answerIndex === selectedAnswer}
+          onClick={handleClickAnswer}
+        />
       ))}
     </div>
   );
