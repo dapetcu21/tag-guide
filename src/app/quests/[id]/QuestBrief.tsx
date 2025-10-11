@@ -1,21 +1,22 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback } from "react";
 import { type PageKey, PageType } from "@/lib/PageKey";
 import { type Quest, QuestType } from "@/lib/quests";
-import type { QuestSaveGame, QuestSolution } from "@/lib/saveGame";
+import type { QuestSaveGame } from "@/lib/saveGame";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "@/lib/util";
 import { QuestInput } from "./QuestInput";
 
 export function QuestBrief({
   quest,
   questSaveGame,
-  onCompletion,
+  setQuestSaveGame,
   setPage,
 }: {
   quest: Quest;
   questSaveGame: QuestSaveGame;
-  onCompletion: (solution: QuestSolution | undefined) => void;
+  setQuestSaveGame: (
+    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
+  ) => void;
   setPage: (page: PageKey) => void;
 }) {
   const nextQuestion = getNextAvailableQuestion(quest, questSaveGame, 0);
@@ -30,14 +31,13 @@ export function QuestBrief({
 
   return (
     <div>
-      <Link href="/">All quests</Link>
       <div>{quest.text}</div>
       {quest.image != null && <Image src={quest.image} alt={quest.text} />}
       {quest.type === QuestType.TextInput && (
         <QuestInput
           quest={quest}
           questSaveGame={questSaveGame}
-          onCompletion={onCompletion}
+          setQuestSaveGame={setQuestSaveGame}
         />
       )}
       {((quest.type === QuestType.Scannable && !questSaveGame.isCompleted) ||

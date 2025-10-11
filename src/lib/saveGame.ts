@@ -42,11 +42,11 @@ export function subscribeToSaveGame(onChange: () => void) {
   return () => subscribers.delete(onChange);
 }
 
-export function setSaveGame(saveGame: SaveGame) {
-  cachedSaveGame = saveGame;
+export function setSaveGame(updater: (_: SaveGame) => SaveGame) {
+  cachedSaveGame = updater(getSaveGame());
 
   try {
-    localStorage.setItem(localStorageKey, JSON.stringify(saveGame));
+    localStorage.setItem(localStorageKey, JSON.stringify(cachedSaveGame));
   } catch (_) { }
 
   // To prevent issues when unsubscribing during the callback
@@ -55,10 +55,13 @@ export function setSaveGame(saveGame: SaveGame) {
   }
 }
 
-export const resetSaveGame = () => setSaveGame(defaultSaveGame);
+export const resetSaveGame = () => setSaveGame(() => defaultSaveGame);
 
 const getServerSnapshot = () => defaultSaveGame;
-export function useSaveGame(): [SaveGame, (saveGame: SaveGame) => void] {
+export function useSaveGame(): [
+  SaveGame,
+  (updater: (saveGame: SaveGame) => SaveGame) => void,
+] {
   return [
     useSyncExternalStore<SaveGame>(
       subscribeToSaveGame,

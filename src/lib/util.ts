@@ -1,5 +1,5 @@
 import { type Quest, type Question, QuestType } from "./quests";
-import type { QuestSaveGame } from "./saveGame";
+import type { QuestSaveGame, QuestSolution } from "./saveGame";
 
 export const isQuestionAvailable = (
   question: Question,
@@ -104,6 +104,37 @@ export function hasUnavailableQuestions(
   for (const question of quest.questions) {
     if (!isQuestionAvailable(question, questSaveGame)) {
       return true;
+    }
+  }
+
+  return false;
+}
+
+export const validateAnswer = (question: Question, answer: number) =>
+  question.correctAnswer === undefined || answer === question.correctAnswer;
+
+export function validateQuestionsQuestSolution(
+  quest: Quest,
+  solution: QuestSolution,
+) {
+  if (quest.type !== QuestType.Questions) return false;
+
+  let numRequiredQuestions = Math.min(
+    quest.numRequiredQuestions ?? quest.questions.length,
+    quest.questions.length,
+  );
+
+  if (numRequiredQuestions === 0) return true;
+
+  if (!solution || typeof solution !== "object") {
+    return false;
+  }
+
+  for (const question of quest.questions) {
+    const answer = solution[question.id];
+    if (answer !== undefined && validateAnswer(question, answer)) {
+      numRequiredQuestions--;
+      if (numRequiredQuestions <= 0) return true;
     }
   }
 

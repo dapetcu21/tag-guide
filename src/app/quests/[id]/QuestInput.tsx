@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 import type { Quest, QuestType } from "@/lib/quests";
-import type { QuestSaveGame, QuestSolution } from "@/lib/saveGame";
+import type { QuestSaveGame } from "@/lib/saveGame";
 
 function validate(input: string, correctInputs: Array<string>): number | null {
   // TODO: fuzzy search
@@ -33,14 +33,17 @@ function getSolution(
 export function QuestInput({
   quest,
   questSaveGame,
-  onCompletion,
+  setQuestSaveGame,
 }: {
   quest: Quest & { type: QuestType.TextInput };
   questSaveGame: QuestSaveGame;
-  onCompletion: (solution: QuestSolution) => void;
+  setQuestSaveGame: (
+    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
+  ) => void;
 }) {
   const [editing, setEditing] = useState(() => !questSaveGame.isCompleted);
   const handleEditClick = useCallback(() => setEditing(true), []);
+  const handleSubmit = useCallback(() => setEditing(false), []);
 
   if (editing)
     return (
@@ -49,7 +52,8 @@ export function QuestInput({
         initialValue={
           questSaveGame.isCompleted ? getSolution(quest, questSaveGame) : ""
         }
-        onCompletion={onCompletion}
+        setQuestSaveGame={setQuestSaveGame}
+        onSubmit={handleSubmit}
       />
     );
 
@@ -70,11 +74,15 @@ const handleFocus: FocusEventHandler<HTMLInputElement> = (e) => {
 export function QuestInputEditing({
   quest,
   initialValue,
-  onCompletion,
+  setQuestSaveGame,
+  onSubmit,
 }: {
   quest: Quest & { type: QuestType.TextInput };
   initialValue: string;
-  onCompletion: (solution: QuestSolution) => void;
+  setQuestSaveGame: (
+    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
+  ) => void;
+  onSubmit: () => void;
 }) {
   const [value, setValue] = useState(initialValue);
   const [isValid, setIsValid] = useState(true);
@@ -87,19 +95,24 @@ export function QuestInputEditing({
     (evt: FormEvent<HTMLFormElement>) => {
       evt.preventDefault();
 
-      const correctValue: string | number | null =
+      const solution: string | number | null =
         quest.correctInputs == null
           ? value
           : validate(value, quest.correctInputs);
 
-      const isValid = correctValue !== null;
+      const isValid = solution !== null;
       setIsValid(isValid);
 
       if (isValid) {
-        onCompletion(correctValue);
+        setQuestSaveGame((s) => ({
+          ...s,
+          isCompleted: true,
+          solution,
+        }));
+        onSubmit();
       }
     },
-    [quest, value, onCompletion],
+    [quest, value, setQuestSaveGame, onSubmit],
   );
 
   return (
