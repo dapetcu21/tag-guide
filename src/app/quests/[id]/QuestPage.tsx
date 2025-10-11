@@ -149,7 +149,7 @@ export default function QuestPage({
     }
   }, [isCompleted]);
 
-  const getPages = useMemo(() => {
+  const availablePages = useMemo(() => {
     if (quest == null) return [];
 
     const pages: Array<PageKey> = [{ type: PageType.Brief }];
@@ -166,6 +166,46 @@ export default function QuestPage({
 
     return pages;
   }, [quest, questSaveGame]);
+
+  // If an answer was selected for an unanswered question, move on to the next unanswered question
+  const handleAnswerSelected = useCallback(
+    (
+      previousSolution: Record<string, number> | null,
+      previousAnswerIndex: number,
+    ) => {
+      if (previousAnswerIndex !== -1) {
+        return;
+      }
+
+      if (
+        quest == null ||
+        quest.type !== QuestType.Questions ||
+        page.type !== PageType.Question
+      ) {
+        return;
+      }
+
+      const numQuestions = quest.questions.length;
+      for (let i = 1; i < numQuestions; i++) {
+        const indexNotWrapped = page.questionIndex + i;
+        const index =
+          indexNotWrapped >= numQuestions
+            ? indexNotWrapped - numQuestions
+            : indexNotWrapped;
+
+        const question = quest.questions[index];
+        if (!isQuestionAvailable(question, questSaveGame)) {
+          continue;
+        }
+
+        const solutionAnswer = previousSolution?.[question.id];
+        if (solutionAnswer === undefined) {
+          setPage({ type: PageType.Question, questionIndex: index });
+        }
+      }
+    },
+    [quest, questSaveGame, page],
+  );
 
   if (quest == null) {
     return notFound();
@@ -209,6 +249,7 @@ export default function QuestPage({
             question={quest.questions[page.questionIndex]}
             questSaveGame={questSaveGame}
             setQuestSaveGame={setQuestSaveGame}
+            onAnswerSelected={handleAnswerSelected}
           />
         );
       }
@@ -217,7 +258,7 @@ export default function QuestPage({
 
   return (
     <QuestContainer
-      availablePages={getPages}
+      availablePages={availablePages}
       currentPage={page}
       setPage={setPage}
     >

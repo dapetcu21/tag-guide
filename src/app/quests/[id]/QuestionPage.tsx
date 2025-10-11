@@ -34,6 +34,7 @@ export function QuestionPage({
   question,
   questSaveGame,
   setQuestSaveGame,
+  onAnswerSelected,
 }: {
   quest: Quest;
   question: Question;
@@ -41,12 +42,21 @@ export function QuestionPage({
   setQuestSaveGame: (
     updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
   ) => void;
+  onAnswerSelected: (
+    oldSolution: Record<string, number> | null,
+    oldAnswerIndex: number,
+  ) => void;
 }) {
   const selectedAnswer =
     (questSaveGame.solution as Record<string, number>)?.[question.id] ?? -1;
 
   const handleClickAnswer = useCallback(
     (answerIndex: number) => {
+      const oldSolution =
+        typeof questSaveGame.solution === "object"
+          ? questSaveGame.solution
+          : null;
+
       setQuestSaveGame((s) => {
         const solution = {
           ...((typeof s.solution === "object" ? s.solution : null) ?? {}),
@@ -59,8 +69,10 @@ export function QuestionPage({
           solution,
         };
       });
+
+      onAnswerSelected(oldSolution, oldSolution?.[question.id] ?? -1);
     },
-    [quest, question, setQuestSaveGame],
+    [quest, question, questSaveGame, setQuestSaveGame, onAnswerSelected],
   );
 
   return (
