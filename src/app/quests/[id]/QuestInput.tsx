@@ -8,11 +8,31 @@ import {
 } from "react";
 import type { Quest, QuestType } from "@/lib/quests";
 import type { QuestSaveGame } from "@/lib/saveGame";
+import { transliterate } from "transliteration";
+import leven from "leven";
 
-function validate(input: string, correctInputs: Array<string>): number | null {
-  // TODO: fuzzy search
-  const index = correctInputs.indexOf(input);
-  return index >= 0 ? index : null;
+const normalizeInput = (s: string): string =>
+  transliterate(s)
+    .toLowerCase()
+    .replaceAll(/[^a-z]+/g, " ")
+    .trim();
+
+function validateInput(
+  input: string,
+  correctInputs: Array<string>,
+): number | null {
+  const normalizedInput = normalizeInput(input);
+  const treshold = 3; // Max allowed mistaken characters
+
+  const [_, bestIndex] = correctInputs.reduce(
+    (acc, variant, currentIndex) => {
+      const distance = leven(normalizedInput, normalizeInput(variant));
+      return distance < acc[0] ? [distance, currentIndex] : acc;
+    },
+    [treshold + 1, -1],
+  );
+
+  return bestIndex >= 0 ? bestIndex : null;
 }
 
 function getSolution(
@@ -98,7 +118,7 @@ export function QuestInputEditing({
       const solution: string | number | null =
         quest.correctInputs == null
           ? value
-          : validate(value, quest.correctInputs);
+          : validateInput(value, quest.correctInputs);
 
       const isValid = solution !== null;
       setIsValid(isValid);
