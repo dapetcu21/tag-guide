@@ -13,13 +13,18 @@ import {
   useState,
 } from "react";
 import { type PageKey, PageType } from "@/lib/PageKey";
-import { QuestType, questsById } from "@/lib/quests";
+import { Quest, QuestType, questsById } from "@/lib/quests";
 import {
   defaultQuestSaveGame,
   type QuestSaveGame,
   useSaveGame,
 } from "@/lib/saveGame";
-import { isQuestionAvailable } from "@/lib/util";
+import {
+  asQuestionsSolution,
+  getNextUnansweredQuestion,
+  isQuestionAvailable,
+  validateAnswerInSaveGame,
+} from "@/lib/util";
 import { QuestBrief } from "./QuestBrief";
 import { QuestDebrief } from "./QuestDebrief";
 import { QuestionPage } from "./QuestionPage";
@@ -27,17 +32,22 @@ import { QuestionPage } from "./QuestionPage";
 const PageDot = ({
   page,
   selected,
+  invalid,
   setPage,
 }: {
   page: PageKey;
   selected: boolean;
+  invalid: boolean;
   setPage: (_: PageKey) => void;
 }) => {
   const handleClick = useCallback(() => setPage(page), [setPage, page]);
   return (
     <button
       type="button"
-      className={classNames("w-2", "h-2", { "font-bold": selected })}
+      className={classNames("w-2", "h-2", {
+        "font-bold": selected,
+        "text-red-400": invalid,
+      })}
       onClick={handleClick}
     >
       {"*"}
@@ -50,11 +60,17 @@ function QuestContainer({
   availablePages,
   currentPage,
   setPage,
+  quest,
+  questSaveGame,
+  validate,
 }: {
   children: ReactNode;
   availablePages: Array<PageKey>;
   currentPage: PageKey;
   setPage: (_: PageKey) => void;
+  quest: Quest;
+  questSaveGame: QuestSaveGame;
+  validate: boolean;
 }) {
   let currentPageIndex = -1;
   const pageDots = availablePages.map((pageKey, index) => {
@@ -68,6 +84,15 @@ function QuestContainer({
       currentPageIndex = index;
     }
 
+    const invalid =
+      validate &&
+      pageKey.type === PageType.Question &&
+      quest.type === QuestType.Questions &&
+      !validateAnswerInSaveGame(
+        quest.questions[pageKey.questionIndex],
+        questSaveGame,
+      );
+
     return (
       <PageDot
         key={
@@ -78,6 +103,7 @@ function QuestContainer({
         page={pageKey}
         setPage={setPage}
         selected={selected}
+        invalid={invalid}
       />
     );
   });
@@ -177,35 +203,40 @@ export default function QuestPage({
         return;
       }
 
-      if (
-        quest == null ||
-        quest.type !== QuestType.Questions ||
-        page.type !== PageType.Question
-      ) {
+      if (quest == null || page.type !== PageType.Question) {
         return;
       }
 
-      const numQuestions = quest.questions.length;
-      for (let i = 1; i < numQuestions; i++) {
-        const indexNotWrapped = page.questionIndex + i;
-        const index =
-          indexNotWrapped >= numQuestions
-            ? indexNotWrapped - numQuestions
-            : indexNotWrapped;
+      const questionIndex = getNextUnansweredQuestion(
+        quest,
+        page.questionIndex,
+        questSaveGame,
+        previousSolution,
+      );
 
-        const question = quest.questions[index];
-        if (!isQuestionAvailable(question, questSaveGame)) {
-          continue;
-        }
-
-        const solutionAnswer = previousSolution?.[question.id];
-        if (solutionAnswer === undefined) {
-          setPage({ type: PageType.Question, questionIndex: index });
-        }
+      if (questionIndex >= 0) {
+        setPage({ type: PageType.Question, questionIndex });
       }
     },
     [quest, questSaveGame, page],
   );
+
+  // Validation starts only when all questions are unlocked and all mandatory questions are answered
+  const shouldValidateQuestions = useMemo(() => {
+    if (quest == null || quest.type !== QuestType.Questions) return false;
+    if (questSaveGame.isCompleted) return true;
+
+    const solution = asQuestionsSolution(questSaveGame.solution);
+
+    for (const question of quest.questions) {
+      if (!isQuestionAvailable(question, questSaveGame)) return false;
+
+      if (question.correctAnswer != null && solution?.[question.id] == null)
+        return false;
+    }
+
+    return true;
+  }, [quest, questSaveGame]);
 
   if (quest == null) {
     return notFound();
@@ -250,6 +281,7 @@ export default function QuestPage({
             questSaveGame={questSaveGame}
             setQuestSaveGame={setQuestSaveGame}
             onAnswerSelected={handleAnswerSelected}
+            validate={shouldValidateQuestions}
           />
         );
       }
@@ -261,6 +293,9 @@ export default function QuestPage({
       availablePages={availablePages}
       currentPage={page}
       setPage={setPage}
+      quest={quest}
+      questSaveGame={questSaveGame}
+      validate={shouldValidateQuestions}
     >
       {pageContent}
     </QuestContainer>

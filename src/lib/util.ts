@@ -6,12 +6,7 @@ export const isQuestionAvailable = (
   questSaveGame: QuestSaveGame,
 ) =>
   question.scanToken === undefined ||
-  isQuestionDiscovered(question, questSaveGame);
-
-export const isQuestionDiscovered = (
-  question: Question,
-  questSaveGame: QuestSaveGame,
-) => questSaveGame.discoveries.includes(question.id);
+  questSaveGame.discoveries.includes(question.id);
 
 export function getNextAvailableQuestion(
   quest: Quest,
@@ -100,3 +95,48 @@ export function validateQuestionsQuestSolution(
 
   return false;
 }
+
+export const asQuestionsSolution = (
+  solution: QuestSolution,
+): Record<string, number> | null =>
+  typeof solution === "object" ? solution : null;
+
+export function getNextUnansweredQuestion(
+  quest: Quest,
+  startingQuestionIndex: number,
+  questSaveGame: QuestSaveGame,
+  previousSolution: Record<string, number> | null,
+): number {
+  if (quest.type !== QuestType.Questions) {
+    return -1;
+  }
+
+  const numQuestions = quest.questions.length;
+  for (let i = 1; i < numQuestions; i++) {
+    const indexNotWrapped = startingQuestionIndex + i;
+    const index =
+      indexNotWrapped >= numQuestions
+        ? indexNotWrapped - numQuestions
+        : indexNotWrapped;
+
+    const question = quest.questions[index];
+    if (!isQuestionAvailable(question, questSaveGame)) {
+      continue;
+    }
+
+    const solutionAnswer = previousSolution?.[question.id];
+    if (solutionAnswer === undefined) {
+      return index;
+    }
+  }
+
+  return -1;
+}
+
+export const validateAnswerInSaveGame = (
+  question: Question,
+  questSaveGame: QuestSaveGame,
+) =>
+  question.correctAnswer == null ||
+  question.correctAnswer ===
+  asQuestionsSolution(questSaveGame.solution)?.[question.id];

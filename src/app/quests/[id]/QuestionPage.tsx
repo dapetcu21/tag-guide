@@ -2,25 +2,34 @@ import classNames from "classnames";
 import { useCallback } from "react";
 import type { Quest, Question } from "@/lib/quests";
 import type { QuestSaveGame } from "@/lib/saveGame";
-import { validateQuestionsQuestSolution } from "@/lib/util";
+import {
+  asQuestionsSolution,
+  validateQuestionsQuestSolution,
+} from "@/lib/util";
 
 const AnswerButton = ({
   index,
   answer,
   selected,
+  correct,
+  incorrect,
   onClick,
 }: {
   index: number;
   answer: string;
   selected: boolean;
+  correct: boolean;
+  incorrect: boolean;
   onClick: (index: number) => void;
 }) => {
   const handleClick = useCallback(() => onClick(index), [onClick, index]);
   return (
     <button
       type="button"
-      className={classNames({
+      className={classNames("block", {
         "font-bold": selected,
+        "text-green-400": correct,
+        "text-red-400": incorrect,
       })}
       onClick={handleClick}
     >
@@ -35,6 +44,7 @@ export function QuestionPage({
   questSaveGame,
   setQuestSaveGame,
   onAnswerSelected,
+  validate,
 }: {
   quest: Quest;
   question: Question;
@@ -46,20 +56,18 @@ export function QuestionPage({
     oldSolution: Record<string, number> | null,
     oldAnswerIndex: number,
   ) => void;
+  validate: boolean;
 }) {
   const selectedAnswer =
     (questSaveGame.solution as Record<string, number>)?.[question.id] ?? -1;
 
   const handleClickAnswer = useCallback(
     (answerIndex: number) => {
-      const oldSolution =
-        typeof questSaveGame.solution === "object"
-          ? questSaveGame.solution
-          : null;
+      const oldSolution = asQuestionsSolution(questSaveGame.solution);
 
       setQuestSaveGame((s) => {
         const solution = {
-          ...((typeof s.solution === "object" ? s.solution : null) ?? {}),
+          ...(asQuestionsSolution(s.solution) ?? {}),
           [question.id]: answerIndex,
         };
         return {
@@ -85,6 +93,17 @@ export function QuestionPage({
           index={answerIndex}
           answer={answer}
           selected={answerIndex === selectedAnswer}
+          correct={
+            validate &&
+            question.correctAnswer != null &&
+            answerIndex === question.correctAnswer
+          }
+          incorrect={
+            validate &&
+            question.correctAnswer != null &&
+            answerIndex !== question.correctAnswer &&
+            answerIndex === selectedAnswer
+          }
           onClick={handleClickAnswer}
         />
       ))}
