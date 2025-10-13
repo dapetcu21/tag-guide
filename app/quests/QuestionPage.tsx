@@ -1,11 +1,15 @@
 import classNames from "classnames";
 import { useCallback } from "react";
-import type { Quest, Question } from "~/lib/quests";
-import type { QuestSaveGame } from "~/lib/saveGame";
+import { useNavigate } from "react-router";
+import { QuestType } from "~/lib/quests";
 import {
   asQuestionsSolution,
+  getNextUnansweredQuestion,
+  isQuestionAvailable,
   validateQuestionsQuestSolution,
 } from "~/lib/util";
+import type { Route } from "./+types/QuestionPage";
+import { useQuestContext } from "./QuestContext";
 
 const AnswerButton = ({
   index,
@@ -38,33 +42,35 @@ const AnswerButton = ({
   );
 };
 
-export function QuestionPage({
-  quest,
-  question,
-  questSaveGame,
-  setQuestSaveGame,
-  onAnswerSelected,
-  validate,
-}: {
-  quest: Quest;
-  question: Question;
-  questSaveGame: QuestSaveGame;
-  setQuestSaveGame: (
-    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
-  ) => void;
-  onAnswerSelected: (
-    oldSolution: Record<string, number> | null,
-    oldAnswerIndex: number,
-  ) => void;
-  validate: boolean;
-}) {
+export default function QuestionPage({ params }: Route.ComponentProps) {
+  const { quest, questSaveGame, setQuestSaveGame, validate } =
+    useQuestContext();
+  const questionIndex = Number.parseInt(params.questionIndex, 10);
+
+  if (
+    quest.type !== QuestType.Questions ||
+    !Number.isSafeInteger(questionIndex) ||
+    params.questionIndex !== questionIndex.toString() ||
+    questionIndex < 0 ||
+    questionIndex >= quest.questions.length
+  ) {
+    throw new Error("Invalid question index");
+  }
+
+  const question = quest.questions[questionIndex];
+
+  if (!isQuestionAvailable(question, questSaveGame)) {
+    throw new Error("Question not available");
+  }
+
+  const navigate = useNavigate();
+
   const selectedAnswer =
     (questSaveGame.solution as Record<string, number>)?.[question.id] ?? -1;
 
   const handleClickAnswer = useCallback(
     (answerIndex: number) => {
       const oldSolution = asQuestionsSolution(questSaveGame.solution);
-
       setQuestSaveGame((s) => {
         const solution = {
           ...(asQuestionsSolution(s.solution) ?? {}),
@@ -78,9 +84,22 @@ export function QuestionPage({
         };
       });
 
-      onAnswerSelected(oldSolution, oldSolution?.[question.id] ?? -1);
+      // If an answer was selected for an unanswered question,
+      // move on to the next unanswered question
+      if (oldSolution?.[question.id] == null) {
+        const nextQuestionIndex = getNextUnansweredQuestion(
+          quest,
+          questionIndex,
+          questSaveGame,
+          oldSolution,
+        );
+
+        if (questionIndex >= 0) {
+          navigate(`/quests/${quest.id}/questions/${nextQuestionIndex}`);
+        }
+      }
     },
-    [quest, question, questSaveGame, setQuestSaveGame, onAnswerSelected],
+    [quest, question, questionIndex, questSaveGame, setQuestSaveGame, navigate],
   );
 
   return (

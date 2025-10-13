@@ -1,32 +1,24 @@
 import { useCallback } from "react";
-import { type PageKey, PageType } from "~/lib/PageKey";
-import { type Quest, QuestType } from "~/lib/quests";
-import type { QuestSaveGame } from "~/lib/saveGame";
+import { useNavigate } from "react-router";
+import { QuestType } from "~/lib/quests";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
+import type { Route } from "./+types/QuestBrief";
+import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
 
-export function QuestBrief({
-  quest,
-  questSaveGame,
-  setQuestSaveGame,
-  setPage,
-}: {
-  quest: Quest;
-  questSaveGame: QuestSaveGame;
-  setQuestSaveGame: (
-    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
-  ) => void;
-  setPage: (page: PageKey) => void;
-}) {
+export default function QuestBrief(_: Route.ComponentProps) {
+  const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
+
   const nextQuestion = getNextAvailableQuestion(quest, questSaveGame, 0);
 
+  const navigate = useNavigate();
   const handleNextQuestionClick = useCallback(() => {
-    setPage({ type: PageType.Question, questionIndex: nextQuestion });
-  }, [setPage, nextQuestion]);
+    navigate(`/quests/${quest.id}/questions/${nextQuestion}`);
+  }, [navigate, nextQuestion, quest]);
 
   const handleGoToDebriefClick = useCallback(() => {
-    setPage({ type: PageType.Debrief });
-  }, [setPage]);
+    navigate(`/quests/${quest.id}/debrief`);
+  }, [navigate, quest]);
 
   return (
     <div>
@@ -41,8 +33,8 @@ export function QuestBrief({
       )}
       {((quest.type === QuestType.Scannable && !questSaveGame.isCompleted) ||
         hasUnavailableQuestions(quest, questSaveGame)) && (
-          <button type="button">Scan QR</button>
-        )}
+        <button type="button">Scan QR</button>
+      )}
       {nextQuestion >= 0 && (
         <button type="button" onClick={handleNextQuestionClick}>
           Continue

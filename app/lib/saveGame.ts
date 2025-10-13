@@ -26,7 +26,7 @@ export function getSaveGame(): SaveGame {
     const localStorageItem = localStorage.getItem(localStorageKey);
     if (localStorageItem !== null)
       cachedSaveGame = JSON.parse(localStorageItem);
-  } catch (_) { }
+  } catch (_) {}
 
   if (!cachedSaveGame) {
     cachedSaveGame = defaultSaveGame;
@@ -47,7 +47,7 @@ export function setSaveGame(updater: (_: SaveGame) => SaveGame) {
 
   try {
     localStorage.setItem(localStorageKey, JSON.stringify(cachedSaveGame));
-  } catch (_) { }
+  } catch (_) {}
 
   // To prevent issues when unsubscribing during the callback
   for (const onChange of Array.from(subscribers)) {

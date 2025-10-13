@@ -19,21 +19,21 @@ export type Quest = {
   completionText: string;
   completionImage?: string;
 } & (
-    | {
+  | {
       type: QuestType.Scannable;
       scanToken: string;
     }
-    | {
+  | {
       type: QuestType.TextInput;
       correctInputs?: Array<string>; // Omit to allow free answer
       typoTolerance: number; // Number of allowable mistyped characters
     }
-    | {
+  | {
       type: QuestType.Questions;
       questions: Array<Question>;
       numRequiredQuestions?: number; // Number of questions required to complete the quest. Omit to require all questions
     }
-  );
+);
 
 export const quests: Array<Quest> = [
   {

@@ -1,6 +1,12 @@
-import type { Quest } from "~/lib/quests";
+import { useQuestContext } from "./QuestContext";
 
-export function QuestDebrief({ quest }: { quest: Quest }) {
+export default function QuestDebrief() {
+  const { quest, questSaveGame } = useQuestContext();
+
+  if (!questSaveGame.isCompleted) {
+    throw new Error("Quest not completed yet");
+  }
+
   return (
     <div>
       <div>{quest.completionText}</div>

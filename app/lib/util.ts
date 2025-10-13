@@ -139,4 +139,4 @@ export const validateAnswerInSaveGame = (
 ) =>
   question.correctAnswer == null ||
   question.correctAnswer ===
-  asQuestionsSolution(questSaveGame.solution)?.[question.id];
+    asQuestionsSolution(questSaveGame.solution)?.[question.id];
