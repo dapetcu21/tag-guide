@@ -5,7 +5,7 @@ export type QuestSolution = null | string | number | Record<string, number>;
 export type QuestSaveGame = {
   isCompleted: boolean;
   solution: QuestSolution;
-  discoveries: Array<string>;
+  discoveries: Record<string, boolean>;
 };
 
 export type SaveGame = { quests: Record<string, QuestSaveGame> };
@@ -14,7 +14,7 @@ export const defaultSaveGame: SaveGame = { quests: {} };
 export const defaultQuestSaveGame: QuestSaveGame = {
   isCompleted: false,
   solution: null,
-  discoveries: [],
+  discoveries: {},
 };
 const localStorageKey = "saveGame";
 

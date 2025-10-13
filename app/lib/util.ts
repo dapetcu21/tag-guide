@@ -5,8 +5,7 @@ export const isQuestionAvailable = (
   question: Question,
   questSaveGame: QuestSaveGame,
 ) =>
-  question.scanToken === undefined ||
-  questSaveGame.discoveries.includes(question.id);
+  question.scanToken === undefined || !!questSaveGame.discoveries[question.id];
 
 export function getNextAvailableQuestion(
   quest: Quest,

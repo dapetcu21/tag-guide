@@ -16,4 +16,8 @@ export default [
       route("questions/:questionIndex", "quests/QuestionPage.tsx"),
     ]),
   ]),
+  route("s/:scanToken", "routes/scanResult.tsx"),
+  ...(process.env.NODE_ENV === "production"
+    ? []
+    : prefix("/dev", [route("qr-list", "dev/qrList.tsx")])),
 ] satisfies RouteConfig;

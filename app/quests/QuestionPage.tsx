@@ -94,7 +94,7 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
           oldSolution,
         );
 
-        if (questionIndex >= 0) {
+        if (nextQuestionIndex >= 0) {
           navigate(`/quests/${quest.id}/questions/${nextQuestionIndex}`);
         }
       }
