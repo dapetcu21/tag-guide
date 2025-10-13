@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { useCallback } from "react";
-import { type PageKey, PageType } from "@/lib/PageKey";
-import { type Quest, QuestType } from "@/lib/quests";
-import type { QuestSaveGame } from "@/lib/saveGame";
-import { getNextAvailableQuestion, hasUnavailableQuestions } from "@/lib/util";
+import { type PageKey, PageType } from "~/lib/PageKey";
+import { type Quest, QuestType } from "~/lib/quests";
+import type { QuestSaveGame } from "~/lib/saveGame";
+import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import { QuestInput } from "./QuestInput";
 
 export function QuestBrief({
@@ -32,7 +31,7 @@ export function QuestBrief({
   return (
     <div>
       <div>{quest.text}</div>
-      {quest.image != null && <Image src={quest.image} alt={quest.text} />}
+      {quest.image != null && <img src={quest.image} alt={quest.text} />}
       {quest.type === QuestType.TextInput && (
         <QuestInput
           quest={quest}

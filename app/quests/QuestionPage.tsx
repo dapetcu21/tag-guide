@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import { useCallback } from "react";
-import type { Quest, Question } from "@/lib/quests";
-import type { QuestSaveGame } from "@/lib/saveGame";
+import type { Quest, Question } from "~/lib/quests";
+import type { QuestSaveGame } from "~/lib/saveGame";
 import {
   asQuestionsSolution,
   validateQuestionsQuestSolution,
-} from "@/lib/util";
+} from "~/lib/util";
 
 const AnswerButton = ({
   index,

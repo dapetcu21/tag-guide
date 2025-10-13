@@ -1,13 +1,12 @@
-import Link from "next/link";
-
-import { type Quest, quests } from "@/lib/quests";
+import { Link } from "react-router";
+import { type Quest, quests } from "~/lib/quests";
 import { ResetSaveGame } from "./ResetSaveGame";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
-  <Link className="bg-red-500 aspect-square" href={`/quests/${quest.id}`} />
+  <Link className="bg-red-500 aspect-square" to={`/quests/${quest.id}`} />
 );
 
-export default function Home() {
+export function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] justify-items-stretch min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <div className="row-start-2 flex flex-col justify-center items-stretch">

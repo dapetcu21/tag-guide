@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import leven from "leven";
 import {
   type ChangeEvent,
   type FocusEventHandler,
@@ -6,10 +7,9 @@ import {
   useCallback,
   useState,
 } from "react";
-import type { Quest, QuestType } from "@/lib/quests";
-import type { QuestSaveGame } from "@/lib/saveGame";
 import { transliterate } from "transliteration";
-import leven from "leven";
+import type { Quest, QuestType } from "~/lib/quests";
+import type { QuestSaveGame } from "~/lib/saveGame";
 
 const normalizeInput = (s: string): string =>
   transliterate(s)

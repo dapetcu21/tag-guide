@@ -1,30 +1,28 @@
 "use client";
 
 import classNames from "classnames";
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import {
   type ReactNode,
-  use,
   useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
 } from "react";
-import { type PageKey, PageType } from "@/lib/PageKey";
-import { Quest, QuestType, questsById } from "@/lib/quests";
+import { Link } from "react-router";
+import { type PageKey, PageType } from "~/lib/PageKey";
+import { type Quest, QuestType } from "~/lib/quests";
 import {
   defaultQuestSaveGame,
   type QuestSaveGame,
   useSaveGame,
-} from "@/lib/saveGame";
+} from "~/lib/saveGame";
 import {
   asQuestionsSolution,
   getNextUnansweredQuestion,
   isQuestionAvailable,
   validateAnswerInSaveGame,
-} from "@/lib/util";
+} from "~/lib/util";
 import { QuestBrief } from "./QuestBrief";
 import { QuestDebrief } from "./QuestDebrief";
 import { QuestionPage } from "./QuestionPage";
@@ -110,7 +108,7 @@ function QuestContainer({
 
   return (
     <div>
-      <Link href="/">All quests</Link>
+      <Link to="/">All quests</Link>
       <div>{children}</div>
       <div className="flex flex-row justify-center items-center">
         {currentPageIndex !== -1 && currentPageIndex > 0 && (
@@ -136,27 +134,25 @@ function QuestContainer({
   );
 }
 
-export default function QuestPage({
-  params,
+export function QuestPage({
+  quest
 }: {
-  params: Promise<{ id: string }>;
+  quest: Quest;
 }) {
-  const { id } = use(params);
-  const quest = questsById.get(id);
-
   const [saveGame, setSaveGame] = useSaveGame();
-  const questSaveGame = saveGame.quests[id] ?? defaultQuestSaveGame;
+  const questSaveGame = saveGame.quests[quest.id] ?? defaultQuestSaveGame;
+
   const setQuestSaveGame = useCallback(
     (updater: (_: QuestSaveGame) => QuestSaveGame) => {
       setSaveGame((s) => ({
         ...s,
         quests: {
           ...s.quests,
-          [id]: updater(s.quests[id] ?? defaultQuestSaveGame),
+          [quest.id]: updater(s.quests[quest.id] ?? defaultQuestSaveGame),
         },
       }));
     },
-    [id, setSaveGame],
+    [quest.id, setSaveGame],
   );
 
   const [page, setPage] = useState<PageKey>(() => {
@@ -176,8 +172,6 @@ export default function QuestPage({
   }, [isCompleted]);
 
   const availablePages = useMemo(() => {
-    if (quest == null) return [];
-
     const pages: Array<PageKey> = [{ type: PageType.Brief }];
 
     if (quest.type === QuestType.Questions) {
@@ -203,7 +197,7 @@ export default function QuestPage({
         return;
       }
 
-      if (quest == null || page.type !== PageType.Question) {
+      if (page.type !== PageType.Question) {
         return;
       }
 
@@ -223,7 +217,7 @@ export default function QuestPage({
 
   // Validation starts only when all questions are unlocked and all mandatory questions are answered
   const shouldValidateQuestions = useMemo(() => {
-    if (quest == null || quest.type !== QuestType.Questions) return false;
+    if (quest.type !== QuestType.Questions) return false;
     if (questSaveGame.isCompleted) return true;
 
     const solution = asQuestionsSolution(questSaveGame.solution);
@@ -238,10 +232,6 @@ export default function QuestPage({
     return true;
   }, [quest, questSaveGame]);
 
-  if (quest == null) {
-    return notFound();
-  }
-
   const pageContent = (() => {
     switch (page.type) {
       case PageType.Brief:
@@ -255,7 +245,7 @@ export default function QuestPage({
         );
       case PageType.Debrief: {
         if (!questSaveGame.isCompleted) {
-          return notFound();
+          throw new Error("Quest not completed yet");
         }
 
         return <QuestDebrief quest={quest} />;
@@ -271,7 +261,7 @@ export default function QuestPage({
             questSaveGame,
           )
         ) {
-          return notFound();
+          throw new Error("Question not available");
         }
 
         return (

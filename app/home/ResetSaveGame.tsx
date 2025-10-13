@@ -6,10 +6,9 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import Image from "next/image";
 import { Fragment, useCallback, useState } from "react";
 import { MdWarningAmber } from "react-icons/md";
-import { resetSaveGame } from "@/lib/saveGame";
+import { resetSaveGame } from "~/lib/saveGame";
 
 export function ResetSaveGame() {
   const [open, setOpen] = useState(false);
@@ -27,13 +26,6 @@ export function ResetSaveGame() {
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         onClick={openDialog}
       >
-        <Image
-          aria-hidden
-          src="/file.svg"
-          alt="File icon"
-          width={16}
-          height={16}
-        />
         Reset progress
       </button>
       <Dialog open={open} onClose={closeDialog} className="relative z-10">
