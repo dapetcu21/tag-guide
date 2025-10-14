@@ -3,6 +3,7 @@
 import classNames from "classnames";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
+import { QRScannerProvider } from "~/components/QRScanner";
 import { type Quest, QuestType } from "~/lib/quests";
 import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
@@ -191,20 +192,22 @@ export function QuestPage({ quest }: { quest: Quest }) {
   }, [quest, questSaveGame]);
 
   return (
-    <QuestContainer
-      availablePages={availablePages}
-      quest={quest}
-      questSaveGame={questSaveGame}
-      validate={shouldValidateQuestions}
-    >
-      <Outlet
-        context={{
-          quest,
-          questSaveGame,
-          setQuestSaveGame,
-          validate: shouldValidateQuestions,
-        }}
-      />
-    </QuestContainer>
+    <QRScannerProvider>
+      <QuestContainer
+        availablePages={availablePages}
+        quest={quest}
+        questSaveGame={questSaveGame}
+        validate={shouldValidateQuestions}
+      >
+        <Outlet
+          context={{
+            quest,
+            questSaveGame,
+            setQuestSaveGame,
+            validate: shouldValidateQuestions,
+          }}
+        />
+      </QuestContainer>
+    </QRScannerProvider>
   );
 }

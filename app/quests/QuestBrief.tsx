@@ -5,6 +5,7 @@ import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
 import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
+import { QRScannerButton } from "~/components/QRScanner";
 
 export default function QuestBrief(_: Route.ComponentProps) {
   const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
@@ -32,9 +33,7 @@ export default function QuestBrief(_: Route.ComponentProps) {
         />
       )}
       {((quest.type === QuestType.Scannable && !questSaveGame.isCompleted) ||
-        hasUnavailableQuestions(quest, questSaveGame)) && (
-        <button type="button">Scan QR</button>
-      )}
+        hasUnavailableQuestions(quest, questSaveGame)) && <QRScannerButton />}
       {nextQuestion >= 0 && (
         <button type="button" onClick={handleNextQuestionClick}>
           Continue

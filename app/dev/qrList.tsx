@@ -79,7 +79,7 @@ const QRCodeEntry = ({
           }}
         >
           <QRCode
-            value={`${pageOrigin}/${path}`}
+            value={`${pageOrigin.replace(/\/+$/, "")}${path}`}
             style={{
               width: `${size}px`,
               height: `${size}px`,
