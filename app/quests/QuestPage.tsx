@@ -4,11 +4,7 @@ import classNames from "classnames";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import { type Quest, QuestType } from "~/lib/quests";
-import {
-  defaultQuestSaveGame,
-  type QuestSaveGame,
-  useSaveGame,
-} from "~/lib/saveGame";
+import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
   asQuestionsSolution,
   isQuestionAvailable,
@@ -134,21 +130,7 @@ function QuestContainer({
 }
 
 export function QuestPage({ quest }: { quest: Quest }) {
-  const [saveGame, setSaveGame] = useSaveGame();
-  const questSaveGame = saveGame.quests[quest.id] ?? defaultQuestSaveGame;
-
-  const setQuestSaveGame = useCallback(
-    (updater: (_: QuestSaveGame) => QuestSaveGame) => {
-      setSaveGame((s) => ({
-        ...s,
-        quests: {
-          ...s.quests,
-          [quest.id]: updater(s.quests[quest.id] ?? defaultQuestSaveGame),
-        },
-      }));
-    },
-    [quest.id, setSaveGame],
-  );
+  const [questSaveGame, setQuestSaveGame] = useQuestSaveGame(quest.id);
 
   const navigate = useNavigate();
 

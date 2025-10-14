@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 export type QuestSolution = null | string | number | Record<string, number>;
 
@@ -42,8 +42,10 @@ export function subscribeToSaveGame(onChange: () => void) {
   return () => subscribers.delete(onChange);
 }
 
-export function setSaveGame(updater: (_: SaveGame) => SaveGame) {
-  cachedSaveGame = updater(getSaveGame());
+export type SaveGameReducer = (_: SaveGame) => SaveGame;
+
+export function setSaveGame(reducer: SaveGameReducer) {
+  cachedSaveGame = reducer(getSaveGame());
 
   try {
     localStorage.setItem(localStorageKey, JSON.stringify(cachedSaveGame));
@@ -60,7 +62,7 @@ export const resetSaveGame = () => setSaveGame(() => defaultSaveGame);
 const getServerSnapshot = () => defaultSaveGame;
 export function useSaveGame(): [
   SaveGame,
-  (updater: (saveGame: SaveGame) => SaveGame) => void,
+  (reducer: SaveGameReducer) => void,
 ] {
   return [
     useSyncExternalStore<SaveGame>(
@@ -70,4 +72,32 @@ export function useSaveGame(): [
     ),
     setSaveGame,
   ];
+}
+
+export type QuestSaveGameReducer = (_: QuestSaveGame) => QuestSaveGame;
+
+export const reduceQuestSaveGame = (
+  s: SaveGame,
+  questId: string,
+  reducer: QuestSaveGameReducer,
+) => ({
+  ...s,
+  quests: {
+    ...s.quests,
+    [questId]: reducer(s.quests[questId] ?? defaultQuestSaveGame),
+  },
+});
+
+export function useQuestSaveGame(questId: string) : [QuestSaveGame, (reducer: QuestSaveGameReducer) => void] {
+  const [saveGame, setSaveGame] = useSaveGame();
+  const questSaveGame = saveGame.quests[questId] ?? defaultQuestSaveGame;
+
+  const setQuestSaveGame = useCallback(
+    (reducer: QuestSaveGameReducer) => {
+      setSaveGame((s) => reduceQuestSaveGame(s, questId, reducer));
+    },
+    [questId, setSaveGame],
+  );
+
+  return [questSaveGame, setQuestSaveGame];
 }

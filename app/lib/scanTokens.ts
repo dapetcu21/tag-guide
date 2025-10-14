@@ -1,5 +1,5 @@
 import { QuestType, quests, questsById } from "./quests";
-import { defaultQuestSaveGame, setSaveGame } from "./saveGame";
+import { reduceQuestSaveGame, setSaveGame } from "./saveGame";
 
 export type ScanTokenOrigin = {
   questId: string;
@@ -37,34 +37,26 @@ export function processScanToken(scanToken: string): string | null {
   if (quest == null) return null;
 
   if (quest.type === QuestType.Scannable && quest.scanToken === scanToken) {
-    setSaveGame((s) => ({
-      ...s,
-      quests: {
-        ...s.quests,
-        [quest.id]: {
-          ...(s.quests[quest.id] ?? defaultQuestSaveGame),
-          isCompleted: true,
-        },
-      },
-    }));
+    setSaveGame((s) =>
+      reduceQuestSaveGame(s, quest.id, (qs) => ({
+        ...qs,
+        isCompleted: true,
+      })),
+    );
     return `/quests/${quest.id}/debrief`;
   }
 
   if (quest.type === QuestType.Questions && origin.questionIndex !== null) {
     const question = quest.questions[origin.questionIndex];
-    setSaveGame((s) => ({
-      ...s,
-      quests: {
-        ...s.quests,
-        [quest.id]: {
-          ...(s.quests[quest.id] ?? defaultQuestSaveGame),
-          discoveries: {
-            ...(s.quests[quest.id] ?? defaultQuestSaveGame).discoveries,
-            [question.id]: true,
-          },
+    setSaveGame((s) =>
+      reduceQuestSaveGame(s, quest.id, (qs) => ({
+        ...qs,
+        discoveries: {
+          ...qs.discoveries,
+          [question.id]: true,
         },
-      },
-    }));
+      })),
+    );
     return `/quests/${quest.id}/questions/${origin.questionIndex}`;
   }
 
