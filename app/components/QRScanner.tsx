@@ -8,6 +8,7 @@ import {
   useEffectEvent,
   useState,
 } from "react";
+import { MdOutlineCameraswitch } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { processScanToken } from "~/lib/scanTokens";
 
@@ -57,12 +58,57 @@ function QRScannerPanel({ onClose }: { onClose: () => void }) {
     }
   });
 
+  const [error, setError] = useState("");
+  const handleError = useCallback((e: unknown) => {
+    if (e instanceof DOMException) {
+      if (e.name === "NotAllowedError") {
+        setError("Camera permission denied");
+        return;
+      }
+      if (e.name === "NotFoundError") {
+        setError("No camera found");
+        return;
+      }
+      setError(e.message);
+      return;
+    }
+    setError("An error has occured while starting the camera");
+  }, []);
+
+  const [frontFacing, setFrontFacing] = useState(false);
+  const toggleFacingMode = useCallback(() => setFrontFacing((f) => !f), []);
+
   return (
     <DialogPanel
       transition
-      className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
+      className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full aspect-square sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
     >
-      <Scanner onScan={handleScan} />
+      <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center">
+        <div className="text-red-500 font-bold">{error}</div>
+      </div>
+      <Scanner
+        onScan={handleScan}
+        onError={handleError}
+        constraints={{ facingMode: frontFacing ? "user" : "environment" }}
+        scanDelay={2000}
+        allowMultiple={false}
+        formats={["qr_code"]}
+        sound={true}
+        components={{
+          onOff: false,
+          torch: true,
+          zoom: true,
+          finder: true,
+        }}
+      >
+        <button
+          type="button"
+          onClick={toggleFacingMode}
+          className="absolute bottom-[83px] right-[8px] z-2"
+        >
+          <MdOutlineCameraswitch className="size-[30px] text-yellow-400" />
+        </button>
+      </Scanner>
     </DialogPanel>
   );
 }
