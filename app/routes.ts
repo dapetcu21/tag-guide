@@ -20,5 +20,11 @@ export default [
   route("export", "routes/export.tsx"),
   ...(process.env.NODE_ENV === "production"
     ? []
-    : prefix("/dev", [route("qr-list", "dev/qrList.tsx")])),
+    : prefix("/dev", [
+        route("qr-list", "dev/qrList.tsx"),
+        ...prefix("card", [
+          index("dev/cardIndex.tsx"),
+          route(":token", "dev/card.tsx"),
+        ]),
+      ])),
 ] satisfies RouteConfig;

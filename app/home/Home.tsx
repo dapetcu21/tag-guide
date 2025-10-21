@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { type Quest, quests } from "~/lib/quests";
 import { ResetSaveGame } from "./ResetSaveGame";
+import { Fragment } from "react/jsx-runtime";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
   <Link className="bg-red-500 aspect-square" to={`/quests/${quest.id}`} />
@@ -25,12 +26,20 @@ export function Home() {
           Export
         </Link>
         {process.env.NODE_ENV !== "production" && (
-          <Link
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            to="/dev/qr-list"
-          >
-            All QR codes
-          </Link>
+          <Fragment>
+            <Link
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              to="/dev/qr-list"
+            >
+              All QR codes
+            </Link>
+            <Link
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              to="/dev/card"
+            >
+              Card
+            </Link>
+          </Fragment>
         )}
       </footer>
     </div>

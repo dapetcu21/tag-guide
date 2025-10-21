@@ -8,15 +8,27 @@ export type QuestSaveGame = {
   discoveries: Record<string, boolean>;
 };
 
-export type SaveGame = { quests: Record<string, QuestSaveGame> };
+export type SaveGame = {
+  salt: number;
+  quests: Record<string, QuestSaveGame>;
+};
 
-export const defaultSaveGame: SaveGame = { quests: {} };
+export const defaultSaveGame: SaveGame = { salt: 0, quests: {} };
 export const defaultQuestSaveGame: QuestSaveGame = {
   isCompleted: false,
   solution: null,
   discoveries: {},
 };
 const localStorageKey = "saveGame";
+
+const getNewSaveGame = () => {
+  const buffer = new Uint16Array(1);
+  crypto.getRandomValues(buffer);
+  return {
+    ...defaultSaveGame,
+    salt: buffer[0],
+  };
+};
 
 let cachedSaveGame: SaveGame | null = null;
 export function getSaveGame(): SaveGame {
@@ -29,7 +41,7 @@ export function getSaveGame(): SaveGame {
   } catch (_) {}
 
   if (!cachedSaveGame) {
-    cachedSaveGame = defaultSaveGame;
+    cachedSaveGame = getNewSaveGame();
   }
 
   return cachedSaveGame;
@@ -57,13 +69,10 @@ export function setSaveGame(reducer: SaveGameReducer) {
   }
 }
 
-export const resetSaveGame = () => setSaveGame(() => defaultSaveGame);
+export const resetSaveGame = () => setSaveGame(() => getNewSaveGame());
 
 const getServerSnapshot = () => defaultSaveGame;
-export function useSaveGame(): [
-  SaveGame,
-  (reducer: SaveGameReducer) => void,
-] {
+export function useSaveGame(): [SaveGame, (reducer: SaveGameReducer) => void] {
   return [
     useSyncExternalStore<SaveGame>(
       subscribeToSaveGame,
@@ -88,7 +97,9 @@ export const reduceQuestSaveGame = (
   },
 });
 
-export function useQuestSaveGame(questId: string) : [QuestSaveGame, (reducer: QuestSaveGameReducer) => void] {
+export function useQuestSaveGame(
+  questId: string,
+): [QuestSaveGame, (reducer: QuestSaveGameReducer) => void] {
   const [saveGame, setSaveGame] = useSaveGame();
   const questSaveGame = saveGame.quests[questId] ?? defaultQuestSaveGame;
 
