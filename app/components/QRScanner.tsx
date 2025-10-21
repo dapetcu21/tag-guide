@@ -2,11 +2,11 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { type IDetectedBarcode, Scanner } from "@yudiel/react-qr-scanner";
 import {
   createContext,
-  Fragment,
   type ReactNode,
   useCallback,
   useContext,
   useEffectEvent,
+  useMemo,
   useState,
 } from "react";
 import { MdOutlineCameraswitch } from "react-icons/md";
@@ -84,6 +84,10 @@ function QRScannerPanel({
 
   const [frontFacing, setFrontFacing] = useState(false);
   const toggleFacingMode = useCallback(() => setFrontFacing((f) => !f), []);
+  const constraints = useMemo(
+    () => ({ facingMode: { ideal: frontFacing ? "user" : "environment" } }),
+    [frontFacing],
+  );
 
   return (
     <DialogPanel
@@ -97,7 +101,7 @@ function QRScannerPanel({
         <Scanner
           onScan={handleScan}
           onError={handleError}
-          constraints={{ facingMode: frontFacing ? "user" : "environment" }}
+          constraints={constraints}
           scanDelay={2000}
           allowMultiple={false}
           formats={["qr_code"]}
