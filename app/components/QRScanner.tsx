@@ -31,14 +31,20 @@ export const QRScannerProvider = ({ children }: { children: ReactNode }) => {
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex flex-row min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <QRScannerPanel onClose={closeDialog} />
+            <QRScannerPanel open={open} onClose={closeDialog} />
           </div>
         </div>
       </Dialog>
     </QRScannerContext>
   );
 };
-function QRScannerPanel({ onClose }: { onClose: () => void }) {
+function QRScannerPanel({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   const navigate = useNavigate();
   const handleScan = useEffectEvent((results: Array<IDetectedBarcode>) => {
     let navigateTo: string | null = null;
@@ -96,6 +102,7 @@ function QRScannerPanel({ onClose }: { onClose: () => void }) {
           allowMultiple={false}
           formats={["qr_code"]}
           sound={true}
+          paused={!open}
           components={{
             onOff: false,
             torch: true,
