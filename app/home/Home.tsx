@@ -4,7 +4,7 @@ import { ResetSaveGame } from "./ResetSaveGame";
 import { Fragment } from "react/jsx-runtime";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
-  <Link className="bg-red-500 aspect-square" to={`/quests/${quest.id}`} />
+  <Link className="bg-orange aspect-square" to={`/quests/${quest.id}`} />
 );
 
 export function Home() {

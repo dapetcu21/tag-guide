@@ -1,0 +1,3 @@
+[submodule "app/css/fonts"]
+	path = app/css/fonts
+	url = https://github.com/dapetcu21/tag-fonts.git

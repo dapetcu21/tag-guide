@@ -1,12 +1,28 @@
 @import "tailwindcss";
+@import "./css/fonts.css";
 
 @theme {
-  --font-sans:
-    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-heading: "TAG-Owners", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "TAG-Loos", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-\*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-lily: #f5a9ff;
+  --color-pink: #df28f9;
+  --color-magenta: #cb00c5;
+  --color-midnight: #231539;
+  --color-blue: #3000f9;
+  --color-yellow: #ffda02;
+  --color-orange: #ea502e;
+  --color-teal: #419af2;
 }
 
 html,
 body {
-  @apply bg-white;
+  @apply bg-yellow;
+  @apply text-midnight;
+  @apply font-sans;
 }
