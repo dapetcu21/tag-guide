@@ -3,8 +3,17 @@ on:
   push:
     branches:
       - dist
+  workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
@@ -18,7 +27,14 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: build/client
+          path: 'build/client'
+
+      - name: Deploy 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
