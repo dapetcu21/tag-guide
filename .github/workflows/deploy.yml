@@ -26,6 +26,7 @@ jobs:
         run: |
           npm ci
           VITE_ENABLE_DEV_ROUTES=1 npm run build
+          cp build/client/index.html build/client/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
