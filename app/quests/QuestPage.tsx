@@ -2,8 +2,19 @@
 
 import classNames from "classnames";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from "react";
+import { LuCircle, LuTrophy } from "react-icons/lu";
+import {
+  MdChevronLeft,
+  MdChevronRight,
+  MdCircle,
+  MdClose,
+  MdQuestionMark,
+  MdWarningAmber,
+} from "react-icons/md";
+import { LiaQuestionCircle } from "react-icons/lia";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import { QRScannerProvider } from "~/components/QRScanner";
+import Rulers from "~/components/Rulers";
 import { type Quest, QuestType } from "~/lib/quests";
 import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
@@ -38,16 +49,30 @@ const PageDot = ({
     () => navigate(page.path),
     [page.path, navigate],
   );
+
   return (
     <button
       type="button"
-      className={classNames("w-2", "h-2", {
-        "font-bold": selected,
-        "text-red-400": invalid,
-      })}
+      className={classNames(
+        "size-12 flex relative justify-center items-center transition-colors",
+        {
+          "text-orange": selected,
+        },
+      )}
       onClick={handleClick}
     >
-      {"*"}
+      {page.type === PageType.Brief && <MdQuestionMark size={26} />}
+      {page.type === PageType.Debrief && <LuTrophy size={26} />}
+      {page.type === PageType.Question && <MdCircle size={12} />}
+      <MdWarningAmber
+        size={26}
+        className={classNames(
+          "absolute top-0 left-[50%] transform transition-all translate-x-[-50%] text-orange",
+          invalid
+            ? "opacity-100 translate-y-[-100%]"
+            : "opacity-0 translate-y-[0]",
+        )}
+      />
     </button>
   );
 };
@@ -100,31 +125,46 @@ function QuestContainer({
     );
   });
 
+  const hasPrev = currentPageIndex !== -1 && currentPageIndex > 0;
+  const hasNext = currentPageIndex !== -1 && currentPageIndex + 1 < availablePages.length;
+
   return (
-    <div>
-      <Link to="/">All quests</Link>
-      <div>{children}</div>
-      <div className="flex flex-row justify-center items-center">
-        {currentPageIndex !== -1 && currentPageIndex > 0 && (
+    <div className="flex justify-stretch items-stretch w-screen h-screen p-4 overflow-hidden">
+      <div className="w-full h-full relative">
+        <Rulers />
+        <div className="bg-yellow w-full h-full rounded-xl overflow-auto pt-16 px-4 pb-12">
+          {children}
+        </div>
+        <Link to="/" className="absolute top-0 left-0 size-16 flex justify-center items-center">
+          <MdClose size={32} />
+        </Link>
+        <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">
           <button
             type="button"
+            className={classNames(
+              "flex justify-center items-center size-12",
+              hasPrev ? "opacity-100" : "opacity-0",
+            )}
+            disabled={!hasPrev}
             onClick={() => navigate(availablePages[currentPageIndex - 1].path)}
           >
-            Prev
+            <MdChevronLeft size={32} />
           </button>
-        )}
-        {pageDots}
-        {currentPageIndex !== -1 &&
-          currentPageIndex + 1 < availablePages.length && (
-            <button
-              type="button"
-              onClick={() =>
-                navigate(availablePages[currentPageIndex + 1].path)
-              }
-            >
-              Next
-            </button>
-          )}
+          {pageDots}
+          <button
+            type="button"
+            className={classNames(
+              "flex justify-center items-center size-12",
+              hasNext ? "opacity-100" : "opacity-0",
+            )}
+            disabled={!hasNext}
+            onClick={() =>
+              navigate(availablePages[currentPageIndex + 1].path)
+            }
+          >
+            <MdChevronRight size={32} />
+          </button>
+        </div>
       </div>
     </div>
   );

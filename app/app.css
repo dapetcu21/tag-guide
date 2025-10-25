@@ -32,6 +32,7 @@
 @utility text-impact {
   @apply font-impact;
   font-optical-sizing: auto;
+  font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
   font-variation-settings:
@@ -40,7 +41,7 @@
 
 html,
 body {
-  @apply bg-yellow;
+  @apply bg-lily;
   @apply text-midnight;
   @apply text-sans;
 }
