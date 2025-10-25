@@ -58,12 +58,12 @@ const QRCodeEntry = ({
   pageOrigin,
   size,
 }: {
-  scanToken: string;
-  origin: ScanTokenOrigin;
+  scanToken?: string;
+  origin?: ScanTokenOrigin;
   pageOrigin: string;
   size: number;
 }) => {
-  const path = `/s/${scanToken}`;
+  const path = scanToken != null ? `/s/${scanToken}` : "";
   const ref = useRef(null);
   return (
     <div className="flex flex-col items-center">
@@ -87,12 +87,16 @@ const QRCodeEntry = ({
           />
         </div>
       </Link>
-      <OriginDescription scanToken={scanToken} origin={origin} />
+      {origin != null && scanToken != null ? (
+        <OriginDescription scanToken={scanToken} origin={origin} />
+      ) : (
+        <div>Index</div>
+      )}
       <button
         type="button"
         onClick={() => {
           if (!ref.current) return;
-          takeScreenShot(ref.current, scanToken);
+          takeScreenShot(ref.current, scanToken ?? "index");
         }}
         className="hidden not-print:block border border-radius hover:bg-gray-300"
       >
@@ -127,6 +131,7 @@ export default function QRList() {
         />
       </div>
       <div className="w-full flex flex-row justify-center flex-wrap break-inside-avoid">
+        <QRCodeEntry pageOrigin={pageOrigin} size={size} />
         {[...scanTokenOrigins.entries()].map(([scanToken, origin]) => (
           <QRCodeEntry
             key={scanToken}
