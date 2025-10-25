@@ -18,8 +18,8 @@ export default [
   ]),
   route("s/:scanToken", "routes/scanResult.tsx"),
   route("export", "routes/export.tsx"),
-  ...(process.env.NODE_ENV === "production" ||
-    process.env.VITE_ENABLE_DEV_ROUTES
+  ...(process.env.NODE_ENV === "production" &&
+    !process.env.VITE_ENABLE_DEV_ROUTES
     ? []
     : prefix("/dev", [
       route("qr-list", "dev/qrList.tsx"),
