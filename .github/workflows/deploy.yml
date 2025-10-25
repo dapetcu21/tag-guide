@@ -25,7 +25,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
-          npm run build
+          VITE_ENABLE_DEV_ROUTES=1 npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
