@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import "./css/fonts.css";
 
 @theme {
-  --font-heading: "TAG-Owners", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-\*: initial;
+  --font-sans: "Special Gothic", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-sans: "TAG-Loos", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-impact: "League Gothic", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-\*: initial;
@@ -20,9 +20,27 @@
   --color-teal: #419af2;
 }
 
+@utility text-sans {
+  @apply font-sans;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 115;
+}
+
+@utility text-impact {
+  @apply font-impact;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-transform: uppercase;
+  font-variation-settings:
+    "wdth" 75;
+}
+
 html,
 body {
   @apply bg-yellow;
   @apply text-midnight;
-  @apply font-sans;
+  @apply text-sans;
 }
