@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { Fragment, useCallback, useState } from "react";
+import { Trans } from "react-i18next";
 import { MdWarningAmber } from "react-icons/md";
 import { resetSaveGame } from "~/lib/saveGame";
 
@@ -26,7 +27,7 @@ export function ResetSaveGame() {
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         onClick={openDialog}
       >
-        Reset progress
+        <Trans>Reset progress</Trans>
       </button>
       <Dialog open={open} onClose={closeDialog} className="relative z-10">
         <DialogBackdrop

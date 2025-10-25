@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { QuestType } from "~/lib/quests";
 import {
@@ -102,15 +103,17 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
     [quest, question, questionIndex, questSaveGame, setQuestSaveGame, navigate],
   );
 
+  const { t } = useTranslation();
+
   return (
     <div>
-      <div>{question.text}</div>
+      <div>{question.text(t)}</div>
       {question.answers.map((answer, answerIndex) => (
         <AnswerButton
           // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
           key={answerIndex}
           index={answerIndex}
-          answer={answer}
+          answer={answer(t)}
           selected={answerIndex === selectedAnswer}
           correct={
             validate &&

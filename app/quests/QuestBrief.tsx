@@ -1,11 +1,12 @@
 import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
+import { QRScannerButton } from "~/components/QRScanner";
 import { QuestType } from "~/lib/quests";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
 import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
-import { QRScannerButton } from "~/components/QRScanner";
 
 export default function QuestBrief(_: Route.ComponentProps) {
   const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
@@ -21,10 +22,11 @@ export default function QuestBrief(_: Route.ComponentProps) {
     navigate(`/quests/${quest.id}/debrief`);
   }, [navigate, quest]);
 
+  const { t } = useTranslation();
   return (
     <div>
-      <div>{quest.text}</div>
-      {quest.image != null && <img src={quest.image} alt={quest.text} />}
+      <div>{quest.brief(t)}</div>
+      {quest.image != null && <img src={quest.image} alt={t("quest.brief_image_alt", "Quest icon")} />}
       {quest.type === QuestType.TextInput && (
         <QuestInput
           quest={quest}

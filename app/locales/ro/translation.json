@@ -1,0 +1,52 @@
+{
+  "quest": {
+    "brief_image_alt": ""
+  },
+  "Reset progress": "",
+  "test_question_qr": {
+    "author": {
+      "gaiman": "",
+      "pratchett": "",
+      "rrmartin": "",
+      "sanderson": "",
+      "text": ""
+    }
+  },
+  "test_questions": {
+    "brief": "",
+    "debrief": "",
+    "q1": {
+      "a1": "",
+      "a2": "",
+      "a3": "",
+      "a4": "",
+      "text": ""
+    },
+    "q2": {
+      "a1": "",
+      "a2": "",
+      "a3": "",
+      "a4": "",
+      "text": ""
+    }
+  },
+  "test_questions_qr": {
+    "brief": "",
+    "color": {
+      "blue": "",
+      "green": "",
+      "red": "",
+      "text": "",
+      "yellow": ""
+    },
+    "debrief": ""
+  },
+  "test_scannable": {
+    "brief": "",
+    "debrief": ""
+  },
+  "test_text": {
+    "brief": "",
+    "debrief": ""
+  }
+}

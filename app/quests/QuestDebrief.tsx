@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useQuestContext } from "./QuestContext";
 
 export default function QuestDebrief() {
   const { quest, questSaveGame } = useQuestContext();
+  const { t } = useTranslation();
 
   if (!questSaveGame.isCompleted) {
     throw new Error("Quest not completed yet");
@@ -9,10 +11,7 @@ export default function QuestDebrief() {
 
   return (
     <div>
-      <div>{quest.completionText}</div>
-      {quest.completionImage != null && (
-        <img src={quest.completionImage} alt={quest.completionText} />
-      )}
+      <div>{quest.debrief(t)}</div>
     </div>
   );
 }

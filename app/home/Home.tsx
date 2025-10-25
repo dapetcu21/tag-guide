@@ -1,7 +1,7 @@
+import { Fragment } from "react/jsx-runtime";
 import { Link } from "react-router";
 import { type Quest, quests } from "~/lib/quests";
 import { ResetSaveGame } from "./ResetSaveGame";
-import { Fragment } from "react/jsx-runtime";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
   <Link className="bg-orange aspect-square" to={`/quests/${quest.id}`} />
