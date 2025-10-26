@@ -14,6 +14,7 @@ import {
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import { QRScannerProvider } from "~/components/QRScanner";
 import Rulers from "~/components/Rulers";
+import { setTransitionClasses } from "~/lib/fakeTransitionType";
 import { type Quest, QuestType } from "~/lib/quests";
 import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
@@ -38,16 +39,20 @@ const PageDot = ({
   page,
   selected,
   invalid,
+  index,
+  selectedIndex,
 }: {
   page: PageRoute;
   selected: boolean;
   invalid: boolean;
+  index: number;
+  selectedIndex: number;
 }) => {
   const navigate = useNavigate();
-  const handleClick = useCallback(
-    () => navigate(page.path),
-    [page.path, navigate],
-  );
+  const handleClick = useCallback(() => {
+    setTransitionClasses({ "transition-back": index < selectedIndex });
+    navigate(page.path, { viewTransition: true });
+  }, [page.path, navigate, index, selectedIndex]);
 
   return (
     <button
@@ -95,11 +100,15 @@ function QuestContainer({
   const navigate = useNavigate();
 
   let currentPageIndex = -1;
-  const pageDots = availablePages.map((page, index) => {
+  availablePages.forEach((page, index) => {
     const selected = currentPath === page.path;
     if (selected) {
       currentPageIndex = index;
     }
+  });
+
+  const pageDots = availablePages.map((page, index) => {
+    const selected = currentPath === page.path;
 
     const invalid =
       validate &&
@@ -120,6 +129,8 @@ function QuestContainer({
         page={page}
         selected={selected}
         invalid={invalid}
+        index={index}
+        selectedIndex={currentPageIndex}
       />
     );
   });
@@ -142,17 +153,26 @@ function QuestContainer({
             } as any
           }
         >
-          <div className="bg-yellow w-full h-full rounded-xl overflow-auto pt-16 px-4 pb-12">
-            {children}
+          <div
+            className="w-full h-full border-pink"
+            style={{ viewTransitionName: "quest-page" }}
+          >
+            <div className="bg-yellow w-full h-full rounded-2xl overflow-auto pt-16 px-4 pb-12">
+              {children}
+            </div>
           </div>
           <Link
             className="absolute top-0 left-0 size-16 flex justify-center items-center"
             to="/"
             viewTransition
+            style={{ viewTransitionName: "quest-close" }}
           >
             <MdClose size={32} />
           </Link>
-          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">
+          <div
+            className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center"
+            style={{ viewTransitionName: "quest-nav" }}
+          >
             <button
               type="button"
               className={classNames(
@@ -160,9 +180,12 @@ function QuestContainer({
                 hasPrev ? "opacity-100" : "opacity-0",
               )}
               disabled={!hasPrev}
-              onClick={() =>
-                navigate(availablePages[currentPageIndex - 1].path)
-              }
+              onClick={() => {
+                setTransitionClasses({ "transition-back": true });
+                navigate(availablePages[currentPageIndex - 1].path, {
+                  viewTransition: true,
+                });
+              }}
             >
               <MdChevronLeft size={32} />
             </button>
@@ -174,9 +197,12 @@ function QuestContainer({
                 hasNext ? "opacity-100" : "opacity-0",
               )}
               disabled={!hasNext}
-              onClick={() =>
-                navigate(availablePages[currentPageIndex + 1].path)
-              }
+              onClick={() => {
+                setTransitionClasses({ "transition-back": false });
+                navigate(availablePages[currentPageIndex + 1].path, {
+                  viewTransition: true,
+                });
+              }}
             >
               <MdChevronRight size={32} />
             </button>
@@ -199,6 +225,7 @@ export function QuestPage({ quest }: { quest: Quest }) {
     if (prevIsCompleted.current !== isCompleted) {
       prevIsCompleted.current = isCompleted;
       if (isCompleted) {
+        setTransitionClasses({ "transition-back": false });
         navigate(`/quests/${quest.id}/debrief`);
       }
     }
