@@ -45,3 +45,10 @@ body {
   @apply text-midnight;
   @apply text-sans;
 }
+
+::view-transition-old(.quest),
+::view-transition-new(.quest) {
+  object-fit: stretch;
+  width: 100%;
+  height: 100%;
+}

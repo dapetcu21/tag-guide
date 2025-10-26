@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from "react";
-import { LuCircle, LuTrophy } from "react-icons/lu";
+import { LuTrophy } from "react-icons/lu";
 import {
   MdChevronLeft,
   MdChevronRight,
@@ -11,7 +11,6 @@ import {
   MdQuestionMark,
   MdWarningAmber,
 } from "react-icons/md";
-import { LiaQuestionCircle } from "react-icons/lia";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import { QRScannerProvider } from "~/components/QRScanner";
 import Rulers from "~/components/Rulers";
@@ -126,44 +125,62 @@ function QuestContainer({
   });
 
   const hasPrev = currentPageIndex !== -1 && currentPageIndex > 0;
-  const hasNext = currentPageIndex !== -1 && currentPageIndex + 1 < availablePages.length;
+  const hasNext =
+    currentPageIndex !== -1 && currentPageIndex + 1 < availablePages.length;
 
   return (
     <div className="flex justify-stretch items-stretch w-screen h-screen p-4 overflow-hidden">
       <div className="w-full h-full relative">
-        <Rulers />
-        <div className="bg-yellow w-full h-full rounded-xl overflow-auto pt-16 px-4 pb-12">
-          {children}
-        </div>
-        <Link to="/" className="absolute top-0 left-0 size-16 flex justify-center items-center">
-          <MdClose size={32} />
-        </Link>
-        <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">
-          <button
-            type="button"
-            className={classNames(
-              "flex justify-center items-center size-12",
-              hasPrev ? "opacity-100" : "opacity-0",
-            )}
-            disabled={!hasPrev}
-            onClick={() => navigate(availablePages[currentPageIndex - 1].path)}
+        <Rulers viewTransitionName="main-rulers" />
+        <div
+          className="w-full h-full"
+          style={
+            {
+              viewTransitionName: `quest-${quest.id}`,
+              viewTransitionClass: `quest`,
+              // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
+            } as any
+          }
+        >
+          <div className="bg-yellow w-full h-full rounded-xl overflow-auto pt-16 px-4 pb-12">
+            {children}
+          </div>
+          <Link
+            className="absolute top-0 left-0 size-16 flex justify-center items-center"
+            to="/"
+            viewTransition
           >
-            <MdChevronLeft size={32} />
-          </button>
-          {pageDots}
-          <button
-            type="button"
-            className={classNames(
-              "flex justify-center items-center size-12",
-              hasNext ? "opacity-100" : "opacity-0",
-            )}
-            disabled={!hasNext}
-            onClick={() =>
-              navigate(availablePages[currentPageIndex + 1].path)
-            }
-          >
-            <MdChevronRight size={32} />
-          </button>
+            <MdClose size={32} />
+          </Link>
+          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">
+            <button
+              type="button"
+              className={classNames(
+                "flex justify-center items-center size-12",
+                hasPrev ? "opacity-100" : "opacity-0",
+              )}
+              disabled={!hasPrev}
+              onClick={() =>
+                navigate(availablePages[currentPageIndex - 1].path)
+              }
+            >
+              <MdChevronLeft size={32} />
+            </button>
+            {pageDots}
+            <button
+              type="button"
+              className={classNames(
+                "flex justify-center items-center size-12",
+                hasNext ? "opacity-100" : "opacity-0",
+              )}
+              disabled={!hasNext}
+              onClick={() =>
+                navigate(availablePages[currentPageIndex + 1].path)
+              }
+            >
+              <MdChevronRight size={32} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

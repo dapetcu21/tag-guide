@@ -1,13 +1,21 @@
 import { Fragment } from "react/jsx-runtime";
 import { Link } from "react-router";
+import Rulers from "~/components/Rulers";
 import { type Quest, quests } from "~/lib/quests";
 import { ResetSaveGame } from "./ResetSaveGame";
-import Rulers from "~/components/Rulers";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
   <Link
     className="bg-yellow aspect-square rounded-[50%]"
+    style={
+      {
+        viewTransitionName: `quest-${quest.id}`,
+        viewTransitionClass: `quest`,
+      // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
+      } as any
+    }
     to={`/quests/${quest.id}`}
+    viewTransition
   />
 );
 
@@ -29,25 +37,16 @@ export function Home() {
           }
         `}
       </style>
-      <div
-        id="home-grid-container"
-        className="row-start-2 flex flex-col"
-      >
+      <div id="home-grid-container" className="row-start-2 flex flex-col">
         <div
           id="home-grid"
           className="flex flex-col justify-center items-stretch w-full h-full"
         >
           <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
-            <Rulers/>
+            <Rulers viewTransitionName="main-rulers"/>
             {quests.map((quest) => (
               <QuestTile key={quest.id} quest={quest} />
             ))}
-            {new Array(Math.max(0, 16 - quests.length))
-              .fill(0)
-              .map((_, index) => (
-                // biome-ignore lint/suspicious/noArrayIndexKey: testing
-                <QuestTile key={index} quest={quests[0]} />
-              ))}
           </main>
         </div>
       </div>
