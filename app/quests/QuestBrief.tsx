@@ -1,5 +1,7 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { LuTrophy } from "react-icons/lu";
+import { MdChevronRight } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { QRScannerButton } from "~/components/QRScanner";
 import { QuestType } from "~/lib/quests";
@@ -7,6 +9,8 @@ import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
 import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
+import { QuestMarkdown } from "./QuestMarkdown";
+import { QuestButton } from "./QuestButton";
 
 export default function QuestBrief(_: Route.ComponentProps) {
   const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
@@ -25,26 +29,36 @@ export default function QuestBrief(_: Route.ComponentProps) {
   const { t } = useTranslation();
   return (
     <div>
-      <div>{quest.brief(t)}</div>
-      {quest.image != null && <img src={quest.image} alt={t("quest.brief_image_alt", "Quest icon")} />}
+      <QuestMarkdown text={quest.brief(t)} />
+      {quest.image != null && (
+        <img src={quest.image} alt={t("quest.brief_image_alt", "Quest icon")} />
+      )}
       {quest.type === QuestType.TextInput && (
-        <QuestInput
-          quest={quest}
-          questSaveGame={questSaveGame}
-          setQuestSaveGame={setQuestSaveGame}
-        />
+        <div className="mt-4">
+          <QuestInput
+            quest={quest}
+            questSaveGame={questSaveGame}
+            setQuestSaveGame={setQuestSaveGame}
+          />
+        </div>
       )}
       {((quest.type === QuestType.Scannable && !questSaveGame.isCompleted) ||
         hasUnavailableQuestions(quest, questSaveGame)) && <QRScannerButton />}
       {nextQuestion >= 0 && (
-        <button type="button" onClick={handleNextQuestionClick}>
+        <QuestButton
+          icon={<MdChevronRight size={32} />}
+          onClick={handleNextQuestionClick}
+        >
           Continue
-        </button>
+        </QuestButton>
       )}
       {questSaveGame.isCompleted && (
-        <button type="button" onClick={handleGoToDebriefClick}>
+        <QuestButton
+          icon={<LuTrophy size={28} />}
+          onClick={handleGoToDebriefClick}
+        >
           Debrief
-        </button>
+        </QuestButton>
       )}
     </div>
   );

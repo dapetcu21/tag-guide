@@ -68,15 +68,16 @@ const PageDot = ({
       {page.type === PageType.Brief && <MdQuestionMark size={26} />}
       {page.type === PageType.Debrief && <LuTrophy size={26} />}
       {page.type === PageType.Question && <MdCircle size={12} />}
-      <MdWarningAmber
-        size={26}
+      <div
         className={classNames(
-          "absolute top-0 left-[50%] transform transition-all translate-x-[-50%] text-orange",
+          "absolute top-2 left-[50%] transform transition-all translate-x-[-50%] bg-yellow rounded-t-[50%] text-orange p-1 pb-2",
           invalid
             ? "opacity-100 translate-y-[-100%]"
             : "opacity-0 translate-y-[0]",
         )}
-      />
+      >
+        <MdWarningAmber size={26} />
+      </div>
     </button>
   );
 };
@@ -107,6 +108,8 @@ function QuestContainer({
     }
   });
 
+  let hasAnyInvalid = false;
+
   const pageDots = availablePages.map((page, index) => {
     const selected = currentPath === page.path;
 
@@ -118,6 +121,8 @@ function QuestContainer({
         quest.questions[page.questionIndex],
         questSaveGame,
       );
+
+    hasAnyInvalid = hasAnyInvalid || invalid;
 
     return (
       <PageDot
@@ -157,7 +162,15 @@ function QuestContainer({
             className="w-full h-full border-pink"
             style={{ viewTransitionName: "quest-page" }}
           >
-            <div className="bg-yellow w-full h-full rounded-2xl overflow-auto pt-16 px-4 pb-12">
+            <div
+              className={classNames(
+                "bg-yellow w-full h-full rounded-2xl overflow-auto pt-16 px-4",
+                {
+                  "pb-20": hasAnyInvalid,
+                  "pb-12": !hasAnyInvalid,
+                },
+              )}
+            >
               {children}
             </div>
           </div>
@@ -170,7 +183,7 @@ function QuestContainer({
             <MdClose size={32} />
           </Link>
           <div
-            className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center"
+            className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center bg-yellow rounded-b-2xl"
             style={{ viewTransitionName: "quest-nav" }}
           >
             <button

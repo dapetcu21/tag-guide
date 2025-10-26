@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useQuestContext } from "./QuestContext";
+import { QuestMarkdown } from "./QuestMarkdown";
 
 export default function QuestDebrief() {
   const { quest, questSaveGame } = useQuestContext();
@@ -11,7 +12,7 @@ export default function QuestDebrief() {
 
   return (
     <div>
-      <div>{quest.debrief(t)}</div>
+      <QuestMarkdown text={quest.debrief(t)} />
     </div>
   );
 }

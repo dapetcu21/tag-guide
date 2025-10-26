@@ -11,6 +11,7 @@ import {
 } from "~/lib/util";
 import type { Route } from "./+types/QuestionPage";
 import { useQuestContext } from "./QuestContext";
+import { QuestMarkdown } from "./QuestMarkdown";
 
 const AnswerButton = ({
   index,
@@ -31,10 +32,11 @@ const AnswerButton = ({
   return (
     <button
       type="button"
-      className={classNames("block", {
-        "font-bold": selected,
-        "text-green-400": correct,
-        "text-red-400": incorrect,
+      className={classNames("block p-2", {
+        "bg-orange": !selected,
+        "bg-teal": selected,
+        "text-yellow": correct && !selected,
+        "text-orange": incorrect,
       })}
       onClick={handleClick}
     >
@@ -107,28 +109,30 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
 
   return (
     <div>
-      <div>{question.text(t)}</div>
-      {question.answers.map((answer, answerIndex) => (
-        <AnswerButton
-          // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
-          key={answerIndex}
-          index={answerIndex}
-          answer={answer(t)}
-          selected={answerIndex === selectedAnswer}
-          correct={
-            validate &&
-            question.correctAnswer != null &&
-            answerIndex === question.correctAnswer
-          }
-          incorrect={
-            validate &&
-            question.correctAnswer != null &&
-            answerIndex !== question.correctAnswer &&
-            answerIndex === selectedAnswer
-          }
-          onClick={handleClickAnswer}
-        />
-      ))}
+      <QuestMarkdown text={question.text(t)} />
+      <div className="w-full flex flex-col items-stretch gap-2 my-2">
+        {question.answers.map((answer, answerIndex) => (
+          <AnswerButton
+            // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
+            key={answerIndex}
+            index={answerIndex}
+            answer={answer(t)}
+            selected={answerIndex === selectedAnswer}
+            correct={
+              validate &&
+              question.correctAnswer != null &&
+              answerIndex === question.correctAnswer
+            }
+            incorrect={
+              validate &&
+              question.correctAnswer != null &&
+              answerIndex !== question.correctAnswer &&
+              answerIndex === selectedAnswer
+            }
+            onClick={handleClickAnswer}
+          />
+        ))}
+      </div>
     </div>
   );
 }

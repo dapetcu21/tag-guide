@@ -10,6 +10,7 @@ import {
 import { transliterate } from "transliteration";
 import type { Quest, QuestType } from "~/lib/quests";
 import type { QuestSaveGame } from "~/lib/saveGame";
+import { QuestButton } from "./QuestButton";
 
 const normalizeInput = (s: string): string =>
   transliterate(s)
@@ -80,9 +81,7 @@ export function QuestInput({
   return (
     <div>
       <div>{getSolution(quest, questSaveGame)}</div>
-      <button type="button" onClick={handleEditClick}>
-        Edit
-      </button>
+      <QuestButton onClick={handleEditClick}>Edit</QuestButton>
     </div>
   );
 }
@@ -140,8 +139,8 @@ export function QuestInputEditing({
       <input
         type="text"
         className={classNames(
-          "border-2",
-          isValid ? "border-white" : "border-red-800",
+          "border-2 w-full",
+          isValid ? "border-white" : "border-magenta",
         )}
         value={value}
         // biome-ignore lint/a11y/noAutofocus: <is requested by the user when they press edit>
@@ -149,7 +148,7 @@ export function QuestInputEditing({
         onFocus={handleFocus}
         onChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <QuestButton type="submit">Submit</QuestButton>
     </form>
   );
 }
