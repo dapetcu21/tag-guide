@@ -48,5 +48,137 @@
   "test_text": {
     "brief": "test_text.brief",
     "debrief": "Congrats! You like animals."
+  },
+  "play_to_survive": {
+    "brief": "Explore the ARCADE section and the EXIT FOYER. Find the oldest games on display—those from the early 1980s. Examine their descriptions, release dates, and mechanics to answer the questions.",
+    "debrief": "PLAY AS NATURE'S TEACHING TOOL\n\nPlay is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination. Even octopuses explore their environment through playful manipulation (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.\n\nThe early arcade games you just examined tap into this ancient learning system. Ms. PAC-MAN teaches spatial awareness as you track ghost patterns. BurgerTime teaches cause and effect—step here, ingredient falls there. Lock 'N' Chase teaches evasion and pursuit.\n\nInside a game, failure is safe. You can die and restart. You can experiment without real consequences. This is what makes games such powerful learning tools: they let you practice, fail, and improve without actual risk.\n\nNeuroscience backs this up. When you play a game and when you successfully learn something new, the same reward pathways light up in your brain (Koepp et al., 1998). That feeling of \"fun\" you get? It's your brain's way of saying \"you're learning something useful—keep doing this!\" Evolution wired us to enjoy learning through play.\n\nGames, by offering clear rules and goals, quick feedback when you succeed or fail and gradual increases in difficulty arecreating what the psychologist Lev Vygotsky would later call \"scaffolded learning environments\" (Vygotsky, 1978): structures that support you as you learn, then fade away as you master the skill.\n\nPlay is how nature teaches.\n\n---\n\nREFERENCES:\nBurghardt, G. M. (2005). The Genesis of Animal Play: Testing the Limits. MIT Press.\nHuizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.\nKoepp, M. J., Gunn, R. N., Lawrence, A. D., Cunningham, V. J., Dagher, A., Jones, T., ... & Grasby, P. M. (1998). Evidence for striatal dopamine release during a video game. Nature, 393(6682), 266-268.\nSalen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.\nVygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.\n\nFURTHER READING:\nSutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.\nPellegrini, A. D. (2009). The Role of Play in Human Development. Oxford University Press.\nCaillois, R. (1961). Man, Play and Games",
+    "q1": {
+      "text": "What year was Ms. PAC-MAN first released?",
+      "a1": "1979",
+      "a2": "1981",
+      "a3": "1983",
+      "a4": "1985",
+      "a5": "1987"
+    },
+    "q2": {
+      "text": "According to the description, what must Ms. PAC-MAN do to advance to the next stage?",
+      "a1": "Defeat all the ghosts",
+      "a2": "Collect power-ups in a specific order",
+      "a3": "Eat all the Pac-Dots while avoiding ghosts",
+      "a4": "Complete a time trial",
+      "a5": "Solve maze puzzles"
+    },
+    "q3": {
+      "text": "What is the main objective in BurgerTime according to its description?",
+      "a1": "Race against a timer",
+      "a2": "Control chef Peter Pepper to make ingredients fall and stack on buns",
+      "a3": "Shoot all enemies",
+      "a4": "Solve mathematical puzzles",
+      "a5": "Defend against waves of attackers"
+    },
+    "q4": {
+      "text": "What genre/type of game is Lock 'N' Chase (1981) described as in the EXIT FOYER?",
+      "a1": "Racing game",
+      "a2": "Maze chase",
+      "a3": "Story-driven adventure",
+      "a4": "Multiplayer sports",
+      "a5": "Vertical shooter"
+    }
+  },
+  "the_learning_ladder": {
+    "brief": "Explore the INDIES SPOTLIGHT, THE PLAYER IS PRESENT, KIDS ROOM, and EXIT FOYER sections. Compare games from different eras (1980s through 2020s). Pay attention to genre descriptions, gameplay complexity, and design evolution.",
+    "debrief": "DESIGNERS AS LEARNING ARCHITECTS\n\nNotice what just happened? This quest was harder than the first one. You had to compare games across different eras, understand terms like \"rogue-lite,\" and analyze how game design evolved over decades. We built on what you learned in Quest 1. You already knew how to extract information from exhibits, so now we could ask you to do something more complex with that information.\n\nThis is exactly what game designers do—and psychologist Mihaly Csikszentmihalyi explained why it works. His \"flow theory\" shows that people are happiest and learn best when a task is perfectly balanced: not so easy that you're bored, not so hard that you're frustrated (Csikszentmihalyi, 1990). Games keep you in this sweet spot—what he called the \"flow channel\" - by constantly adjusting difficulty as your skills improve.\n\nGame designers scaffold learning by:\n- Introducing ONE new concept at a time\n- Giving IMMEDIATE FEEDBACK (you know instantly if you succeeded)\n- Increasing DIFFICULTY GRADUALLY (each level slightly harder)\n- Allowing SAFE FAILURE (you can try again without real consequences)\n- Rewarding MASTERY (that satisfying feeling when you \"get it\")\n\nTrinity Fusion's \"rogue-lite\" design brilliantly demonstrates this. You die and restart, but you're smarter each time—you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).\n\nHere's the remarkable part: when learning is scaffolded this way, it doesn't feel like work. It feels like play. Your brain is doing exactly what evolution designed it to do—learn through voluntary, enjoyable engagement. Game designers just figured out how to make that ladder really, really effective at keeping you climbing.\n\n---\n\nREFERENCES:\nBarzilai, S., & Blau, I. (2014). Scaffolding game-based learning: Impact on learning achievements, perceived learning, and game experiences. Computers & Education, 70, 65-79.\nBruner, J. S. (1960). The Process of Education. Harvard University Press.\nChen, J. (2007). Flow in games (and everything else). Communications of the ACM, 50(4), 31-34.\nCsikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.\nHabgood, M. J., & Ainsworth, S. E. (2011). Motivating children to learn effectively: Exploring the value of intrinsic integration in educational games. Journal of the Learning Sciences, 20(2), 169-206.\nSweetser, P., & Wyeth, P. (2005). GameFlow: A model for evaluating player enjoyment in games. Computers in Entertainment, 3(3), 1-24.\nVygotsky, L. S. (1978). Mind in Society. Harvard University Press.\nWood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of Child Psychology and Psychiatry, 17(2), 89-100.\n\nFURTHER READING:\nGarris, R., Ahlers, R., & Driskell, J. E. (2002). Games, motivation, and learning: A research and practice model. Simulation & Gaming, 33(4), 441-467.\nGee, J. P. (2007). What Video Games Have to Teach Us About Learning and Literacy (2nd ed.). Palgrave Macmillan.\nMayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MIT Press.",
+    "q1": {
+      "text": "Find Simpler Times in the INDIES SPOTLIGHT by Romanian studio Stoneskip. How is this game described?",
+      "a1": "Fast-paced action shooter",
+      "a2": "Cozy musical / experiential meditation",
+      "a3": "Competitive multiplayer battle",
+      "a4": "Horror survival experience",
+      "a5": "Complex strategy simulation"
+    },
+    "q2": {
+      "text": "Compare two eras: BurgerTime (1982) taught ONE core mechanic (walk over ingredients). Now find The Witcher 3 (2015) in THE PLAYER IS PRESENT. What does its description emphasise?",
+      "a1": "Simple arcade action",
+      "a2": "A single puzzle type repeated",
+      "a3": "Complex world exploration, monster hunting, and story choices",
+      "a4": "Only combat mechanics",
+      "a5": "Passive watching without interaction"
+    },
+    "q3": {
+      "text": "Game Builder Garage (2021) in the KIDS ROOM explicitly teaches players about what?",
+      "a1": "How to play existing games better",
+      "a2": "The basics of game design and visual programming",
+      "a3": "Historical facts about gaming",
+      "a4": "Competitive esports strategies",
+      "a5": "Art and music composition"
+    },
+    "q4": {
+      "text": "Find Trinity Fusion by Romanian developer Angry Mob Games. It's described as a \"rogue-lite action platformer.\" What does \"rogue-lite\" mean about its learning design?",
+      "a1": "Players start over when they die, but keep some progress/knowledge",
+      "a2": "There is only one correct path through the game",
+      "a3": "The game has no challenge or difficulty",
+      "a4": "Players can only play once",
+      "a5": "All levels are exactly the same each time"
+    },
+    "q5": {
+      "text": "In the EXIT FOYER, find Wizard Fire (1992). According to its description, what setting and genre does it use?",
+      "a1": "Modern city, racing game",
+      "a2": "Year 355 A.D., hack 'n slash",
+      "a3": "Space station, puzzle game",
+      "a4": "Medieval castle, platformer only",
+      "a5": "Underwater world, adventure"
+    }
+  },
+  "beyond_the_game": {
+    "brief": "Synthesize knowledge across the entire exhibition. Cross-reference information between sections. Analyze patterns in gaming history, developer ecosystems, and design evolution from 1980s to present.",
+    "debrief": "GAMES AS A MODEL FOR ALL LEARNING\n\nYou've completed all three quests. Now for the uncomfortable question: if games are so good at teaching, why doesn't all learning work this way?\n\nThink about traditional education for a moment. Lectures where you sit passively for an hour. Textbooks you read weeks before the test. Exams that come with no second chances. Subjects presented in isolation from each other. Failure that's punished rather than used as feedback for improvement.\n\nThis is almost the opposite of how games teach. Research by Shute and Ke (2012) shows that delayed, high-stakes assessment—the kind used in most schools—actively undermines learning compared to the immediate, low-stakes feedback games provide naturally. Games give you information right when you need it; traditional education makes you wait weeks to find out if you understood anything.\n\nCognitive Load Theory explains why lectures often fail: our working memory can only handle so much information at once (Sweller, 1988). Dump too much at us, and we can't process any of it. Games naturally \"chunk\" information—giving you one new concept, letting you practice, then giving you the next. They do this instinctively because players quit games that overwhelm them.\n\nIn this exhibition, each quest scaffolded the next. The difficulty increased gradually. You got immediate feedback (right or wrong answers). Failure was safe (you could try again). This is how Bloom's Taxonomy describes sophisticated learning: starting with basic knowledge and building up to synthesis and evaluation (Krathwohl, 2002).\n\nThe evidence is mounting that this approach works beyond games:\n\n- Duolingo uses game mechanics (points, levels, streaks) to teach languages more effectively than traditional courses (Vesselinov & Grego, 2012)\n- Medical students learn surgery better in simulators—where they can fail safely and repeat endlessly—than through traditional apprenticeship (Seymour et al., 2002)\n- Even this quest system gamifies museum education, turning you from a passive observer into an active learner\n\nThe Romanian developers you discovered exemplify this shift. Critique Gaming's Interrogation doesn't lecture you about ethics—it makes you face ethical dilemmas and live with the consequences. Breadcrumbs Interactive's Yaga doesn't tell you about Slavic folklore—it lets you experience it. Last Tales creates spaces where you learn by solving problems together. These aren't \"games that happen to teach\"—they're teaching that happens through play.\n\nRain World offers a perfect metaphor: you're simultaneously predator and prey in an ecosystem that's always slightly beyond your current ability. Every death teaches you something. The environment provides just enough support to keep you progressing. This is what Vygotsky called the \"Zone of Proximal Development\"—that sweet spot where you're challenged but not overwhelmed (Vygotsky, 1978). Rain World enforces this through its very structure.\n\nThink about your answer to that last question. You recognized that your own learning was scaffolded across these three quests. This awareness—what educators call \"metacognition\"—is the ultimate learning goal. You didn't just learn facts about games; you learned how learning itself works. Now you can recognize these patterns in other contexts and maybe even design learning experiences yourself.\n\nThe question isn't \"Should we make learning more like games?\"\n\nPlay is humanity's original learning technology, refined across millions of years before schools existed. The question is: why did we stop using these principles when we created formal education—and can games help us remember?\n\nGames don't just teach content. They teach how learning works. That's their revolutionary contribution.\n\n---\n\nREFERENCES:\nDweck, C. S. (2006). Mindset: The New Psychology of Success. Random House.\nKrathwohl, D. R. (2002). A revision of Bloom's taxonomy: An overview. Theory into Practice, 41(4), 212-218.\nSeymour, N. E., Gallagher, A. G., Roman, S. A., O'Brien, M. K., Bansal, V. K., Andersen, D. K., & Satava, R. M. (2002). Virtual reality training improves operating room performance: Results of a randomized, double-blinded study. Annals of Surgery, 236(4), 458-464.\nShute, V. J. (2011). Stealth assessment in computer-based games to support learning. In S. Tobias & J. D. Fletcher (Eds.), Computer Games and Instruction (pp. 503-524). Information Age Publishers.\nShute, V. J., & Ke, F. (2012). Games, learning, and assessment. In D. Ifenthaler, D. Eseryel, & X. Ge (Eds.), Assessment in Game-Based Learning: Foundations, Innovations, and Perspectives (pp. 43-58). Springer.\nSweller, J. (1988). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2), 257-285.\nVesselinov, R., & Grego, J. (2012). Duolingo Effectiveness Study. City University of New York.\n\nFURTHER READING:\nClark, D. B., Tanner-Smith, E. E., & Killingsworth, S. S. (2016). Digital games, design, and learning: A systematic review and meta-analysis. Review of Educational Research, 86(1), 79-122.\nHoney, M. A., & Hilton, M. L. (Eds.). (2011). Learning Science Through Computer Games and Simulations. National Academies Press.\nPrensky, M. (2006). Don't Bother Me, Mom, I'm Learning!: How Computer and Video Games are Preparing Your Kids for 21st Century Success and How You Can Help! Paragon House.\nYoung, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & Yukhymenko, M. (2012). Our princess is in another castle: A review of trends in serious gaming for education. Review of Educational Research, 82(1), 61-89.",
+    "q1": {
+      "text": "Arrange these four games chronologically from OLDEST to NEWEST: Ms. PAC-MAN, Papers Please, Stray, BurgerTime",
+      "a1": "Ms. PAC-MAN (1981), BurgerTime (1982), Papers Please (2013), Stray (2022)",
+      "a2": "BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022), Papers Please (2013)",
+      "a3": "Papers Please (2013), BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022)",
+      "a4": "Stray (2022), Papers Please (2013), Ms. PAC-MAN (1981), BurgerTime (1982)",
+      "a5": "BurgerTime (1982), Papers Please (2013), Ms. PAC-MAN (1981), Stray (2022)"
+    },
+    "q2": {
+      "text": "Which game in the exhibition EXPLICITLY teaches game design itself, demonstrating that game principles can teach complex subjects?",
+      "a1": "The Hex by Daniel Mullins Games",
+      "a2": "Game Builder Garage by Nintendo",
+      "a3": "There Is No Game: Wrong Dimension",
+      "a4": "Portal (referenced in descriptions)",
+      "a5": "Minecraft (referenced in descriptions)"
+    },
+    "q3": {
+      "text": "ROMANIAN GAME DEVELOPMENT - Which Romanian developer created a game for the KIDS ROOM section, showing how local developers contribute to global gaming education?",
+      "a1": "Last Tales (Raiders of The Lost Island)",
+      "a2": "stoneskip. (Simpler Times)",
+      "a3": "Breadcrumbs Interactive (Yaga)",
+      "a4": "Sand Sailor Studio (ASKA)",
+      "a5": "Edgeflow Studio (Breachway)"
+    },
+    "q4": {
+      "text": "According to its description, in Rain World you play as a \"nomadic slugcat\" in what kind of environment?",
+      "a1": "A peaceful garden sanctuary",
+      "a2": "A broken ecosystem where you are both predator and prey",
+      "a3": "A friendly city with no danger",
+      "a4": "A time-traveling dimension",
+      "a5": "An underwater coral reef"
+    },
+    "q5": {
+      "text": "DEVELOPER IDENTIFICATION - Match each Romanian developer to their game:\n- Game A: Bear and Breakfast\n- Game B: Interrogation: You will be deceived\n- Game C: Yaga",
+      "a1": "Gummy Cat, Critique Gaming, Breadcrumbs Interactive",
+      "a2": "Critique Gaming, Gummy Cat, Breadcrumbs Interactive",
+      "a3": "Breadcrumbs Interactive, Gummy Cat, Critique Gaming",
+      "a4": "Angry Mob Games, KillHouse Games, Alien Pixel Studios",
+      "a5": "stoneskip., Last Tales, Sand Sailor Studio"
+    },
+    "q6": {
+      "text": "META-LEARNING QUESTION - Think about YOUR experience with these three quests. Which statement is TRUE about your learning journey?",
+      "a1": "All three quests were equally difficult with no progression",
+      "a2": "Quest 1 taught basics, Quest 2 built on that knowledge, Quest 3 required synthesizing everything—demonstrating scaffolded learning",
+      "a3": "The quests got easier as you progressed",
+      "a4": "Each quest taught completely unrelated information",
+      "a5": "Only Quest 3 contained any real learning"
+    }
   }
 }

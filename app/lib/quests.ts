@@ -128,114 +128,55 @@ export const quests: Array<Quest> = [
   },
   {
     id: "play_to_survive",
-    brief: (t) =>
-      t(
-        "play_to_survive.brief",
-        "Explore the ARCADE section and the EXIT FOYER. Find the oldest games on display—those from the early 1980s. Examine their descriptions, release dates, and mechanics to answer the questions.",
-      ),
-    debrief: (t) =>
-      t(
-        "play_to_survive.debrief",
-        `PLAY AS NATURE'S TEACHING TOOL
-
-Play is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination. Even octopuses explore their environment through playful manipulation (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.
-
-The early arcade games you just examined tap into this ancient learning system. Ms. PAC-MAN teaches spatial awareness as you track ghost patterns. BurgerTime teaches cause and effect—step here, ingredient falls there. Lock 'N' Chase teaches evasion and pursuit.
-
-Inside a game, failure is safe. You can die and restart. You can experiment without real consequences. This is what makes games such powerful learning tools: they let you practice, fail, and improve without actual risk.
-
-Neuroscience backs this up. When you play a game and when you successfully learn something new, the same reward pathways light up in your brain (Koepp et al., 1998). That feeling of "fun" you get? It's your brain's way of saying "you're learning something useful—keep doing this!" Evolution wired us to enjoy learning through play.
-
-Games, by offering clear rules and goals, quick feedback when you succeed or fail and gradual increases in difficulty arecreating what the psychologist Lev Vygotsky would later call "scaffolded learning environments" (Vygotsky, 1978): structures that support you as you learn, then fade away as you master the skill.
-
-Play is how nature teaches.
-
----
-
-REFERENCES:
-Burghardt, G. M. (2005). The Genesis of Animal Play: Testing the Limits. MIT Press.
-Huizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.
-Koepp, M. J., Gunn, R. N., Lawrence, A. D., Cunningham, V. J., Dagher, A., Jones, T., ... & Grasby, P. M. (1998). Evidence for striatal dopamine release during a video game. Nature, 393(6682), 266-268.
-Salen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.
-Vygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.
-
-FURTHER READING:
-Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.
-Pellegrini, A. D. (2009). The Role of Play in Human Development. Oxford University Press.
-Caillois, R. (1961). Man, Play and Games`,
-      ),
+    brief: (t) => t("play_to_survive.brief"),
+    debrief: (t) => t("play_to_survive.debrief"),
     type: QuestType.Questions,
     questions: [
       {
         id: "q1",
-        text: (t) =>
-          t(
-            "play_to_survive.q1.text",
-            "What year was Ms. PAC-MAN first released?",
-          ),
+        text: (t) => t("play_to_survive.q1.text"),
         answers: [
-          (t) => t("play_to_survive.q1.a1", "1979"),
-          (t) => t("play_to_survive.q1.a2", "1981"),
-          (t) => t("play_to_survive.q1.a3", "1983"),
-          (t) => t("play_to_survive.q1.a4", "1985"),
-          (t) => t("play_to_survive.q1.a5", "1987"),
+          (t) => t("play_to_survive.q1.a1"),
+          (t) => t("play_to_survive.q1.a2"),
+          (t) => t("play_to_survive.q1.a3"),
+          (t) => t("play_to_survive.q1.a4"),
+          (t) => t("play_to_survive.q1.a5"),
         ],
         correctAnswer: 1,
       },
       {
         id: "q2",
-        text: (t) =>
-          t(
-            "play_to_survive.q2.text",
-            "According to the description, what must Ms. PAC-MAN do to advance to the next stage?",
-          ),
+        text: (t) => t("play_to_survive.q2.text"),
         answers: [
-          (t) => t("play_to_survive.q2.a1", "Defeat all the ghosts"),
-          (t) =>
-            t("play_to_survive.q2.a2", "Collect power-ups in a specific order"),
-          (t) =>
-            t(
-              "play_to_survive.q2.a3",
-              "Eat all the Pac-Dots while avoiding ghosts",
-            ),
-          (t) => t("play_to_survive.q2.a4", "Complete a time trial"),
-          (t) => t("play_to_survive.q2.a5", "Solve maze puzzles"),
+          (t) => t("play_to_survive.q2.a1"),
+          (t) => t("play_to_survive.q2.a2"),
+          (t) => t("play_to_survive.q2.a3"),
+          (t) => t("play_to_survive.q2.a4"),
+          (t) => t("play_to_survive.q2.a5"),
         ],
         correctAnswer: 2,
       },
       {
         id: "q3",
-        text: (t) =>
-          t(
-            "play_to_survive.q3.text",
-            "What is the main objective in BurgerTime according to its description?",
-          ),
+        text: (t) => t("play_to_survive.q3.text"),
         answers: [
-          (t) => t("play_to_survive.q3.a1", "Race against a timer"),
-          (t) =>
-            t(
-              "play_to_survive.q3.a2",
-              "Control chef Peter Pepper to make ingredients fall and stack on buns",
-            ),
-          (t) => t("play_to_survive.q3.a3", "Shoot all enemies"),
-          (t) => t("play_to_survive.q3.a4", "Solve mathematical puzzles"),
-          (t) => t("play_to_survive.q3.a5", "Defend against waves of attackers"),
+          (t) => t("play_to_survive.q3.a1"),
+          (t) => t("play_to_survive.q3.a2"),
+          (t) => t("play_to_survive.q3.a3"),
+          (t) => t("play_to_survive.q3.a4"),
+          (t) => t("play_to_survive.q3.a5"),
         ],
         correctAnswer: 1,
       },
       {
         id: "q4",
-        text: (t) =>
-          t(
-            "play_to_survive.q4.text",
-            "What genre/type of game is Lock 'N' Chase (1981) described as in the EXIT FOYER?",
-          ),
+        text: (t) => t("play_to_survive.q4.text"),
         answers: [
-          (t) => t("play_to_survive.q4.a1", "Racing game"),
-          (t) => t("play_to_survive.q4.a2", "Maze chase"),
-          (t) => t("play_to_survive.q4.a3", "Story-driven adventure"),
-          (t) => t("play_to_survive.q4.a4", "Multiplayer sports"),
-          (t) => t("play_to_survive.q4.a5", "Vertical shooter"),
+          (t) => t("play_to_survive.q4.a1"),
+          (t) => t("play_to_survive.q4.a2"),
+          (t) => t("play_to_survive.q4.a3"),
+          (t) => t("play_to_survive.q4.a4"),
+          (t) => t("play_to_survive.q4.a5"),
         ],
         correctAnswer: 1,
       },
