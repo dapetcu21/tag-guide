@@ -1,8 +1,111 @@
 interface Resources {
   "translation": {
-    "Reset progress": "Reset progress",
+    "beyond_the_game": {
+      "brief": "Synthesize knowledge across the entire exhibition. Cross-reference information between sections. Analyze patterns in gaming history, developer ecosystems, and design evolution from 1980s to present.",
+      "debrief": "",
+      "q1": {
+        "a1": "Ms. PAC-MAN (1981), BurgerTime (1982), Papers Please (2013), Stray (2022)",
+        "a2": "BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022), Papers Please (2013)",
+        "a3": "Papers Please (2013), BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022)",
+        "a4": "Stray (2022), Papers Please (2013), Ms. PAC-MAN (1981), BurgerTime (1982)",
+        "a5": "BurgerTime (1982), Papers Please (2013), Ms. PAC-MAN (1981), Stray (2022)",
+        "text": "Arrange these four games chronologically from OLDEST to NEWEST: Ms. PAC-MAN, Papers Please, Stray, BurgerTime"
+      },
+      "q2": {
+        "a1": "The Hex by Daniel Mullins Games",
+        "a2": "Game Builder Garage by Nintendo",
+        "a3": "There Is No Game: Wrong Dimension",
+        "a4": "Portal (referenced in descriptions)",
+        "a5": "Minecraft (referenced in descriptions)",
+        "text": "Which game in the exhibition EXPLICITLY teaches game design itself, demonstrating that game principles can teach complex subjects?"
+      },
+      "q3": {
+        "a1": "Last Tales (Raiders of The Lost Island)",
+        "a2": "stoneskip. (Simpler Times)",
+        "a3": "Breadcrumbs Interactive (Yaga)",
+        "a4": "Sand Sailor Studio (ASKA)",
+        "a5": "Edgeflow Studio (Breachway)",
+        "text": "ROMANIAN GAME DEVELOPMENT - Which Romanian developer created a game for the KIDS ROOM section, showing how local developers contribute to global gaming education?"
+      },
+      "q4": {
+        "a1": "A peaceful garden sanctuary",
+        "a2": "A broken ecosystem where you are both predator and prey",
+        "a3": "A friendly city with no danger",
+        "a4": "A time-traveling dimension",
+        "a5": "An underwater coral reef",
+        "text": "According to its description, in Rain World you play as a \"nomadic slugcat\" in what kind of environment?"
+      },
+      "q5": {
+        "a1": "Gummy Cat, Critique Gaming, Breadcrumbs Interactive",
+        "a2": "Critique Gaming, Gummy Cat, Breadcrumbs Interactive",
+        "a3": "Breadcrumbs Interactive, Gummy Cat, Critique Gaming",
+        "a4": "Angry Mob Games, KillHouse Games, Alien Pixel Studios",
+        "a5": "stoneskip., Last Tales, Sand Sailor Studio",
+        "text": "DEVELOPER IDENTIFICATION - Match each Romanian developer to their game:\n- Game A: Bear and Breakfast\n- Game B: Interrogation: You will be deceived\n- Game C: Yaga"
+      },
+      "q6": {
+        "a1": "All three quests were equally difficult with no progression",
+        "a2": "Quest 1 taught basics, Quest 2 built on that knowledge, Quest 3 required synthesizing everything—demonstrating scaffolded learning",
+        "a3": "The quests got easier as you progressed",
+        "a4": "Each quest taught completely unrelated information",
+        "a5": "Only Quest 3 contained any real learning",
+        "text": "META-LEARNING QUESTION - Think about YOUR experience with these three quests. Which statement is TRUE about your learning journey?"
+      }
+    },
+    "home": {
+      "reset_progress": {
+        "open": "Reset progress"
+      },
+      "title": "The Art of the Game"
+    },
+    "play_to_survive": {
+      "brief": "",
+      "debrief": "",
+      "q1": {
+        "a1": "",
+        "a2": "",
+        "a3": "",
+        "a4": "",
+        "a5": "",
+        "text": ""
+      },
+      "q2": {
+        "a1": "",
+        "a2": "",
+        "a3": "",
+        "a4": "",
+        "a5": "",
+        "text": ""
+      },
+      "q3": {
+        "a1": "",
+        "a2": "",
+        "a3": "",
+        "a4": "",
+        "a5": "",
+        "text": ""
+      },
+      "q4": {
+        "a1": "",
+        "a2": "",
+        "a3": "",
+        "a4": "",
+        "a5": "",
+        "text": ""
+      }
+    },
     "quest": {
-      "brief_image_alt": "Quest icon"
+      "brief_image_alt": "Quest icon",
+      "continue": "Continue",
+      "debrief": "Debrief",
+      "input": {
+        "edit": "Edit",
+        "submit": "Submit"
+      }
+    },
+    "scan": {
+      "close": "Close",
+      "open": "Scan QR"
     },
     "test_question_qr": {
       "author": {
@@ -47,8 +150,52 @@ interface Resources {
       "debrief": "Congrats! You scanned the QR."
     },
     "test_text": {
-      "brief": "test_text.brief",
+      "brief": "Type \"Cats/Dogs are cool!\" to complete this quest.",
       "debrief": "Congrats! You like animals."
+    },
+    "the_learning_ladder": {
+      "brief": "Explore the INDIES SPOTLIGHT, THE PLAYER IS PRESENT, KIDS ROOM, and EXIT FOYER sections. Compare games from different eras (1980s through 2020s). Pay attention to genre descriptions, gameplay complexity, and design evolution.",
+      "debrief": "# DESIGNERS AS LEARNING ARCHITECTS\n\nNotice what just happened?   This quest was harder than the first one. You had to compare games across different eras, understand terms like \"rogue-lite,\" and analyze how game design evolved over decades. We built on what you learned in Quest 1. You already knew how to extract information from exhibits, so now we could ask you to do something more complex with that information.\n\nThis is exactly what game designers do—and psychologist Mihaly Csikszentmihalyi explained why it works. His \"flow theory\" shows that people are happiest and learn best when a task is perfectly balanced: not so easy that you're bored, not so hard that you're frustrated (Csikszentmihalyi, 1990). Games keep you in this sweet spot—what he called the \"flow channel\" - by constantly adjusting difficulty as your skills improve.\n\nGame designers scaffold learning by:\n* Introducing ONE new concept at a time\n* Giving IMMEDIATE FEEDBACK (you know instantly if you succeeded)\n* Increasing DIFFICULTY GRADUALLY (each level slightly harder)\n* Allowing SAFE FAILURE (you can try again without real consequences)\n* Rewarding MASTERY (that satisfying feeling when you \"get it\")\n\nTrinity Fusion's \"rogue-lite\" design brilliantly demonstrates this. You die and restart, but you're smarter each time—you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).\n\nHere's the remarkable part: when learning is scaffolded this way, it doesn't feel like work. It feels like play. Your brain is doing exactly what evolution designed it to do—learn through voluntary, enjoyable engagement. Game designers just figured out how to make that ladder really, really effective at keeping you climbing.\n\n---\n\n## REFERENCES:\nBarzilai, S., & Blau, I. (2014). Scaffolding game-based learning: Impact on learning achievements, perceived learning, and game experiences. Computers & Education, 70, 65-79.\nBruner, J. S. (1960). The Process of Education. Harvard University Press.\nChen, J. (2007). Flow in games (and everything else). Communications of the ACM, 50(4), 31-34.\nCsikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.\nHabgood, M. J., & Ainsworth, S. E. (2011). Motivating children to learn effectively: Exploring the value of intrinsic integration in educational games. Journal of the Learning Sciences, 20(2), 169-206.\nSweetser, P., & Wyeth, P. (2005). GameFlow: A model for evaluating player enjoyment in games. Computers in Entertainment, 3(3), 1-24.\nVygotsky, L. S. (1978). Mind in Society. Harvard University Press.\nWood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of Child Psychology and Psychiatry, 17(2), 89-100.\n\n## FURTHER READING:\nGarris, R., Ahlers, R., & Driskell, J. E. (2002). Games, motivation, and learning: A research and practice model. Simulation & Gaming, 33(4), 441-467.\nGee, J. P. (2007). What Video Games Have to Teach Us About Learning and Literacy (2nd ed.). Palgrave Macmillan.\nMayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MIT Press.",
+      "q1": {
+        "a1": "Fast-paced action shooter",
+        "a2": "Cozy musical / experiential meditation",
+        "a3": "Competitive multiplayer battle",
+        "a4": "Horror survival experience",
+        "a5": "Complex strategy simulation",
+        "text": "Find Simpler Times in the INDIES SPOTLIGHT by Romanian studio Stoneskip. How is this game described?"
+      },
+      "q2": {
+        "a1": "Simple arcade action",
+        "a2": "A single puzzle type repeated",
+        "a3": "Complex world exploration, monster hunting, and story choices",
+        "a4": "Only combat mechanics",
+        "a5": "Passive watching without interaction",
+        "text": "Compare two eras: BurgerTime (1982) taught ONE core mechanic (walk over ingredients). Now find The Witcher 3 (2015) in THE PLAYER IS PRESENT. What does its description emphasise?"
+      },
+      "q3": {
+        "a1": "How to play existing games better",
+        "a2": "The basics of game design and visual programming",
+        "a3": "Historical facts about gaming",
+        "a4": "Competitive esports strategies",
+        "a5": "Art and music composition",
+        "text": "Game Builder Garage (2021) in the KIDS ROOM explicitly teaches players about what?"
+      },
+      "q4": {
+        "a1": "Players start over when they die, but keep some progress/knowledge",
+        "a2": "There is only one correct path through the game",
+        "a3": "The game has no challenge or difficulty",
+        "a4": "Players can only play once",
+        "a5": "All levels are exactly the same each time",
+        "text": "Find Trinity Fusion by Romanian developer Angry Mob Games. It's described as a \"rogue-lite action platformer.\" What does \"rogue-lite\" mean about its learning design?"
+      },
+      "q5": {
+        "a1": "Modern city, racing game",
+        "a2": "Year 355 A.D., hack 'n slash",
+        "a3": "Space station, puzzle game",
+        "a4": "Medieval castle, platformer only",
+        "a5": "Underwater world, adventure",
+        "text": "In the EXIT FOYER, find Wizard Fire (1992). According to its description, what setting and genre does it use?"
+      }
     }
   }
 }

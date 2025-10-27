@@ -27,7 +27,7 @@ export function ResetSaveGame() {
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         onClick={openDialog}
       >
-        <Trans>Reset progress</Trans>
+        <Trans i18nKey="home.reset_progress.open">Reset progress</Trans>
       </button>
       <Dialog open={open} onClose={closeDialog} className="relative z-10">
         <DialogBackdrop

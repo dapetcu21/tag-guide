@@ -51,9 +51,11 @@ export const quests: Array<Quest> = [
   {
     id: "test_text",
     brief: (t) =>
-      t("test_text.brief", `Type "Cats/Dogs are cool!" to complete this quest.`),
-    debrief: (t) =>
-      t("test_text.debrief", "Congrats! You like animals."),
+      t(
+        "test_text.brief",
+        "Type \"Cats/Dogs are cool!\" to complete this quest.",
+      ),
+    debrief: (t) => t("test_text.debrief", "Congrats! You like animals."),
     type: QuestType.TextInput,
     correctInputs: ["Cats are cool!", "Dogs are cool!"],
     typoTolerance: 2,
@@ -61,8 +63,7 @@ export const quests: Array<Quest> = [
   {
     id: "test_questions",
     brief: (t) => t("test_questions.brief", "Answer the questions correctly."),
-    debrief: (t) =>
-      t("test_questions.debrief", "Congrats! You can do math."),
+    debrief: (t) => t("test_questions.debrief", "Congrats! You can do math."),
     type: QuestType.Questions,
     questions: [
       {
@@ -192,18 +193,18 @@ export const quests: Array<Quest> = [
     debrief: (t) =>
       t(
         "the_learning_ladder.debrief",
-        `DESIGNERS AS LEARNING ARCHITECTS
+        `# DESIGNERS AS LEARNING ARCHITECTS
 
 Notice what just happened? This quest was harder than the first one. You had to compare games across different eras, understand terms like "rogue-lite," and analyze how game design evolved over decades. We built on what you learned in Quest 1. You already knew how to extract information from exhibits, so now we could ask you to do something more complex with that information.
 
 This is exactly what game designers do—and psychologist Mihaly Csikszentmihalyi explained why it works. His "flow theory" shows that people are happiest and learn best when a task is perfectly balanced: not so easy that you're bored, not so hard that you're frustrated (Csikszentmihalyi, 1990). Games keep you in this sweet spot—what he called the "flow channel" - by constantly adjusting difficulty as your skills improve.
 
 Game designers scaffold learning by:
-- Introducing ONE new concept at a time
-- Giving IMMEDIATE FEEDBACK (you know instantly if you succeeded)
-- Increasing DIFFICULTY GRADUALLY (each level slightly harder)
-- Allowing SAFE FAILURE (you can try again without real consequences)
-- Rewarding MASTERY (that satisfying feeling when you "get it")
+* Introducing ONE new concept at a time
+* Giving IMMEDIATE FEEDBACK (you know instantly if you succeeded)
+* Increasing DIFFICULTY GRADUALLY (each level slightly harder)
+* Allowing SAFE FAILURE (you can try again without real consequences)
+* Rewarding MASTERY (that satisfying feeling when you "get it")
 
 Trinity Fusion's "rogue-lite" design brilliantly demonstrates this. You die and restart, but you're smarter each time—you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).
 
@@ -211,7 +212,7 @@ Here's the remarkable part: when learning is scaffolded this way, it doesn't fee
 
 ---
 
-REFERENCES:
+## REFERENCES:
 Barzilai, S., & Blau, I. (2014). Scaffolding game-based learning: Impact on learning achievements, perceived learning, and game experiences. Computers & Education, 70, 65-79.
 Bruner, J. S. (1960). The Process of Education. Harvard University Press.
 Chen, J. (2007). Flow in games (and everything else). Communications of the ACM, 50(4), 31-34.
@@ -221,7 +222,7 @@ Sweetser, P., & Wyeth, P. (2005). GameFlow: A model for evaluating player enjoym
 Vygotsky, L. S. (1978). Mind in Society. Harvard University Press.
 Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of Child Psychology and Psychiatry, 17(2), 89-100.
 
-FURTHER READING:
+## FURTHER READING:
 Garris, R., Ahlers, R., & Driskell, J. E. (2002). Games, motivation, and learning: A research and practice model. Simulation & Gaming, 33(4), 441-467.
 Gee, J. P. (2007). What Video Games Have to Teach Us About Learning and Literacy (2nd ed.). Palgrave Macmillan.
 Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MIT Press.`,
@@ -258,7 +259,8 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
           ),
         answers: [
           (t) => t("the_learning_ladder.q2.a1", "Simple arcade action"),
-          (t) => t("the_learning_ladder.q2.a2", "A single puzzle type repeated"),
+          (t) =>
+            t("the_learning_ladder.q2.a2", "A single puzzle type repeated"),
           (t) =>
             t(
               "the_learning_ladder.q2.a3",
@@ -266,7 +268,10 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
             ),
           (t) => t("the_learning_ladder.q2.a4", "Only combat mechanics"),
           (t) =>
-            t("the_learning_ladder.q2.a5", "Passive watching without interaction"),
+            t(
+              "the_learning_ladder.q2.a5",
+              "Passive watching without interaction",
+            ),
         ],
         correctAnswer: 2,
       },
@@ -285,7 +290,8 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
               "the_learning_ladder.q3.a2",
               "The basics of game design and visual programming",
             ),
-          (t) => t("the_learning_ladder.q3.a3", "Historical facts about gaming"),
+          (t) =>
+            t("the_learning_ladder.q3.a3", "Historical facts about gaming"),
           (t) =>
             t("the_learning_ladder.q3.a4", "Competitive esports strategies"),
           (t) => t("the_learning_ladder.q3.a5", "Art and music composition"),
@@ -297,7 +303,7 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
         text: (t) =>
           t(
             "the_learning_ladder.q4.text",
-            "Find Trinity Fusion by Romanian developer Angry Mob Games. It's described as a \"rogue-lite action platformer.\" What does \"rogue-lite\" mean about its learning design?",
+            'Find Trinity Fusion by Romanian developer Angry Mob Games. It\'s described as a "rogue-lite action platformer." What does "rogue-lite" mean about its learning design?',
           ),
         answers: [
           (t) =>
@@ -450,9 +456,13 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
           (t) => t("beyond_the_game.q2.a2", "Game Builder Garage by Nintendo"),
           (t) =>
             t("beyond_the_game.q2.a3", "There Is No Game: Wrong Dimension"),
-          (t) => t("beyond_the_game.q2.a4", "Portal (referenced in descriptions)"),
           (t) =>
-            t("beyond_the_game.q2.a5", "Minecraft (referenced in descriptions)"),
+            t("beyond_the_game.q2.a4", "Portal (referenced in descriptions)"),
+          (t) =>
+            t(
+              "beyond_the_game.q2.a5",
+              "Minecraft (referenced in descriptions)",
+            ),
         ],
         correctAnswer: 1,
       },
@@ -465,7 +475,10 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
           ),
         answers: [
           (t) =>
-            t("beyond_the_game.q3.a1", "Last Tales (Raiders of The Lost Island)"),
+            t(
+              "beyond_the_game.q3.a1",
+              "Last Tales (Raiders of The Lost Island)",
+            ),
           (t) => t("beyond_the_game.q3.a2", "stoneskip. (Simpler Times)"),
           (t) => t("beyond_the_game.q3.a3", "Breadcrumbs Interactive (Yaga)"),
           (t) => t("beyond_the_game.q3.a4", "Sand Sailor Studio (ASKA)"),
@@ -478,7 +491,7 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
         text: (t) =>
           t(
             "beyond_the_game.q4.text",
-            "According to its description, in Rain World you play as a \"nomadic slugcat\" in what kind of environment?",
+            'According to its description, in Rain World you play as a "nomadic slugcat" in what kind of environment?',
           ),
         answers: [
           (t) => t("beyond_the_game.q4.a1", "A peaceful garden sanctuary"),
@@ -547,13 +560,21 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
               "beyond_the_game.q6.a2",
               "Quest 1 taught basics, Quest 2 built on that knowledge, Quest 3 required synthesizing everything—demonstrating scaffolded learning",
             ),
-          (t) => t("beyond_the_game.q6.a3", "The quests got easier as you progressed"),
+          (t) =>
+            t(
+              "beyond_the_game.q6.a3",
+              "The quests got easier as you progressed",
+            ),
           (t) =>
             t(
               "beyond_the_game.q6.a4",
               "Each quest taught completely unrelated information",
             ),
-          (t) => t("beyond_the_game.q6.a5", "Only Quest 3 contained any real learning"),
+          (t) =>
+            t(
+              "beyond_the_game.q6.a5",
+              "Only Quest 3 contained any real learning",
+            ),
         ],
         correctAnswer: 1,
       },

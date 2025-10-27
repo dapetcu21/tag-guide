@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { LuTrophy } from "react-icons/lu";
 import { MdChevronRight } from "react-icons/md";
 import { useNavigate } from "react-router";
@@ -7,10 +7,10 @@ import { QRScannerButton } from "~/components/QRScanner";
 import { QuestType } from "~/lib/quests";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
+import { QuestButton } from "./QuestButton";
 import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
 import { QuestMarkdown } from "./QuestMarkdown";
-import { QuestButton } from "./QuestButton";
 
 export default function QuestBrief(_: Route.ComponentProps) {
   const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
@@ -49,7 +49,7 @@ export default function QuestBrief(_: Route.ComponentProps) {
           icon={<MdChevronRight size={32} />}
           onClick={handleNextQuestionClick}
         >
-          Continue
+          <Trans i18nKey="quest.continue">Continue</Trans>
         </QuestButton>
       )}
       {questSaveGame.isCompleted && (
@@ -57,7 +57,7 @@ export default function QuestBrief(_: Route.ComponentProps) {
           icon={<LuTrophy size={28} />}
           onClick={handleGoToDebriefClick}
         >
-          Debrief
+          <Trans i18nKey="quest.debrief">Debrief</Trans>
         </QuestButton>
       )}
     </div>

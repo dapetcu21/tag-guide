@@ -7,6 +7,7 @@ import {
   useCallback,
   useState,
 } from "react";
+import { Trans } from "react-i18next";
 import { transliterate } from "transliteration";
 import type { Quest, QuestType } from "~/lib/quests";
 import type { QuestSaveGame } from "~/lib/saveGame";
@@ -81,7 +82,9 @@ export function QuestInput({
   return (
     <div>
       <div>{getSolution(quest, questSaveGame)}</div>
-      <QuestButton onClick={handleEditClick}>Edit</QuestButton>
+      <QuestButton onClick={handleEditClick}>
+        <Trans i18nKey="quest.input.edit">Edit</Trans>
+      </QuestButton>
     </div>
   );
 }
@@ -148,7 +151,9 @@ export function QuestInputEditing({
         onFocus={handleFocus}
         onChange={handleChange}
       />
-      <QuestButton type="submit">Submit</QuestButton>
+      <QuestButton type="submit">
+        <Trans i18nKey="quest.input.submit">Submit</Trans>
+      </QuestButton>
     </form>
   );
 }

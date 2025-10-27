@@ -9,6 +9,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { Trans } from "react-i18next";
 import { MdOutlineCameraswitch } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { processScanToken } from "~/lib/scanTokens";
@@ -125,7 +126,7 @@ function QRScannerPanel({
         </Scanner>
       </div>
       <QuestButton className="mt-2" noMargin onClick={onClose}>
-        Close
+        <Trans i18nKey="scan.close">Close</Trans>
       </QuestButton>
     </DialogPanel>
   );
@@ -137,7 +138,7 @@ export function QRScannerButton() {
   const openQRScanner = useOpenQRScanner();
   return (
     <QuestButton onClick={openQRScanner}>
-      Scan QR
+      <Trans i18nKey="scan.open">Scan QR</Trans>
     </QuestButton>
   );
 }

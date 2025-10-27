@@ -1,4 +1,5 @@
 import { Fragment } from "react/jsx-runtime";
+import { Trans } from "react-i18next";
 import Rulers from "~/components/Rulers";
 import { Link } from "~/lib/fakeTransitionType";
 import { type Quest, quests } from "~/lib/quests";
@@ -11,7 +12,7 @@ const QuestTile = ({ quest }: { quest: Quest }) => (
       {
         viewTransitionName: `quest-${quest.id}`,
         viewTransitionClass: `quest`,
-      // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
+        // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
       } as any
     }
     to={`/quests/${quest.id}`}
@@ -23,7 +24,9 @@ export function Home() {
   return (
     <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-screen h-screen overflow-hidden p-8 pb-20 sm:p-20">
       <div className="row-start-1 flex flex-row justify-center items-start mb-4">
-        <div className="text-impact text-[60px]">The Art of the Game</div>
+        <div className="text-impact text-[60px]">
+          <Trans i18nKey="home.title">The Art of the Game</Trans>
+        </div>
       </div>
       <style>
         {`
@@ -43,7 +46,7 @@ export function Home() {
           className="flex flex-col justify-center items-stretch w-full h-full"
         >
           <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
-            <Rulers viewTransitionName="main-rulers"/>
+            <Rulers viewTransitionName="main-rulers" />
             {quests.map((quest) => (
               <QuestTile key={quest.id} quest={quest} />
             ))}
