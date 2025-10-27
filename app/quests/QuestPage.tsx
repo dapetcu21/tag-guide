@@ -50,9 +50,10 @@ const PageDot = ({
 }) => {
   const navigate = useNavigate();
   const handleClick = useCallback(() => {
+    if (selected) return;
     setTransitionTypes([index < selectedIndex ? "quest-prev" : "quest-next"]);
     navigate(page.path, { viewTransition: true });
-  }, [page.path, navigate, index, selectedIndex]);
+  }, [page.path, navigate, selected, index, selectedIndex]);
 
   return (
     <button
@@ -145,8 +146,8 @@ function QuestContainer({
     currentPageIndex !== -1 && currentPageIndex + 1 < availablePages.length;
 
   return (
-    <div className="flex justify-stretch items-stretch w-screen h-screen p-4 overflow-hidden">
-      <div className="w-full h-full relative">
+    <div className="flex flex-col justify-stretch items-center w-screen h-screen p-4 overflow-hidden">
+      <div className="w-full h-full max-w-2xl relative">
         <Rulers viewTransitionName="main-rulers" />
         <style>
           {`
@@ -176,7 +177,7 @@ function QuestContainer({
             to="/"
             viewTransition={{ types: ["home"] }}
           >
-            <MdClose size={32} />
+            <MdClose className="bg-yellow rounded-[50%] p-2" size={48} />
           </Link>
           <div
             id="quest-nav"
