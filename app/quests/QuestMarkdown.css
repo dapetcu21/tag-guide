@@ -1,0 +1,36 @@
+@reference "../app.css";
+
+.quest-body {
+  h1 {
+    @apply mt-4;
+    @apply text-impact;
+    font-size: 40px;
+  }
+  h2 {
+    @apply mt-4;
+    @apply text-impact;
+    font-size: 32px;
+  }
+  h3 {
+    @apply mt-4;
+    @apply text-impact;
+    font-size: 24px;
+  }
+  p {
+    @apply mt-4;
+  }
+  hr {
+    @apply my-4;
+    border: none;
+    border-bottom: 2px solid var(--color-pink);
+  }
+  li {
+    list-style: disc inside;
+    &::marker {
+      color: var(--color-orange);
+    }
+  }
+  strong {
+    color: var(--color-orange);
+  }
+}

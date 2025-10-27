@@ -1,0 +1,78 @@
+::view-transition-old(.quest),
+::view-transition-new(.quest) {
+  object-fit: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+html.view-transition-quest-prev,
+html.view-transition-quest-next {
+  #quest-page {
+    view-transition-name: quest-page;
+  }
+
+  #quest-nav {
+    view-transition-name: quest-nav;
+  }
+
+  #quest-close {
+    view-transition-name: quest-close;
+  }
+}
+
+::view-transition-group(quest-nav),
+::view-transition-old(quest-nav),
+::view-transition-new(quest-nav),
+::view-transition-group(quest-close),
+::view-transition-old(quest-close),
+::view-transition-new(quest-close) {
+  animation-duration: 0s;
+}
+
+@keyframes squish-in {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes squish-out {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+::view-transition-old(quest-page) {
+  animation-name: squish-out;
+}
+
+::view-transition-new(quest-page) {
+  animation-name: squish-in;
+}
+
+::view-transition-new(quest-page),
+::view-transition-old(quest-page) {
+  width: calc(100% - 2px);
+  height: 100%;
+}
+
+::view-transition-old(quest-page) {
+  transform-origin: 0% 50%;
+  border-left: none;
+}
+
+::view-transition-new(quest-page) {
+  transform-origin: 100% 50%;
+  border-left: 2px solid var(--color-pink);
+}
+
+html.view-transition-quest-prev {
+  &::view-transition-old(quest-page) {
+    transform-origin: 100% 50%;
+    border-left: 2px solid var(--color-pink);
+  }
+
+  &::view-transition-new(quest-page) {
+    transform-origin: 0% 50%;
+    border-left: none;
+  }
+}
