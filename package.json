@@ -10,7 +10,7 @@
     "typecheck": "react-router typegen && tsc",
     "lint": "biome check",
     "format": "biome format --write",
-    "extract": "i18next-cli extract && i18next-cli types"
+    "extract": "i18next-cli extract --sync-primary && i18next-cli types"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
