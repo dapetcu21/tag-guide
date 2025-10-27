@@ -11,10 +11,10 @@ import {
   MdQuestionMark,
   MdWarningAmber,
 } from "react-icons/md";
-import { Link, Outlet, useLocation, useNavigate } from "react-router";
+import { Outlet, useLocation, useNavigate } from "react-router";
 import { QRScannerProvider } from "~/components/QRScanner";
 import Rulers from "~/components/Rulers";
-import { setTransitionClasses } from "~/lib/fakeTransitionType";
+import { Link, setTransitionTypes } from "~/lib/fakeTransitionType";
 import { type Quest, QuestType } from "~/lib/quests";
 import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
@@ -50,7 +50,7 @@ const PageDot = ({
 }) => {
   const navigate = useNavigate();
   const handleClick = useCallback(() => {
-    setTransitionClasses({ "transition-back": index < selectedIndex });
+    setTransitionTypes([index < selectedIndex ? "quest-prev" : "quest-next"]);
     navigate(page.path, { viewTransition: true });
   }, [page.path, navigate, index, selectedIndex]);
 
@@ -148,20 +148,16 @@ function QuestContainer({
     <div className="flex justify-stretch items-stretch w-screen h-screen p-4 overflow-hidden">
       <div className="w-full h-full relative">
         <Rulers viewTransitionName="main-rulers" />
-        <div
-          className="w-full h-full"
-          style={
-            {
-              viewTransitionName: `quest-${quest.id}`,
-              viewTransitionClass: `quest`,
-              // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
-            } as any
-          }
-        >
-          <div
-            className="w-full h-full border-pink"
-            style={{ viewTransitionName: "quest-page" }}
-          >
+        <style>
+          {`
+            html.view-transition-home #quest-container {
+              view-transition-name: quest-${quest.id};
+              view-transition-class: quest;
+            }
+          `}
+        </style>
+        <div id="quest-container" className="w-full h-full">
+          <div id="quest-page" className="w-full h-full border-pink">
             <div
               className={classNames(
                 "bg-yellow w-full h-full rounded-2xl overflow-auto pt-16 px-4",
@@ -175,16 +171,16 @@ function QuestContainer({
             </div>
           </div>
           <Link
+            id="quest-close"
             className="absolute top-0 left-0 size-16 flex justify-center items-center"
             to="/"
-            viewTransition
-            style={{ viewTransitionName: "quest-close" }}
+            viewTransition={{ types: ["home"] }}
           >
             <MdClose size={32} />
           </Link>
           <div
+            id="quest-nav"
             className="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center bg-yellow rounded-b-2xl"
-            style={{ viewTransitionName: "quest-nav" }}
           >
             <button
               type="button"
@@ -194,7 +190,7 @@ function QuestContainer({
               )}
               disabled={!hasPrev}
               onClick={() => {
-                setTransitionClasses({ "transition-back": true });
+                setTransitionTypes(["quest-prev"]);
                 navigate(availablePages[currentPageIndex - 1].path, {
                   viewTransition: true,
                 });
@@ -211,7 +207,7 @@ function QuestContainer({
               )}
               disabled={!hasNext}
               onClick={() => {
-                setTransitionClasses({ "transition-back": false });
+                setTransitionTypes(["quest-next"]);
                 navigate(availablePages[currentPageIndex + 1].path, {
                   viewTransition: true,
                 });
@@ -238,8 +234,8 @@ export function QuestPage({ quest }: { quest: Quest }) {
     if (prevIsCompleted.current !== isCompleted) {
       prevIsCompleted.current = isCompleted;
       if (isCompleted) {
-        setTransitionClasses({ "transition-back": false });
-        navigate(`/quests/${quest.id}/debrief`);
+        setTransitionTypes(["quest-next"]);
+        navigate(`/quests/${quest.id}/debrief`, { viewTransition: true });
       }
     }
   }, [isCompleted, navigate, quest]);

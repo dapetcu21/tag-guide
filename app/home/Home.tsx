@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
-import { Link } from "react-router";
 import Rulers from "~/components/Rulers";
+import { Link } from "~/lib/fakeTransitionType";
 import { type Quest, quests } from "~/lib/quests";
 import { ResetSaveGame } from "./ResetSaveGame";
 
@@ -15,7 +15,7 @@ const QuestTile = ({ quest }: { quest: Quest }) => (
       } as any
     }
     to={`/quests/${quest.id}`}
-    viewTransition
+    viewTransition={{ types: ["home"] }}
   />
 );
 

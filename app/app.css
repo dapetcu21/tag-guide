@@ -53,12 +53,24 @@ body {
   height: 100%;
 }
 
-::view-transition-group(quest-nav),
-::view-transition-old(quest-nav),
-::view-transition-new(quest-nav) {
-  animation-duration: 0s;
+html.view-transition-quest-prev,
+html.view-transition-quest-next {
+  #quest-page {
+    view-transition-name: quest-page;
+  }
+
+  #quest-nav {
+    view-transition-name: quest-nav;
+  }
+
+  #quest-close {
+    view-transition-name: quest-close;
+  }
 }
 
+::view-transition-group(quest-nav),
+::view-transition-old(quest-nav),
+::view-transition-new(quest-nav),
 ::view-transition-group(quest-close),
 ::view-transition-old(quest-close),
 ::view-transition-new(quest-close) {
@@ -101,12 +113,14 @@ body {
   border-left: 2px solid var(--color-pink);
 }
 
-.transition-back::view-transition-old(quest-page) {
-  transform-origin: 100% 50%;
-  border-left: 2px solid var(--color-pink);
-}
+html.view-transition-quest-prev {
+  &::view-transition-old(quest-page) {
+    transform-origin: 100% 50%;
+    border-left: 2px solid var(--color-pink);
+  }
 
-.transition-back::view-transition-new(quest-page) {
-  transform-origin: 0% 50%;
-  border-left: none;
+  &::view-transition-new(quest-page) {
+    transform-origin: 0% 50%;
+    border-left: none;
+  }
 }
