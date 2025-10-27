@@ -139,8 +139,8 @@ export function QuestInputEditing({
       <input
         type="text"
         className={classNames(
-          "border-2 w-full",
-          isValid ? "border-white" : "border-magenta",
+          "border-2 w-full p-2",
+          isValid ? "border-midnight" : "border-magenta",
         )}
         value={value}
         // biome-ignore lint/a11y/noAutofocus: <is requested by the user when they press edit>
