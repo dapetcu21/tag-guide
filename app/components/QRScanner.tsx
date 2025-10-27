@@ -12,6 +12,7 @@ import {
 import { MdOutlineCameraswitch } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { processScanToken } from "~/lib/scanTokens";
+import { QuestButton } from "~/quests/QuestButton";
 
 export const QRScannerContext = createContext<() => void>(() => { });
 
@@ -123,13 +124,9 @@ function QRScannerPanel({
           </button>
         </Scanner>
       </div>
-      <button
-        type="button"
-        className="flex justify-center items-center rounded-lg overflow-hidden bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 mt-4 sm:mb-8"
-        onClick={onClose}
-      >
+      <QuestButton className="mt-2" noMargin onClick={onClose}>
         Close
-      </button>
+      </QuestButton>
     </DialogPanel>
   );
 }
@@ -139,8 +136,8 @@ export const useOpenQRScanner = () => useContext(QRScannerContext);
 export function QRScannerButton() {
   const openQRScanner = useOpenQRScanner();
   return (
-    <button type="button" onClick={openQRScanner}>
+    <QuestButton onClick={openQRScanner}>
       Scan QR
-    </button>
+    </QuestButton>
   );
 }
