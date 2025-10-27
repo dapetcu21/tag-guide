@@ -66,39 +66,39 @@
     "debrief": "# THE PLAYFUL MIND\n\nYou just searched through human life experience and found game language describing it.\n\nThis reveals something fundamental about how minds work.\n\nTHE RATIONALIST MISTAKE\n\nFor centuries, Western philosophy claimed the human mind is fundamentally rational—a logic machine that calculates outcomes and makes decisions (Descartes, 1637/1998). Play was considered a distraction from \"real\" thinking.\n\nBut your quest proves otherwise.\n\nWhen you think about romance, you don't just calculate compatibility. You \"play the field,\" \"play hard to get,\" engage in \"love games.\" When facing deception, you don't just analyze truth probability. You \"play along,\" \"call bluffs,\" maintain a \"poker face.\"\n\nCognitive linguists George Lakoff and Mark Johnson demonstrated that human thought is fundamentally metaphorical (Lakoff & Johnson, 1980). We understand abstract concepts—time, love, argument, ideas—by mapping them onto concrete experiences. Crucially, these metaphors aren't just describing thoughts. They're *creating* them.\n\nWhen you think about arguments as war (\"defend your position,\" \"attack that claim\"), you literally think differently than if you thought about arguments as dance. The metaphor shapes the cognition.\n\nAnd one of our most powerful cognitive metaphors is play.\n\nLANGUAGE PLAYING WITH ITSELF\n\nLook at what happened to the word \"play\" itself:\n- Originally: movement, exercise (Old English *plegian*)\n- Then: free movement in machinery (14th century)\n- Then: theatrical performance (16th century)\n- Then: recreational games (16th century)\n- Then: musical performance (17th century)\n- Now: all of these plus dozens more\n\nThe word *played* across contexts, finding new freedoms within language's structures. This enacts Zimmerman's definition: \"free movement within a more rigid structure\" (Salen & Zimmerman, 2004, p. 304).\n\nLanguage isn't a rigid code. It's a playground.\n\nChildren learning language don't memorize rules—they play with sounds, test boundaries, invent words (Vygotsky, 1978). Poets exploit ambiguities and create novel combinations. Even ordinary speakers constantly engage in wordplay and metaphorical innovation.\n\nThis contradicts the computational theory of mind from the 1950s—the idea that brains are computers running algorithms (Fodor, 1975). If true, language would be unambiguous and literal. But it's not. It plays.\n\nGerman philosopher Friedrich Schiller wrote: \"Man only plays when he is in the fullest sense of the word a human being, and he is only fully a human being when he plays\" (Schiller, 1795/2004, p. 80).\n\nYour quest revealed this truth. You collected an expression and found play woven into it.\n\nThis isn't because we occasionally use game metaphors. It's because human cognition itself is ludic. We understand abstract domains by mapping them onto play structures. We process uncertainty through game-like scenarios. We solve problems by playing with possibilities.\n\nThe game expressions you collected aren't decoration. They're evidence of how thought works. We are Homo Ludens—the playing species.\n\n---\n\nREFERENCES:\nDescartes, R. (1637/1998). Discourse on Method and Meditations on First Philosophy (D. A. Cress, Trans.). Hackett Publishing.\nFodor, J. A. (1975). The Language of Thought. Harvard University Press.\nLakoff, G., & Johnson, M. (1980). Metaphors We Live By. University of Chicago Press.\nSchiller, F. (1795/2004). On the Aesthetic Education of Man (R. Snell, Trans.). Dover Publications.\nVygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.\n\nFURTHER READING:\nCook, G. (2000). Language Play, Language Learning. Oxford University Press.\nPinker, S. (1994). The Language Instinct: How the Mind Creates Language. William Morrow."
   },
   "play_to_survive": {
-    "brief": "",
-    "debrief": "",
+    "brief": "Explore the ARCADE section and the EXIT FOYER. Find the oldest games on display—those from the early 1980s. Examine their descriptions, release dates, and mechanics to answer the questions.",
+    "debrief": "# PLAY AS NATURE'S TEACHING TOOL\n\nPlay is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination. Even octopuses explore their environment through playful manipulation (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.\n\nThe early arcade games you just examined tap into this ancient learning system. Ms. PAC-MAN teaches spatial awareness as you track ghost patterns. BurgerTime teaches cause and effect—step here, ingredient falls there. Lock 'N' Chase teaches evasion and pursuit.\n\nInside a game, failure is safe. You can die and restart. You can experiment without real consequences. This is what makes games such powerful learning tools: they let you practice, fail, and improve without actual risk.\n\nNeuroscience backs this up. When you play a game and when you successfully learn something new, the same reward pathways light up in your brain (Koepp et al., 1998). That feeling of \"fun\" you get? It's your brain's way of saying \"you're learning something useful—keep doing this!\" Evolution wired us to enjoy learning through play.\n\nGames, by offering clear rules and goals, quick feedback when you succeed or fail and gradual increases in difficulty are creating what the psychologist Lev Vygotsky would later call \"scaffolded learning environments\" (Vygotsky, 1978): structures that support you as you learn, then fade away as you master the skill.\n\nPlay is how nature teaches.\n\n---\n\nREFERENCES:\nBurghardt, G. M. (2005). The Genesis of Animal Play: Testing the Limits. MIT Press.\nHuizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.\nKoepp, M. J., Gunn, R. N., Lawrence, A. D., Cunningham, V. J., Dagher, A., Jones, T., ... & Grasby, P. M. (1998). Evidence for striatal dopamine release during a video game. Nature, 393(6682), 266-268.\nSalen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.\nVygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.\n\nFURTHER READING:\nSutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.\nPellegrini, A. D. (2009). The Role of Play in Human Development. Oxford University Press.\nCaillois, R. (1961). Man, Play and Games",
     "q1": {
-      "a1": "",
-      "a2": "",
-      "a3": "",
-      "a4": "",
-      "a5": "",
-      "text": ""
+      "a1": "1979",
+      "a2": "1981",
+      "a3": "1983",
+      "a4": "1985",
+      "a5": "1987",
+      "text": "What year was Ms. PAC-MAN first released?"
     },
     "q2": {
-      "a1": "",
-      "a2": "",
-      "a3": "",
-      "a4": "",
-      "a5": "",
-      "text": ""
+      "a1": "Defeat all the ghosts",
+      "a2": "Collect power-ups in a specific order",
+      "a3": "Eat all the Pac-Dots while avoiding ghosts",
+      "a4": "Complete a time trial",
+      "a5": "Solve maze puzzles",
+      "text": "According to the description, what must Ms. PAC-MAN do to advance to the next stage?"
     },
     "q3": {
-      "a1": "",
-      "a2": "",
-      "a3": "",
-      "a4": "",
-      "a5": "",
-      "text": ""
+      "a1": "Race against a timer",
+      "a2": "Control chef Peter Pepper to make ingredients fall and stack on buns",
+      "a3": "Shoot all enemies",
+      "a4": "Solve mathematical puzzles",
+      "a5": "Defend against waves of attackers",
+      "text": "What is the main objective in BurgerTime according to its description?"
     },
     "q4": {
-      "a1": "",
-      "a2": "",
-      "a3": "",
-      "a4": "",
-      "a5": "",
-      "text": ""
+      "a1": "Racing game",
+      "a2": "Maze chase",
+      "a3": "Story-driven adventure",
+      "a4": "Multiplayer sports",
+      "a5": "Vertical shooter",
+      "text": "What genre/type of game is Lock 'N' Chase (1981) described as in the EXIT FOYER?"
     }
   },
   "quest": {
