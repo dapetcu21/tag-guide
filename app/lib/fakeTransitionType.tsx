@@ -38,7 +38,7 @@ if (startViewTransition) {
     nextTypes = [];
 
     const t = startViewTransition.apply(this, [callbackOptions]);
-    t.finished.catch(() => { }).then(removeAllClasses);
+    t.finished.catch(() => {}).then(removeAllClasses);
     return t;
   };
 }

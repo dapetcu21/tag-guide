@@ -15,7 +15,7 @@ import { useNavigate } from "react-router";
 import { processScanToken } from "~/lib/scanTokens";
 import { QuestButton } from "~/quests/QuestButton";
 
-export const QRScannerContext = createContext<() => void>(() => { });
+export const QRScannerContext = createContext<() => void>(() => {});
 
 export const QRScannerProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);

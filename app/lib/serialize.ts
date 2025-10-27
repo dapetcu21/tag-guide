@@ -29,10 +29,10 @@ const freeQuestionsAnsweredSize = Math.ceil(freeQuestions.length / 8);
 export function serializeSave(save: SaveGame): ArrayBuffer {
   const buffer = new ArrayBuffer(
     saltSize +
-    completedSize +
-    freeInputSize +
-    freeQuestionsSize +
-    freeQuestionsAnsweredSize,
+      completedSize +
+      freeInputSize +
+      freeQuestionsSize +
+      freeQuestionsAnsweredSize,
   );
 
   const saltBytes = new Uint16Array(buffer, 0, saltSize);
@@ -150,7 +150,7 @@ export function deserializeSave(buffer: ArrayBuffer): SaveGame {
         if (
           question.scanToken &&
           asQuestionsSolution(save.quests?.[quest.id]?.solution)?.[
-          question.id
+            question.id
           ] != null
         ) {
           save = reduceQuestSaveGame(save, quest.id, (qs) => ({
