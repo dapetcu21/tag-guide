@@ -1,5 +1,3 @@
-"use client";
-
 import classNames from "classnames";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from "react";
 import { LuTrophy } from "react-icons/lu";
@@ -15,7 +13,7 @@ import { Outlet, useLocation, useNavigate } from "react-router";
 import { QRScannerProvider } from "~/components/QRScanner";
 import Rulers from "~/components/Rulers";
 import { Link, setTransitionTypes } from "~/lib/fakeTransitionType";
-import { type Quest, QuestType } from "~/lib/quests";
+import { type Quest, QuestType } from "~/lib/Quest";
 import { type QuestSaveGame, useQuestSaveGame } from "~/lib/saveGame";
 import {
   asQuestionsSolution,

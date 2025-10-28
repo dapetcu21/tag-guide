@@ -4,7 +4,7 @@ import { LuTrophy } from "react-icons/lu";
 import { MdChevronRight } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { QRScannerButton } from "~/components/QRScanner";
-import { QuestType } from "~/lib/quests";
+import { QuestType } from "~/lib/Quest";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
 import { QuestButton } from "./QuestButton";

@@ -1,132 +1,6 @@
-import type { DefaultNamespace, TFunction } from "i18next";
-
-export enum QuestType {
-  Scannable,
-  TextInput,
-  Questions,
-}
-
-type IntlFunc = (t: TFunction<DefaultNamespace>) => string;
-
-export type Question = {
-  id: string;
-  text: IntlFunc;
-  answers: Array<IntlFunc>;
-  correctAnswer?: number; // 0-3. Omit to not require validation
-  scanToken?: string; // Add this to hide the question until scanned. Omit to always display.
-};
-
-export type Quest = {
-  id: string;
-  image?: string;
-  brief: IntlFunc;
-  debrief: IntlFunc;
-} & (
-    | {
-      type: QuestType.Scannable;
-      scanToken: string;
-    }
-    | {
-      type: QuestType.TextInput;
-      correctInputs?: Array<string>; // Omit to allow free answer
-      typoTolerance: number; // Number of allowable mistyped characters
-    }
-    | {
-      type: QuestType.Questions;
-      questions: Array<Question>;
-      numRequiredQuestions?: number; // Number of questions required to complete the quest. Omit to require all questions
-    }
-  );
+import { type Quest, QuestType } from "~/lib/Quest";
 
 export const quests: Array<Quest> = [
-  {
-    id: "test_scannable",
-    brief: (t) =>
-      t("test_scannable.brief", "Scan the QR to complete this quest."),
-    debrief: (t) =>
-      t("test_scannable.debrief", "Congrats! You scanned the QR."),
-    type: QuestType.Scannable,
-    scanToken: "test",
-  },
-  {
-    id: "test_text",
-    brief: (t) =>
-      t(
-        "test_text.brief",
-        "Type \"Cats/Dogs are cool!\" to complete this quest.",
-      ),
-    debrief: (t) => t("test_text.debrief", "Congrats! You like animals."),
-    type: QuestType.TextInput,
-    correctInputs: ["Cats are cool!", "Dogs are cool!"],
-    typoTolerance: 2,
-  },
-  {
-    id: "test_questions",
-    brief: (t) => t("test_questions.brief", "Answer the questions correctly."),
-    debrief: (t) => t("test_questions.debrief", "Congrats! You can do math."),
-    type: QuestType.Questions,
-    questions: [
-      {
-        id: "q1",
-        text: (t) => t("test_questions.q1.text", "2 + 2 = ?"),
-        answers: [
-          (t) => t("test_questions.q1.a1", "1"),
-          (t) => t("test_questions.q1.a2", "2"),
-          (t) => t("test_questions.q1.a3", "3"),
-          (t) => t("test_questions.q1.a4", "4"),
-        ],
-        correctAnswer: 3,
-      },
-      {
-        id: "q2",
-        text: (t) => t("test_questions.q2.text", "2 - 2 = ?"),
-        answers: [
-          (t) => t("test_questions.q2.a1", "1"),
-          (t) => t("test_questions.q2.a2", "2"),
-          (t) => t("test_questions.q2.a3", "0"),
-          (t) => t("test_questions.q2.a4", "4"),
-        ],
-        correctAnswer: 2,
-      },
-    ],
-  },
-  {
-    id: "test_questions_qr",
-    brief: (t) => t("test_questions_qr.brief", "Answer one of the questions."),
-    debrief: (t) =>
-      t("test_questions_qr.debrief", "Congrats! You have opinions."),
-    type: QuestType.Questions,
-    numRequiredQuestions: 1,
-    questions: [
-      {
-        id: "color",
-        text: (t) =>
-          t("test_questions_qr.color.text", "What is your favorite color?"),
-        answers: [
-          (t) => t("test_questions_qr.color.red", "Red"),
-          (t) => t("test_questions_qr.color.green", "Green"),
-          (t) => t("test_questions_qr.color.blue", "Blue"),
-          (t) => t("test_questions_qr.color.yellow", "Yellow"),
-        ],
-        scanToken: "q1",
-      },
-      {
-        id: "author",
-        text: (t) =>
-          t(
-            "test_question_qr.author.text",
-            "What is your favorite fantasy author?",
-          ),
-        answers: [
-          (t) => t("test_question_qr.author.gaiman", "Neil Gaiman"),
-          (t) => t("test_question_qr.author.pratchett", "Terry Pratchett"),
-          (t) => t("test_question_qr.author.sanderson", "Brandon Sanderson"),
-          (t) => t("test_question_qr.author.rrmartin", "George R. R. Martin"),
-        ],
-        scanToken: "q2",
-      },
-    ],
-  },
   {
     id: "play_to_survive",
     brief: (t) =>
@@ -169,7 +43,11 @@ Caillois, R. (1961). Man, Play and Games`,
     questions: [
       {
         id: "q1",
-        text: (t) => t("play_to_survive.q1.text", "What year was Ms. PAC-MAN first released?"),
+        text: (t) =>
+          t(
+            "play_to_survive.q1.text",
+            "What year was Ms. PAC-MAN first released?",
+          ),
         answers: [
           (t) => t("play_to_survive.q1.a1", "1979"),
           (t) => t("play_to_survive.q1.a2", "1981"),
@@ -189,10 +67,7 @@ Caillois, R. (1961). Man, Play and Games`,
         answers: [
           (t) => t("play_to_survive.q2.a1", "Defeat all the ghosts"),
           (t) =>
-            t(
-              "play_to_survive.q2.a2",
-              "Collect power-ups in a specific order",
-            ),
+            t("play_to_survive.q2.a2", "Collect power-ups in a specific order"),
           (t) =>
             t(
               "play_to_survive.q2.a3",
@@ -923,7 +798,7 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
         text: (t) =>
           t(
             "the_fellowship_of_selves.resonance.text",
-            "Think about your FAVORITE character type to play. How strongly does this statement resonate: \"This character type expresses something about who I really am or want to be\"?",
+            'Think about your FAVORITE character type to play. How strongly does this statement resonate: "This character type expresses something about who I really am or want to be"?',
           ),
         answers: [
           (t) =>
@@ -959,7 +834,7 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
         text: (t) =>
           t(
             "the_fellowship_of_selves.real_life_class.text",
-            "When you imagine your real-life \"character class,\" how strongly do you feel: \"I wish I could be a different type than I am in daily life\"?",
+            'When you imagine your real-life "character class," how strongly do you feel: "I wish I could be a different type than I am in daily life"?',
           ),
         answers: [
           (t) =>
@@ -1061,7 +936,7 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
         text: (t) =>
           t(
             "the_safe_space_for_transformation.self_learning.text",
-            "In these games, you face difficult choices or situations you'd never encounter in real life. How intensely do you feel: \"I learned something about myself from how I responded\"?",
+            'In these games, you face difficult choices or situations you\'d never encounter in real life. How intensely do you feel: "I learned something about myself from how I responded"?',
           ),
         answers: [
           (t) =>
@@ -1550,7 +1425,3 @@ Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
     typoTolerance: 2,
   },
 ];
-
-export const questsById: Map<string, Quest> = new Map(
-  quests.map((quest) => [quest.id, quest]),
-);

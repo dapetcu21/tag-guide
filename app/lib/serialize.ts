@@ -1,5 +1,6 @@
 import { decode, encode } from "base64-arraybuffer";
-import { QuestType, quests } from "./quests";
+import { QuestType } from "~/lib/Quest";
+import { quests } from "../content/quests";
 import {
   defaultSaveGame,
   reduceQuestSaveGame,

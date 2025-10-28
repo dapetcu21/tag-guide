@@ -9,7 +9,7 @@ import {
 } from "react";
 import { Trans } from "react-i18next";
 import { transliterate } from "transliteration";
-import type { Quest, QuestType } from "~/lib/quests";
+import type { Quest, QuestType } from "~/lib/Quest";
 import type { QuestSaveGame } from "~/lib/saveGame";
 import { QuestButton } from "./QuestButton";
 

@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router";
-import type { Quest } from "~/lib/quests";
+import type { Quest } from "~/lib/Quest";
 import type { QuestSaveGame } from "~/lib/saveGame";
 
 export type QuestContext = {

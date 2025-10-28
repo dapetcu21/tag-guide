@@ -1,4 +1,4 @@
-import { type Quest, type Question, QuestType } from "./quests";
+import { type Quest, type Question, QuestType } from "~/lib/Quest";
 import type { QuestSaveGame, QuestSolution } from "./saveGame";
 
 export const isQuestionAvailable = (

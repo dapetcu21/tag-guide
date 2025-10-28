@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
-import { QuestType } from "~/lib/quests";
+import { QuestType } from "~/lib/Quest";
 import {
   asQuestionsSolution,
   getNextUnansweredQuestion,

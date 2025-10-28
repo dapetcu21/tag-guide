@@ -20,7 +20,9 @@ export function IosScrollLock({ children }: { children: ReactNode }) {
     if (isIOS) {
       setIOSHeight();
       window.addEventListener("resize", setIOSHeight);
-      removeEventListener = () => { window.removeEventListener("resize", setIOSHeight); }
+      removeEventListener = () => {
+        window.removeEventListener("resize", setIOSHeight);
+      };
     }
 
     return removeEventListener;

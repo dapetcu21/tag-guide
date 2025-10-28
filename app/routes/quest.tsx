@@ -1,4 +1,4 @@
-import { questsById } from "~/lib/quests";
+import { questsById } from "~/content/quests";
 import { QuestPage } from "~/quests/QuestPage";
 import type { Route } from "./+types/quest";
 

@@ -1,4 +1,5 @@
-import { QuestType, quests, questsById } from "./quests";
+import { QuestType } from "~/lib/Quest";
+import { questsById } from "../content/quests";
 import { reduceQuestSaveGame, setSaveGame } from "./saveGame";
 
 export type ScanTokenOrigin = {
@@ -8,9 +9,19 @@ export type ScanTokenOrigin = {
 };
 
 export const scanTokenOrigins: Map<string, ScanTokenOrigin> = new Map();
-for (const quest of quests) {
+const trySetScanTokenOrigin = (
+  scanToken: string,
+  scanTokenOrigin: ScanTokenOrigin,
+) => {
+  console.assert(
+    !scanTokenOrigins.has(scanToken),
+    `Scan token ${scanToken} used twice in quest data`,
+  );
+  scanTokenOrigins.set(scanToken, scanTokenOrigin);
+};
+for (const quest of Object.values(questsById)) {
   if (quest.type === QuestType.Scannable) {
-    scanTokenOrigins.set(quest.scanToken, {
+    trySetScanTokenOrigin(quest.scanToken, {
       questId: quest.id,
       questionIndex: null,
       questionId: null,
@@ -19,7 +30,7 @@ for (const quest of quests) {
     for (let i = 0; i < quest.questions.length; i++) {
       const question = quest.questions[i];
       if (question.scanToken != null) {
-        scanTokenOrigins.set(question.scanToken, {
+        trySetScanTokenOrigin(question.scanToken, {
           questId: quest.id,
           questionIndex: i,
           questionId: question.id,

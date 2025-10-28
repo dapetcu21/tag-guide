@@ -1,8 +1,9 @@
 import { Fragment } from "react/jsx-runtime";
 import { Trans } from "react-i18next";
 import Rulers from "~/components/Rulers";
+import { mockQuests, quests } from "~/content/quests";
 import { Link } from "~/lib/fakeTransitionType";
-import { type Quest, quests } from "~/lib/quests";
+import type { Quest } from "~/lib/Quest";
 import { ResetSaveGame } from "./ResetSaveGame";
 
 const QuestTile = ({ quest }: { quest: Quest }) => (
@@ -21,6 +22,19 @@ const QuestTile = ({ quest }: { quest: Quest }) => (
 );
 
 export function Home() {
+  let displayedQuests = quests;
+  let useMockQuests = false;
+
+  if (process.env.NODE_ENV !== "production") {
+    try {
+      useMockQuests = !!JSON.parse(
+        localStorage.getItem("useMockQuests") ?? "false",
+      );
+    } catch (_e) {}
+
+    if (useMockQuests) displayedQuests = mockQuests;
+  }
+
   return (
     <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-full h-full overflow-hidden p-8 pb-20 sm:p-20">
       <div className="row-start-1 flex flex-row justify-center items-start mb-4">
@@ -47,7 +61,7 @@ export function Home() {
         >
           <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
             <Rulers viewTransitionName="main-rulers" />
-            {quests.map((quest) => (
+            {displayedQuests.map((quest) => (
               <QuestTile key={quest.id} quest={quest} />
             ))}
           </main>
@@ -57,6 +71,21 @@ export function Home() {
         <ResetSaveGame />
         {process.env.NODE_ENV !== "production" && (
           <Fragment>
+            <button
+              type="button"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              onClick={() => {
+                try {
+                  localStorage.setItem(
+                    "useMockQuests",
+                    JSON.stringify(!useMockQuests),
+                  );
+                  window.location.reload();
+                } catch (_e) {}
+              }}
+            >
+              Toggle
+            </button>
             <Link
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
               to="/export"
