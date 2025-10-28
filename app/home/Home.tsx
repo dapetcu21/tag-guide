@@ -22,7 +22,7 @@ const QuestTile = ({ quest }: { quest: Quest }) => (
 
 export function Home() {
   return (
-    <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-screen h-screen overflow-hidden p-8 pb-20 sm:p-20">
+    <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-full h-full overflow-hidden p-8 pb-20 sm:p-20">
       <div className="row-start-1 flex flex-row justify-center items-start mb-4">
         <div className="text-impact text-[60px]">
           <Trans i18nKey="home.title">The Art of the Game</Trans>

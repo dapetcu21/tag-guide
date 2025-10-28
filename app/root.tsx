@@ -4,8 +4,8 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
 } from "react-router";
+import { IosScrollLock } from "~/components/IosScrollLock";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -34,8 +34,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
+        <IosScrollLock>
+          {children}
+        </IosScrollLock>
         <Scripts />
       </body>
     </html>
