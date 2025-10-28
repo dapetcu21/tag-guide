@@ -4,6 +4,7 @@ import { LuTrophy } from "react-icons/lu";
 import { MdChevronRight } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { QRScannerButton } from "~/components/QRScanner";
+import { setTransitionTypes } from "~/lib/fakeTransitionType";
 import { QuestType } from "~/lib/Quest";
 import { getNextAvailableQuestion, hasUnavailableQuestions } from "~/lib/util";
 import type { Route } from "./+types/QuestBrief";
@@ -19,11 +20,15 @@ export default function QuestBrief(_: Route.ComponentProps) {
 
   const navigate = useNavigate();
   const handleNextQuestionClick = useCallback(() => {
-    navigate(`/quests/${quest.id}/questions/${nextQuestion}`);
+    setTransitionTypes(["quest-next"]);
+    navigate(`/quests/${quest.id}/questions/${nextQuestion}`, {
+      viewTransition: true,
+    });
   }, [navigate, nextQuestion, quest]);
 
   const handleGoToDebriefClick = useCallback(() => {
-    navigate(`/quests/${quest.id}/debrief`);
+    setTransitionTypes(["quest-next"]);
+    navigate(`/quests/${quest.id}/debrief`, { viewTransition: true });
   }, [navigate, quest]);
 
   const { t } = useTranslation();

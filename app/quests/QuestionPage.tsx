@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
+import { setTransitionTypes } from "~/lib/fakeTransitionType";
 import { QuestType } from "~/lib/Quest";
 import {
   asQuestionsSolution,
@@ -98,7 +99,12 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
         );
 
         if (nextQuestionIndex >= 0) {
-          navigate(`/quests/${quest.id}/questions/${nextQuestionIndex}`);
+          setTransitionTypes([
+            nextQuestionIndex < questionIndex ? "quest-prev" : "quest-next",
+          ]);
+          navigate(`/quests/${quest.id}/questions/${nextQuestionIndex}`, {
+            viewTransition: true,
+          });
         }
       }
     },
