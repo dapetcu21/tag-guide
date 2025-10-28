@@ -23,16 +23,16 @@ const QuestTile = ({ quest }: { quest: Quest }) => (
 
 export function Home() {
   let displayedQuests = quests;
-  let useMockQuests = false;
+  let displaysMockQuests = false;
 
   if (process.env.NODE_ENV !== "production") {
     try {
-      useMockQuests = !!JSON.parse(
+      displaysMockQuests = !!JSON.parse(
         localStorage.getItem("useMockQuests") ?? "false",
       );
     } catch (_e) {}
 
-    if (useMockQuests) displayedQuests = mockQuests;
+    if (displaysMockQuests) displayedQuests = mockQuests;
   }
 
   return (
@@ -78,13 +78,13 @@ export function Home() {
                 try {
                   localStorage.setItem(
                     "useMockQuests",
-                    JSON.stringify(!useMockQuests),
+                    JSON.stringify(!displaysMockQuests),
                   );
                   window.location.reload();
                 } catch (_e) {}
               }}
             >
-              {useMockQuests ? "Real quests" : "Mock quests"}
+              {displaysMockQuests ? "Real quests" : "Mock quests"}
             </button>
             <Link
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
