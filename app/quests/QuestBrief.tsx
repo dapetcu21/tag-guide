@@ -41,9 +41,12 @@ export default function QuestBrief(_: Route.ComponentProps) {
       {quest.type === QuestType.TextInput && (
         <div className="mt-4">
           <QuestInput
-            quest={quest}
-            questSaveGame={questSaveGame}
-            setQuestSaveGame={setQuestSaveGame}
+            correctInputs={quest.correctInputs}
+            isCompleted={questSaveGame.isCompleted}
+            solution={questSaveGame.solution}
+            setSolution={(solution) =>
+              setQuestSaveGame((s) => ({ ...s, isCompleted: true, solution }))
+            }
           />
         </div>
       )}

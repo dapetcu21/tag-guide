@@ -9,8 +9,7 @@ import {
 } from "react";
 import { Trans } from "react-i18next";
 import { transliterate } from "transliteration";
-import type { Quest, QuestType } from "~/lib/Quest";
-import type { QuestSaveGame } from "~/lib/saveGame";
+import type { QuestSolution } from "~/lib/saveGame";
 import { QuestButton } from "./QuestButton";
 
 const normalizeInput = (s: string): string =>
@@ -37,51 +36,49 @@ function validateInput(
   return bestIndex >= 0 ? bestIndex : null;
 }
 
-function getSolution(
-  quest: Quest & { type: QuestType.TextInput },
-  questSaveGame: QuestSaveGame,
+export function getSolution(
+  correctInputs: Array<string> | undefined,
+  solution: QuestSolution | undefined,
 ) {
-  if (typeof questSaveGame.solution === "string") {
-    return questSaveGame.solution;
+  if (typeof solution === "string") {
+    return solution;
   }
 
-  if (typeof questSaveGame.solution === "number" && quest.correctInputs) {
-    return quest.correctInputs[questSaveGame.solution];
+  if (typeof solution === "number" && correctInputs) {
+    return correctInputs[solution];
   }
 
   return "Invalid solution";
 }
 
 export function QuestInput({
-  quest,
-  questSaveGame,
-  setQuestSaveGame,
+  isCompleted,
+  correctInputs,
+  solution,
+  setSolution,
 }: {
-  quest: Quest & { type: QuestType.TextInput };
-  questSaveGame: QuestSaveGame;
-  setQuestSaveGame: (
-    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
-  ) => void;
+  isCompleted: boolean;
+  correctInputs: Array<string> | undefined;
+  solution: QuestSolution | undefined;
+  setSolution: (solution: number | string) => void;
 }) {
-  const [editing, setEditing] = useState(() => !questSaveGame.isCompleted);
+  const [editing, setEditing] = useState(() => !isCompleted);
   const handleEditClick = useCallback(() => setEditing(true), []);
   const handleSubmit = useCallback(() => setEditing(false), []);
 
   if (editing)
     return (
       <QuestInputEditing
-        quest={quest}
-        initialValue={
-          questSaveGame.isCompleted ? getSolution(quest, questSaveGame) : ""
-        }
-        setQuestSaveGame={setQuestSaveGame}
+        initialValue={isCompleted ? getSolution(correctInputs, solution) : ""}
+        correctInputs={correctInputs}
+        setSolution={setSolution}
         onSubmit={handleSubmit}
       />
     );
 
   return (
     <div>
-      <div>{getSolution(quest, questSaveGame)}</div>
+      <div>{getSolution(correctInputs, solution)}</div>
       <QuestButton onClick={handleEditClick}>
         <Trans i18nKey="quest.input.edit">Edit</Trans>
       </QuestButton>
@@ -94,16 +91,14 @@ const handleFocus: FocusEventHandler<HTMLInputElement> = (e) => {
 };
 
 export function QuestInputEditing({
-  quest,
   initialValue,
-  setQuestSaveGame,
+  correctInputs,
+  setSolution,
   onSubmit,
 }: {
-  quest: Quest & { type: QuestType.TextInput };
   initialValue: string;
-  setQuestSaveGame: (
-    updater: (questSaveGame: QuestSaveGame) => QuestSaveGame,
-  ) => void;
+  correctInputs: Array<string> | undefined;
+  setSolution: (solution: number | string) => void;
   onSubmit: () => void;
 }) {
   const [value, setValue] = useState(initialValue);
@@ -118,23 +113,17 @@ export function QuestInputEditing({
       evt.preventDefault();
 
       const solution: string | number | null =
-        quest.correctInputs == null
-          ? value
-          : validateInput(value, quest.correctInputs);
+        correctInputs == null ? value : validateInput(value, correctInputs);
 
       const isValid = solution !== null;
       setIsValid(isValid);
 
       if (isValid) {
-        setQuestSaveGame((s) => ({
-          ...s,
-          isCompleted: true,
-          solution,
-        }));
+        setSolution(solution);
         onSubmit();
       }
     },
-    [quest, value, setQuestSaveGame, onSubmit],
+    [correctInputs, value, setSolution, onSubmit],
   );
 
   return (

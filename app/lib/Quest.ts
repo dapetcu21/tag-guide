@@ -10,10 +10,17 @@ type IntlFunc = (t: TFunction<DefaultNamespace>) => string;
 export type Question = {
   id: string;
   text: IntlFunc;
-  answers: Array<IntlFunc>;
-  correctAnswer?: number; // 0-3. Omit to not require validation
   scanToken?: string; // Add this to hide the question until scanned. Omit to always display.
-};
+} & (
+  | {
+      answers: Array<IntlFunc>;
+      correctAnswer?: number; // 0-3. Omit to not require validation
+    }
+  | {
+      answers?: undefined;
+      correctInputs?: Array<string>; // Omit to allow free answer
+    }
+);
 
 export type Quest = {
   id: string;

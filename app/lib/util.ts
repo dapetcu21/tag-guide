@@ -64,8 +64,13 @@ export function hasUnavailableQuestions(
   return false;
 }
 
-export const validateAnswer = (question: Question, answer: number) =>
-  question.correctAnswer === undefined || answer === question.correctAnswer;
+const validateAnswer = (
+  question: Question,
+  solution: string | number | undefined,
+) =>
+  question.answers
+    ? question.correctAnswer == null || question.correctAnswer === solution
+    : solution != null;
 
 export function validateQuestionsQuestSolution(
   quest: Quest,
@@ -97,14 +102,14 @@ export function validateQuestionsQuestSolution(
 
 export const asQuestionsSolution = (
   solution: QuestSolution,
-): Record<string, number> | null =>
+): Record<string, number | string> | null =>
   typeof solution === "object" ? solution : null;
 
 export function getNextUnansweredQuestion(
   quest: Quest,
   startingQuestionIndex: number,
   questSaveGame: QuestSaveGame,
-  previousSolution: Record<string, number> | null,
+  previousSolution: Record<string, number | string> | null,
 ): number {
   if (quest.type !== QuestType.Questions) {
     return -1;
@@ -135,7 +140,7 @@ export function getNextUnansweredQuestion(
 export const validateAnswerInSaveGame = (
   question: Question,
   questSaveGame: QuestSaveGame,
-) =>
-  question.correctAnswer == null ||
-  question.correctAnswer ===
-    asQuestionsSolution(questSaveGame.solution)?.[question.id];
+) => {
+  const solution = asQuestionsSolution(questSaveGame.solution)?.[question.id];
+  return validateAnswer(question, solution);
+};

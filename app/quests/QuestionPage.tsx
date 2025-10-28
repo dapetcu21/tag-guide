@@ -12,6 +12,7 @@ import {
 } from "~/lib/util";
 import type { Route } from "./+types/QuestionPage";
 import { useQuestContext } from "./QuestContext";
+import { QuestInput } from "./QuestInput";
 import { QuestMarkdown } from "./QuestMarkdown";
 
 const AnswerButton = ({
@@ -69,22 +70,24 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
 
   const navigate = useNavigate();
 
-  const selectedAnswer =
-    (questSaveGame.solution as Record<string, number>)?.[question.id] ?? -1;
+  const solution: number | string | undefined = (
+    questSaveGame.solution as Record<string, number | string>
+  )?.[question.id];
 
-  const handleClickAnswer = useCallback(
-    (answerIndex: number) => {
+  const setSolution = useCallback(
+    (solution: number | string) => {
       const oldSolution = asQuestionsSolution(questSaveGame.solution);
       setQuestSaveGame((s) => {
-        const solution = {
+        const questSolution = {
           ...(asQuestionsSolution(s.solution) ?? {}),
-          [question.id]: answerIndex,
+          [question.id]: solution,
         };
         return {
           ...s,
           isCompleted:
-            s.isCompleted || validateQuestionsQuestSolution(quest, solution),
-          solution,
+            s.isCompleted ||
+            validateQuestionsQuestSolution(quest, questSolution),
+          solution: questSolution,
         };
       });
 
@@ -116,29 +119,41 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
   return (
     <div>
       <QuestMarkdown text={question.text(t)} />
-      <div className="w-full flex flex-col items-stretch gap-2 my-2">
-        {question.answers.map((answer, answerIndex) => (
-          <AnswerButton
-            // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
-            key={answerIndex}
-            index={answerIndex}
-            answer={answer(t)}
-            selected={answerIndex === selectedAnswer}
-            correct={
-              validate &&
-              question.correctAnswer != null &&
-              answerIndex === question.correctAnswer
-            }
-            incorrect={
-              validate &&
-              question.correctAnswer != null &&
-              answerIndex !== question.correctAnswer &&
-              answerIndex === selectedAnswer
-            }
-            onClick={handleClickAnswer}
+      {question.answers !== undefined && (
+        <div className="w-full flex flex-col items-stretch gap-2 my-2">
+          {question.answers.map((answer, answerIndex) => (
+            <AnswerButton
+              // biome-ignore lint/suspicious/noArrayIndexKey: <we have no other key>
+              key={answerIndex}
+              index={answerIndex}
+              answer={answer(t)}
+              selected={answerIndex === (solution as number | undefined)}
+              correct={
+                validate &&
+                question.correctAnswer != null &&
+                answerIndex === question.correctAnswer
+              }
+              incorrect={
+                validate &&
+                question.correctAnswer != null &&
+                answerIndex !== question.correctAnswer &&
+                answerIndex === (solution as number | undefined)
+              }
+              onClick={setSolution}
+            />
+          ))}
+        </div>
+      )}
+      {question.answers === undefined && (
+        <div className="mt-4">
+          <QuestInput
+            correctInputs={question.correctInputs}
+            isCompleted={solution != null}
+            solution={solution}
+            setSolution={setSolution}
           />
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

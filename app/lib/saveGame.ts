@@ -1,6 +1,10 @@
 import { useCallback, useSyncExternalStore } from "react";
 
-export type QuestSolution = null | string | number | Record<string, number>;
+export type QuestSolution =
+  | null
+  | string
+  | number
+  | Record<string, number | string>;
 
 export type QuestSaveGame = {
   isCompleted: boolean;

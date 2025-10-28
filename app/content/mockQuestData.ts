@@ -50,6 +50,11 @@ export const mockQuests: Array<Quest> = [
         ],
         correctAnswer: 2,
       },
+      {
+        id: "q3",
+        text: () => 'Type "meow" to continue',
+        correctInputs: ["meow"],
+      },
     ],
   },
   {
