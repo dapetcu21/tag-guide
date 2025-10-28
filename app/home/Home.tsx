@@ -84,7 +84,7 @@ export function Home() {
                 } catch (_e) {}
               }}
             >
-              Toggle
+              {useMockQuests ? "Real quests" : "Mock quests"}
             </button>
             <Link
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -96,7 +96,7 @@ export function Home() {
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
               to="/dev/qr-list"
             >
-              All QR codes
+              QR codes
             </Link>
             <Link
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
