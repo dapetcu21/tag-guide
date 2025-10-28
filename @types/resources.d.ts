@@ -115,52 +115,6 @@ interface Resources {
       "close": "Close",
       "open": "Scan QR"
     },
-    "test_question_qr": {
-      "author": {
-        "gaiman": "Neil Gaiman",
-        "pratchett": "Terry Pratchett",
-        "rrmartin": "George R. R. Martin",
-        "sanderson": "Brandon Sanderson",
-        "text": "What is your favorite fantasy author?"
-      }
-    },
-    "test_questions": {
-      "brief": "Answer the questions correctly.",
-      "debrief": "Congrats! You can do math.",
-      "q1": {
-        "a1": "1",
-        "a2": "2",
-        "a3": "3",
-        "a4": "4",
-        "text": "2 + 2 = ?"
-      },
-      "q2": {
-        "a1": "1",
-        "a2": "2",
-        "a3": "0",
-        "a4": "4",
-        "text": "2 - 2 = ?"
-      }
-    },
-    "test_questions_qr": {
-      "brief": "Answer one of the questions.",
-      "color": {
-        "blue": "Blue",
-        "green": "Green",
-        "red": "Red",
-        "text": "What is your favorite color?",
-        "yellow": "Yellow"
-      },
-      "debrief": "Congrats! You have opinions."
-    },
-    "test_scannable": {
-      "brief": "Scan the QR to complete this quest.",
-      "debrief": "Congrats! You scanned the QR."
-    },
-    "test_text": {
-      "brief": "Type \"Cats/Dogs are cool!\" to complete this quest.",
-      "debrief": "Congrats! You like animals."
-    },
     "the_breadth_of_play": {
       "brief": "The word \"play\" appears in many surprising contexts beyond games. Think broadly—from machinery to music to technology to theater.\n\nWrite ONE expression using \"play\" or \"game\" that is NOT about recreational games.\n\nExamples: \"play in the steering wheel\" (mechanical), \"play a role\" (theatrical), \"play piano\" (musical), \"press play\" (media), \"play acting\" (deception)",
       "debrief": "# THE DEFINITION OF PLAY ITSELF\n\nYou just traced \"play\" into a context beyond recreational games—maybe machinery, theater, music, deception, or technology.\n\nThis reveals something profound: \"play\" is remarkably hard to define. But this difficulty isn't a problem—it's the point.\n\nMost words have stable meanings. A \"chair\" is a chair. But \"play\" sprawls across domains with nothing in common: a child playing tag, an actor playing Hamlet, a musician playing Chopin, free movement in gears, pressing a button to start video, strategic deception, light shimmering on water.\n\nPhilosopher Ludwig Wittgenstein argued that \"game\" and \"play\" are \"family resemblance\" concepts—there's no single feature shared by all instances, just overlapping similarities (Wittgenstein, 1953). Some games have winners; some don't. Some require skill; some are pure chance.\n\nBut Eric Zimmerman found a unifying structure beneath this diversity.\n\nTHE CORE DEFINITION\n\nIn Rules of Play, Zimmerman and Salen offer this formulation:\n\n\"Play is free movement within a more rigid structure.\" (Salen & Zimmerman, 2004, p. 304)\n\nLook at your expression through this lens:\n\n- MECHANICAL PLAY: A gear has \"play\" when there's slack allowing free movement within the mechanism's rigid structure\n\n- THEATRICAL PLAY: An actor has interpretive freedom within the rigid structure of script and stage\n\n- MUSICAL PLAY: A musician explores expression within the rigid structure of notation and instrument\n\n- GAME PLAY: Chess players discover endless possibilities within chess's rigid 64-square structure\n\n- MEDIA PLAYBACK: Pressing \"play\" releases free movement of video within its rigid timeline\n\n- LINGUISTIC PLAY: \"Playing dumb\" finds freedom within rigid social expectations\n\nIn every case: FREEDOM WITHIN CONSTRAINT. Movement within boundaries. Possibility within structure.\n\nThis definition is recursive—it applies to itself. The word \"play\" exhibits free movement (across all these contexts) within the rigid structure of language. \"Play\" itself plays.\n\nTHREE TYPES OF PLAY\n\nZimmerman identifies three categories:\n\n1. GAME PLAY - Playing games with explicit rules (chess, poker, video games). This is what most people think \"play\" means. But it's just one type.\n\n2. LUDIC ACTIVITIES - Less structured play (bouncing a ball, playing with toys, horseplay). You test boundaries, experiment with physics, discover possibilities. Looser rules.\n\n3. BEING PLAYFUL - Playful attitude applied to non-play contexts (playing dumb, playful banter, \"play on words\"). Play seeps into everything, transforming ordinary activities.\n\nTRANSFORMATIVE PLAY\n\nSome play is so powerful it transforms the structures within which it operates. Zimmerman calls this \"transformative play\" (Salen & Zimmerman, 2004, p. 305).\n\nPlayful slang (\"cool,\" \"sick,\" \"lit\") starts as rule-breaking but enters the dictionary, becoming standard. The play transforms the structure. \"Play\" originally meant physical exercise (Old English *plegian*). Then someone playfully applied it to machinery (14th century), theater (16th century), music (17th century), media technology (20th century). Each extension was strange—then became normal.\n\nWHY PLAY RESISTS DEFINITION\n\nAny rigid definition would contradict play's nature. Play is *characterized by* free movement, boundary-testing, creative exploration. A definition that rigidly constrained it would kill what makes it play.\n\nCaillois understood this. His four categories (agon, alea, mimicry, ilinx) map play's territory without pinning it down (Caillois, 1961). Huizinga described play's qualities but refused to constrain it completely (Huizinga, 1938).\n\nTHE JOURNEY COMPLETE\n\nThe \"Finish the Phrase\" quest revealed that life domains already have ludic structures—that's why game language describes them naturally.\n\nThe \"Language Domains\" quest revealed that language itself is playful, that human cognition is ludic, that thinking is creative exploration.\n\nThis quest revealed that play itself is definable only as \"free movement within rigid structure\"—and this pattern appears everywhere, from gears to grammar, from chess to theater to technology.\n\nYou've discovered what Huizinga argued in 1938: we are Homo Ludens. Not because we sometimes play games. But because play—this dance between freedom and structure—is the fundamental pattern through which we engage with reality, create meaning, use language, and understand ourselves.\n\nHuizinga called it the \"magic circle\"—that special space where play happens (Huizinga, 1938, p. 10). But your quest proved something deeper: the magic circle isn't separate from ordinary life. It's woven throughout it.\n\nYou've been inside it all along.\n\n---\n\nREFERENCES:\nCaillois, R. (1961). Man, Play and Games (M. Barash, Trans.). University of Illinois Press.\nHuizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.\nSalen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.\nWittgenstein, L. (1953). Philosophical Investigations (G. E. M. Anscombe, Trans.). Blackwell.\n\nFURTHER READING:\nHans, J. S. (1981). The Play of the World. University of Massachusetts Press.\nSutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press."
