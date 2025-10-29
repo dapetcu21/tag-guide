@@ -144,7 +144,7 @@ function QuestContainer({
     currentPageIndex !== -1 && currentPageIndex + 1 < availablePages.length;
 
   return (
-    <div className="flex flex-col justify-stretch items-center w-screen h-screen p-4 overflow-hidden">
+    <div className="flex flex-col justify-stretch items-center w-full h-full p-4 overflow-hidden">
       <div className="w-full h-full max-w-2xl relative">
         <Rulers viewTransitionName="main-rulers" />
         <style>
