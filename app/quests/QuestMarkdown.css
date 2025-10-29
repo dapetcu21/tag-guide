@@ -33,4 +33,10 @@
   strong {
     color: var(--color-orange);
   }
+
+  img {
+    height: auto;
+    max-width: min(100%, 400px);
+    @apply mx-auto;
+  }
 }

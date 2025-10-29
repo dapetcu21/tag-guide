@@ -13,7 +13,7 @@ export const mockQuests: Array<Quest> = [
     id: "test_text",
     image: "/quest_icons/test_icon.svg",
     brief: () => 'Type "Cats/Dogs are cool!" to complete this quest.',
-    debrief: () => "Congrats! You like animals.",
+    debrief: () => "Congrats! You like animals.\n![](https://www.publicdomainpictures.net/pictures/180000/velka/cat-1464103447LmK.jpg)",
     type: QuestType.TextInput,
     correctInputs: ["Cats are cool!", "Dogs are cool!"],
     typoTolerance: 2,
