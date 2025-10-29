@@ -45,7 +45,7 @@ export default function QuestBrief(_: Route.ComponentProps) {
       </style>
       <QuestIcon
         id="quest-icon"
-        className="size-18 mx-auto"
+        className="size-32 mx-auto"
         quest={quest}
         isCompleted={questSaveGame.isCompleted}
       />

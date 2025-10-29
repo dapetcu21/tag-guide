@@ -19,9 +19,11 @@ export const QuestIcon = ({
         maskImage: `url(${quest.image}`,
         maskSize: "contain",
         maskPosition: "50% 50%",
+        maskRepeat: "no-repeat",
         WebkitMaskImage: `url(${quest.image}`,
         WebkitMaskSize: "contain",
         WebkitMaskPosition: "50% 50%",
+        WebkitMaskRepeat: "no-repeat",
       }}
       className={classNames(className, isCompleted ? "bg-orange" : "bg-white")}
       {...rest}
