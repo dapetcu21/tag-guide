@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 194 194" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
+    <g transform="matrix(1,0,0,1,-91.9581,-1160.92)">
+        <g id="Frames">
+        </g>
+        <g id="Icons">
+            <g transform="matrix(-0.707107,0.707107,0.707107,0.707107,188.583,1358.66)">
+                <path d="M-172.616,-71.5L29.616,-71.5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
+            </g>
+            <g transform="matrix(0.707107,0.707107,0.707107,-0.707107,188.583,1156.43)">
+                <path d="M-29.616,-71.5L172.616,-71.5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
+            </g>
+            <g transform="matrix(0,-1,-1,0,117.333,1177.54)">
+                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0,-1,-1,0,260.333,1177.54)">
+                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0,-1,-1,0,117.333,1320.54)">
+                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0,-1,-1,0,260.333,1320.54)">
+                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>

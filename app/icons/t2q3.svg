@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 210 238" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
+    <g transform="matrix(1,0,0,1,-802.191,-424.738)">
+        <g id="Frames">
+        </g>
+        <g id="Icons">
+            <g transform="matrix(-1,0,0,1,1733.84,-324.192)">
+                <rect x="827.316" y="803.511" width="79.205" height="158.17" style="fill:none;stroke:black;stroke-width:5px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,867.151,561.962)">
+                <path d="M0,-82.643L-41.763,0L41.763,0L0,-82.643ZM0,-71.557L33.635,-5L-33.634,-5L0,-71.557Z" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(-1,0,0,1,1892.75,-324.192)">
+                <rect x="906.774" y="803.511" width="79.205" height="158.17" style="fill:none;stroke:black;stroke-width:5px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,946.609,561.962)">
+                <path d="M0,-82.643L-41.763,0L41.763,0L0,-82.643ZM0,-71.557L33.634,-5L-33.635,-5L0,-71.557Z" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,986.283,449.862)">
+                <path d="M0,27.193C-21.946,10.151 -49.51,0 -79.447,0C-109.385,0 -136.948,10.151 -158.894,27.193" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
+            </g>
+            <g transform="matrix(0,1,1,0,986.207,471.548)">
+                <path d="M8.25,-8.25C3.694,-8.25 0,-4.556 0,0C0,4.556 3.694,8.25 8.25,8.25C12.806,8.25 16.5,4.556 16.5,0C16.5,-4.556 12.806,-8.25 8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0,1,1,0,827.207,471.548)">
+                <path d="M8.25,-8.25C3.694,-8.25 0,-4.556 0,0C0,4.556 3.694,8.25 8.25,8.25C12.806,8.25 16.5,4.556 16.5,0C16.5,-4.556 12.806,-8.25 8.25,-8.25" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
