@@ -12,6 +12,7 @@ import { QuestButton } from "./QuestButton";
 import { useQuestContext } from "./QuestContext";
 import { QuestInput } from "./QuestInput";
 import { QuestMarkdown } from "./QuestMarkdown";
+import { QuestIcon } from "./QuestIcon";
 
 export default function QuestBrief(_: Route.ComponentProps) {
   const { quest, questSaveGame, setQuestSaveGame } = useQuestContext();
@@ -34,10 +35,21 @@ export default function QuestBrief(_: Route.ComponentProps) {
   const { t } = useTranslation();
   return (
     <div>
+      <style>
+        {`
+        html.view-transition-home-${quest.id} #quest-icon {
+          view-transition-name: quest-icon-${quest.id};
+          view-transition-class: quest-icon;
+        }
+      `}
+      </style>
+      <QuestIcon
+        id="quest-icon"
+        className="size-18 mx-auto"
+        quest={quest}
+        isCompleted={questSaveGame.isCompleted}
+      />
       <QuestMarkdown text={quest.brief(t)} />
-      {quest.image != null && (
-        <img src={quest.image} alt={t("quest.brief_image_alt", "Quest icon")} />
-      )}
       {quest.type === QuestType.TextInput && (
         <div className="mt-4">
           <QuestInput

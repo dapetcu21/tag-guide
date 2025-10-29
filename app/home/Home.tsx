@@ -4,21 +4,44 @@ import Rulers from "~/components/Rulers";
 import { mockQuests, quests } from "~/content/quests";
 import { Link } from "~/lib/fakeTransitionType";
 import type { Quest } from "~/lib/Quest";
+import { useSaveGame } from "~/lib/saveGame";
+import { QuestIcon } from "~/quests/QuestIcon";
 import { ResetSaveGame } from "./ResetSaveGame";
 
-const QuestTile = ({ quest }: { quest: Quest }) => (
-  <Link
-    className="bg-yellow aspect-square rounded-[50%]"
-    style={
-      {
-        viewTransitionName: `quest-${quest.id}`,
-        viewTransitionClass: `quest`,
-        // biome-ignore lint/suspicious/noExplicitAny: viewTransitionClass not typed yet
-      } as any
-    }
-    to={`/quests/${quest.id}`}
-    viewTransition={{ types: ["home"] }}
-  />
+const QuestTile = ({
+  quest,
+  isCompleted,
+}: {
+  quest: Quest;
+  isCompleted: boolean;
+}) => (
+  <Fragment>
+    <style>
+      {`
+        html.view-transition-home-${quest.id} #quest-${quest.id} {
+          view-transition-name: quest-${quest.id};
+          view-transition-class: quest;
+        }
+        html.view-transition-home-${quest.id} #quest-icon-${quest.id} {
+          view-transition-name: quest-icon-${quest.id};
+          view-transition-class: quest-icon;
+        }
+      `}
+    </style>
+    <Link
+      id={`quest-${quest.id}`}
+      className="bg-yellow aspect-square rounded-[50%] flex justify-center items-center"
+      to={`/quests/${quest.id}`}
+      viewTransition={{ types: [`home-${quest.id}`] }}
+    >
+      <QuestIcon
+        id={`quest-icon-${quest.id}`}
+        className="size-[70%]"
+        quest={quest}
+        isCompleted={isCompleted}
+      />
+    </Link>
+  </Fragment>
 );
 
 export function Home() {
@@ -30,10 +53,12 @@ export function Home() {
       displaysMockQuests = !!JSON.parse(
         localStorage.getItem("useMockQuests") ?? "false",
       );
-    } catch (_e) {}
+    } catch (_e) { }
 
     if (displaysMockQuests) displayedQuests = mockQuests;
   }
+
+  const [saveGame] = useSaveGame();
 
   return (
     <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-full h-full overflow-hidden p-8 pb-20 sm:p-20">
@@ -62,7 +87,11 @@ export function Home() {
           <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
             <Rulers viewTransitionName="main-rulers" />
             {displayedQuests.map((quest) => (
-              <QuestTile key={quest.id} quest={quest} />
+              <QuestTile
+                key={quest.id}
+                quest={quest}
+                isCompleted={saveGame.quests[quest.id]?.isCompleted ?? false}
+              />
             ))}
           </main>
         </div>
@@ -81,7 +110,7 @@ export function Home() {
                     JSON.stringify(!displaysMockQuests),
                   );
                   window.location.reload();
-                } catch (_e) {}
+                } catch (_e) { }
               }}
             >
               {displaysMockQuests ? "Real quests" : "Mock quests"}

@@ -3,6 +3,7 @@ import { type Quest, QuestType } from "~/lib/Quest";
 export const mockQuests: Array<Quest> = [
   {
     id: "test_scannable",
+    image: "/quest_icons/test_icon.svg",
     brief: () => "Scan the QR to complete this quest.",
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
@@ -10,6 +11,7 @@ export const mockQuests: Array<Quest> = [
   },
   {
     id: "test_text",
+    image: "/quest_icons/test_icon.svg",
     brief: () => 'Type "Cats/Dogs are cool!" to complete this quest.',
     debrief: () => "Congrats! You like animals.",
     type: QuestType.TextInput,

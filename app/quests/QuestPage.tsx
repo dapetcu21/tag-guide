@@ -149,7 +149,7 @@ function QuestContainer({
         <Rulers viewTransitionName="main-rulers" />
         <style>
           {`
-            html.view-transition-home #quest-container {
+            html.view-transition-home-${quest.id} #quest-container {
               view-transition-name: quest-${quest.id};
               view-transition-class: quest;
             }
@@ -173,7 +173,7 @@ function QuestContainer({
             id="quest-close"
             className="absolute top-0 left-0 size-16 flex justify-center items-center"
             to="/"
-            viewTransition={{ types: ["home"] }}
+            viewTransition={{ types: [`home-${quest.id}`] }}
           >
             <MdClose className="bg-yellow rounded-[50%] p-2" size={48} />
           </Link>
