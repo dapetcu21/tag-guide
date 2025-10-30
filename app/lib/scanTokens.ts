@@ -19,7 +19,7 @@ const trySetScanTokenOrigin = (
   );
   scanTokenOrigins.set(scanToken, scanTokenOrigin);
 };
-for (const quest of Object.values(questsById)) {
+for (const quest of questsById.values()) {
   if (quest.type === QuestType.Scannable) {
     trySetScanTokenOrigin(quest.scanToken, {
       questId: quest.id,
