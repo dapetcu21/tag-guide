@@ -7,6 +7,7 @@ import type { Quest } from "~/lib/Quest";
 import { useSaveGame } from "~/lib/saveGame";
 import { QuestIcon } from "~/quests/QuestIcon";
 import { ResetSaveGame } from "./ResetSaveGame";
+import { useMemo } from "react";
 
 const QuestTile = ({
   quest,
@@ -60,6 +61,11 @@ export function Home() {
 
   const [saveGame] = useSaveGame();
 
+  const isEmptySave = useMemo(
+    () => Object.keys(saveGame.quests).length === 0,
+    [saveGame],
+  );
+
   return (
     <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-full h-full overflow-hidden p-8 pb-20 sm:p-20">
       <div className="row-start-1 flex flex-row justify-center items-start mb-4">
@@ -79,25 +85,38 @@ export function Home() {
           }
         `}
       </style>
-      <div id="home-grid-container" className="row-start-2 flex flex-col">
+      <div className="flex flex-col items-stretch">
         <div
-          id="home-grid"
-          className="flex flex-col justify-center items-stretch w-full h-full"
+          id="home-grid-container"
+          className="row-start-2 flex flex-col flex-1"
         >
-          <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
-            <Rulers viewTransitionName="main-rulers" />
-            {displayedQuests.map((quest) => (
-              <QuestTile
-                key={quest.id}
-                quest={quest}
-                isCompleted={saveGame.quests[quest.id]?.isCompleted ?? false}
-              />
-            ))}
-          </main>
+          <div
+            id="home-grid"
+            className="flex flex-col justify-center items-stretch w-full h-full"
+          >
+            <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
+              <Rulers viewTransitionName="main-rulers" />
+              {displayedQuests.map((quest) => (
+                <QuestTile
+                  key={quest.id}
+                  quest={quest}
+                  isCompleted={saveGame.quests[quest.id]?.isCompleted ?? false}
+                />
+              ))}
+            </main>
+          </div>
         </div>
+        {isEmptySave && (
+          <div className="text-center flex flex-col self-center items-center max-w-xs">
+            <Trans i18nKey="home.empty_save_instruction">
+              <div>Select any quest to begin.</div>
+              <div>Complete all for a prize at the reception.</div>
+            </Trans>
+          </div>
+        )}
       </div>
       <footer className="row-start-3 pt-16 flex gap-[24px] flex-wrap items-center justify-center">
-        <ResetSaveGame />
+        {!isEmptySave && <ResetSaveGame />}
         {process.env.NODE_ENV !== "production" && (
           <Fragment>
             <button
