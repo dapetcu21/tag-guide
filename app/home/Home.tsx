@@ -8,13 +8,16 @@ import { useSaveGame } from "~/lib/saveGame";
 import { QuestIcon } from "~/quests/QuestIcon";
 import { ResetSaveGame } from "./ResetSaveGame";
 import { useMemo } from "react";
+import classNames from "classnames";
 
 const QuestTile = ({
   quest,
   isCompleted,
+  cta,
 }: {
   quest: Quest;
   isCompleted: boolean;
+  cta: boolean;
 }) => (
   <Fragment>
     <style>
@@ -31,7 +34,10 @@ const QuestTile = ({
     </style>
     <Link
       id={`quest-${quest.id}`}
-      className="bg-yellow aspect-square rounded-[50%] flex justify-center items-center"
+      className={classNames(
+        "bg-yellow aspect-square rounded-[50%] flex justify-center items-center",
+        cta && "animate-cta",
+      )}
       to={`/quests/${quest.id}`}
       viewTransition={{ types: [`home-${quest.id}`] }}
     >
@@ -96,11 +102,12 @@ export function Home() {
           >
             <main className="grid relative grid-cols-4 grid-rows-4 gap-1 aspect-square">
               <Rulers viewTransitionName="main-rulers" />
-              {displayedQuests.map((quest) => (
+              {displayedQuests.map((quest, index) => (
                 <QuestTile
                   key={quest.id}
                   quest={quest}
                   isCompleted={saveGame.quests[quest.id]?.isCompleted ?? false}
+                  cta={index === 0 && isEmptySave}
                 />
               ))}
             </main>

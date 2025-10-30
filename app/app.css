@@ -21,6 +21,18 @@
   --color-yellow: #ffda02;
   --color-orange: #ea502e;
   --color-teal: #419af2;
+
+  --animate-cta: grow 1s ease-in-out infinite;
+
+  @keyframes grow {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
 }
 
 @utility text-sans {
