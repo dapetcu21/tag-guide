@@ -15,7 +15,7 @@ import { useNavigate } from "react-router";
 import { processScanToken } from "~/lib/scanTokens";
 import { QuestButton } from "~/quests/QuestButton";
 
-export const QRScannerContext = createContext<() => void>(() => {});
+export const QRScannerContext = createContext<() => void>(() => { });
 
 export const QRScannerProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ export const QRScannerProvider = ({ children }: { children: ReactNode }) => {
       <Dialog open={open} onClose={closeDialog} className="relative z-10">
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+          className="fixed inset-0 bg-midnight/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -96,9 +96,9 @@ function QRScannerPanel({
       transition
       className="flex flex-col items-stretch w-full sm:max-w-lg transform transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95"
     >
-      <div className="relative rounded-lg overflow-hidden bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 sm:mt-8 aspect-square">
+      <div className="relative rounded-lg overflow-hidden bg-midnight text-left shadow-xl outline -outline-offset-1 outline-white/10 sm:mt-8 aspect-square">
         <div className="absolute top-0 bottom-0 left-0 right-0 flex p-[17%] items-center justify-center">
-          <div className="text-red-500 font-bold">{error}</div>
+          <div className="text-orange font-bold text-center">{error}</div>
         </div>
         <Scanner
           onScan={handleScan}
@@ -121,13 +121,19 @@ function QRScannerPanel({
             onClick={toggleFacingMode}
             className="absolute bottom-[83px] right-[8px] z-2"
           >
-            <MdOutlineCameraswitch className="size-[30px] text-yellow-400" />
+            <MdOutlineCameraswitch className="size-[30px] text-[yellow]" />
           </button>
         </Scanner>
       </div>
-      <QuestButton className="mt-2" noMargin onClick={onClose}>
-        <Trans i18nKey="scan.close">Close</Trans>
-      </QuestButton>
+      <button
+        type="button"
+        className="mt-2 bg-midnight text-white w-full flex flex-row items-stretch justify-center rounded-lg shadow-xl outline -outline-offset-1 outline-white/10"
+        onClick={onClose}
+      >
+        <div className="p-2 flex flex-row items-center justify-center">
+          <Trans i18nKey="scan.close">Close</Trans>
+        </div>
+      </button>
     </DialogPanel>
   );
 }
