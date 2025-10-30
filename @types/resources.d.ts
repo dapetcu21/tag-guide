@@ -103,7 +103,6 @@ interface Resources {
       }
     },
     "quest": {
-      "brief_image_alt": "Quest icon",
       "continue": "Continue",
       "debrief": "Debrief",
       "input": {

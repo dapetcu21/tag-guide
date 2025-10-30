@@ -2,7 +2,402 @@ import { type Quest, QuestType } from "~/lib/Quest";
 
 export const quests: Array<Quest> = [
   {
+    id: "finish_the_phrase",
+    image: "/quest_icons/t1q1.svg",
+    brief: (t) =>
+      t(
+        "finish_the_phrase.brief",
+        `Complete this common expression by filling in the missing word. Think about phrases you've heard in conversations about work, relationships, or everyday decisions.
+
+**play the ________**
+
+(Something you do in social situations)`,
+      ),
+    debrief: (t) =>
+      t(
+        "finish_the_phrase.debrief",
+        `# THE HIDDEN GAME IN EVERYDAY LIFE
+
+You just completed a phrase about relationships, decisions, or social strategy—yet it borrowed its words from games. Not occasionally. Constantly and naturally.
+
+This isn't decorative language. It's evidence.
+
+In 1938, Dutch historian Johan Huizinga published Homo Ludens (literally "Man the Player") arguing that play isn't something added to human culture—play *is* the foundation of human culture (Huizinga, 1938). We don't just play games; we live through game-like structures. Our language proves it.
+
+When someone says "the ball is in your court" during a business negotiation, they're revealing that negotiation itself has a ludic structure: alternating turns, clear rules about whose move it is, strategies for winning. The game language works because the situation *is* game-like.
+
+French sociologist Roger Caillois identified four fundamental categories of play that structure human experience (Caillois, 1961):
+
+- AGON (Competition): "game changer," "ahead of the game"—the drive to prove superiority through fair contest
+
+- ALEA (Chance): "roll the dice," "hedge your bets"—submitting to fate while managing uncertainty
+
+- MIMICRY (Role-playing): "play the fool," "poker face"—adopting identities and performing roles
+
+- ILINX (Vertigo): "play with fire"—seeking the thrill of losing control within safe boundaries
+
+Game designers Eric Zimmerman and Katie Salen captured this pattern: "Play is free movement within a more rigid structure" (Salen & Zimmerman, 2004, p. 304). A chess player finds creative moves within rigid rules. A negotiator finds clever strategies within business protocols. A romantic "playing the field" explores freedom within dating's social norms.
+
+The structure is the same. That's why the language is the same.
+
+When we say someone is "gaming the system," we're recognizing that systems have game-like rules that can be exploited. When we talk about "moving the goalposts," we're acknowledging that social rules—like game rules—can be changed unfairly.
+
+We don't play games to escape life. Life already contains games. The ancient Greeks had no word separating "play" from "games" from "music" from "education"—they used one word, *paidia*, for all of it (Huizinga, 1938).
+
+Your language just revealed the ludic structure hidden in plain sight.
+
+---
+
+REFERENCES:
+Caillois, R. (1961). Man, Play and Games (M. Barash, Trans.). University of Illinois Press.
+Huizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.
+Salen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.
+
+FURTHER READING:
+Borstelmann, N. (2020). Homo Ludens 2.0: Play, Media and Identity. Amsterdam University Press.
+Henricks, T. S. (2015). Play and the Human Condition. University of Illinois Press.`,
+      ),
+    type: QuestType.TextInput,
+    correctInputs: [
+      "game",
+      "field",
+      "fool",
+      "victim",
+      "joc",
+      "terenul",
+      "mâinile",
+      "norocul",
+      "viața",
+      "viitorul",
+      "cariera",
+      "reputația",
+      "șansele",
+      "regulile",
+      "față",
+      "mișcare",
+    ],
+    typoTolerance: 1,
+  },
+  {
+    id: "language_domains",
+    image: "/quest_icons/t1q2.svg",
+    brief: (t) =>
+      t(
+        "language_domains.brief",
+        `Think about different aspects of life—deception, power, failure, romance, risk, strategy.
+
+Write ONE expression that uses game or play language from any of these domains. Draw from your own memory—phrases you've heard people say or that you use yourself.
+
+Examples: "poker face" (deception), "hold all the cards" (power), "game over" (failure), "play the field" (romance), "roll the dice" (risk), "game plan" (strategy)`,
+      ),
+    debrief: (t) =>
+      t(
+        "language_domains.debrief",
+        `# THE PLAYFUL MIND
+
+You just searched through human life experience and found game language describing it.
+
+This reveals something fundamental about how minds work.
+
+THE RATIONALIST MISTAKE
+
+For centuries, Western philosophy claimed the human mind is fundamentally rational—a logic machine that calculates outcomes and makes decisions (Descartes, 1637/1998). Play was considered a distraction from "real" thinking.
+
+But your quest proves otherwise.
+
+When you think about romance, you don't just calculate compatibility. You "play the field," "play hard to get," engage in "love games." When facing deception, you don't just analyze truth probability. You "play along," "call bluffs," maintain a "poker face."
+
+Cognitive linguists George Lakoff and Mark Johnson demonstrated that human thought is fundamentally metaphorical (Lakoff & Johnson, 1980). We understand abstract concepts—time, love, argument, ideas—by mapping them onto concrete experiences. Crucially, these metaphors aren't just describing thoughts. They're *creating* them.
+
+When you think about arguments as war ("defend your position," "attack that claim"), you literally think differently than if you thought about arguments as dance. The metaphor shapes the cognition.
+
+And one of our most powerful cognitive metaphors is play.
+
+LANGUAGE PLAYING WITH ITSELF
+
+Look at what happened to the word "play" itself:
+- Originally: movement, exercise (Old English *plegian*)
+- Then: free movement in machinery (14th century)
+- Then: theatrical performance (16th century)
+- Then: recreational games (16th century)
+- Then: musical performance (17th century)
+- Now: all of these plus dozens more
+
+The word *played* across contexts, finding new freedoms within language's structures. This enacts Zimmerman's definition: "free movement within a more rigid structure" (Salen & Zimmerman, 2004, p. 304).
+
+Language isn't a rigid code. It's a playground.
+
+Children learning language don't memorize rules—they play with sounds, test boundaries, invent words (Vygotsky, 1978). Poets exploit ambiguities and create novel combinations. Even ordinary speakers constantly engage in wordplay and metaphorical innovation.
+
+This contradicts the computational theory of mind from the 1950s—the idea that brains are computers running algorithms (Fodor, 1975). If true, language would be unambiguous and literal. But it's not. It plays.
+
+German philosopher Friedrich Schiller wrote: "Man only plays when he is in the fullest sense of the word a human being, and he is only fully a human being when he plays" (Schiller, 1795/2004, p. 80).
+
+Your quest revealed this truth. You collected an expression and found play woven into it.
+
+This isn't because we occasionally use game metaphors. It's because human cognition itself is ludic. We understand abstract domains by mapping them onto play structures. We process uncertainty through game-like scenarios. We solve problems by playing with possibilities.
+
+The game expressions you collected aren't decoration. They're evidence of how thought works. We are Homo Ludens—the playing species.
+
+---
+
+REFERENCES:
+Descartes, R. (1637/1998). Discourse on Method and Meditations on First Philosophy (D. A. Cress, Trans.). Hackett Publishing.
+Fodor, J. A. (1975). The Language of Thought. Harvard University Press.
+Lakoff, G., & Johnson, M. (1980). Metaphors We Live By. University of Chicago Press.
+Schiller, F. (1795/2004). On the Aesthetic Education of Man (R. Snell, Trans.). Dover Publications.
+Vygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.
+
+FURTHER READING:
+Cook, G. (2000). Language Play, Language Learning. Oxford University Press.
+Pinker, S. (1994). The Language Instinct: How the Mind Creates Language. William Morrow.`,
+      ),
+    type: QuestType.TextInput,
+    correctInputs: [
+      "poker face",
+      "play dumb",
+      "play along",
+      "call someone's bluff",
+      "call their bluff",
+      "call your bluff",
+      "play possum",
+      "card up your sleeve",
+      "hold all the cards",
+      "move the goalposts",
+      "play into someone's hands",
+      "trump card",
+      "power play",
+      "throw in the towel",
+      "drop the ball",
+      "game over",
+      "strike out",
+      "down for the count",
+      "play the field",
+      "play hard to get",
+      "make a play for",
+      "player",
+      "love game",
+      "play with fire",
+      "roll the dice",
+      "bet your bottom dollar",
+      "all in",
+      "play it safe",
+      "long shot",
+      "play your cards right",
+      "game plan",
+      "chess game",
+      "gaming the system",
+      "ahead of the game",
+      "game changer",
+      "the ball is in your court",
+      "față de poker",
+      "a juca teatru",
+      "joc prefăcut",
+      "a prinde cu cărțile în mână",
+      "a juca la cacealma",
+      "a juca murdar",
+      "a juca la două capete",
+      "a avea atuuri în mână",
+      "a schimba regulile jocului",
+      "a face jocul cuiva",
+      "joc de putere",
+      "a fi la mâna cuiva",
+      "a ieși din joc",
+      "jocul nu merită lumânarea",
+      "a scoate din joc",
+      "jocurile sunt făcute",
+      "a da cu bâta-n baltă",
+      "a se juca cu sentimentele cuiva",
+      "jocul seducției",
+      "jucător",
+      "a se juca de-a v-ați ascunselea",
+      "a juca cu focul",
+      "a-și juca norocul",
+      "a pune în joc",
+      "a-și pune capul în joc",
+      "joc periculos",
+      "a-și juca viața",
+      "a da cărțile pe față",
+      "a-i descoperi jocul",
+      "a juca pe două fronturi",
+      "a-și joca ultima carte",
+      "joc de interese",
+      "joc politic",
+      "joc diplomatic",
+      "joc dublu",
+      "joc triplu",
+    ],
+    typoTolerance: 2,
+  },
+  {
+    id: "the_breadth_of_play",
+    image: "/quest_icons/t1q3.svg",
+    brief: (t) =>
+      t(
+        "the_breadth_of_play.brief",
+        `The word "play" appears in many surprising contexts beyond games. Think broadly—from machinery to music to technology to theater.
+
+Write ONE expression using "play" or "game" that is NOT about recreational games.
+
+Examples: "play in the steering wheel" (mechanical), "play a role" (theatrical), "play piano" (musical), "press play" (media), "play acting" (deception)`,
+      ),
+    debrief: (t) =>
+      t(
+        "the_breadth_of_play.debrief",
+        `# THE DEFINITION OF PLAY ITSELF
+
+You just traced "play" into a context beyond recreational games—maybe machinery, theater, music, deception, or technology.
+
+This reveals something profound: "play" is remarkably hard to define. But this difficulty isn't a problem—it's the point.
+
+Most words have stable meanings. A "chair" is a chair. But "play" sprawls across domains with nothing in common: a child playing tag, an actor playing Hamlet, a musician playing Chopin, free movement in gears, pressing a button to start video, strategic deception, light shimmering on water.
+
+Philosopher Ludwig Wittgenstein argued that "game" and "play" are "family resemblance" concepts—there's no single feature shared by all instances, just overlapping similarities (Wittgenstein, 1953). Some games have winners; some don't. Some require skill; some are pure chance.
+
+But Eric Zimmerman found a unifying structure beneath this diversity.
+
+THE CORE DEFINITION
+
+In Rules of Play, Zimmerman and Salen offer this formulation:
+
+"Play is free movement within a more rigid structure." (Salen & Zimmerman, 2004, p. 304)
+
+Look at your expression through this lens:
+
+- MECHANICAL PLAY: A gear has "play" when there's slack allowing free movement within the mechanism's rigid structure
+
+- THEATRICAL PLAY: An actor has interpretive freedom within the rigid structure of script and stage
+
+- MUSICAL PLAY: A musician explores expression within the rigid structure of notation and instrument
+
+- GAME PLAY: Chess players discover endless possibilities within chess's rigid 64-square structure
+
+- MEDIA PLAYBACK: Pressing "play" releases free movement of video within its rigid timeline
+
+- LINGUISTIC PLAY: "Playing dumb" finds freedom within rigid social expectations
+
+In every case: FREEDOM WITHIN CONSTRAINT. Movement within boundaries. Possibility within structure.
+
+This definition is recursive—it applies to itself. The word "play" exhibits free movement (across all these contexts) within the rigid structure of language. "Play" itself plays.
+
+THREE TYPES OF PLAY
+
+Zimmerman identifies three categories:
+
+1. GAME PLAY - Playing games with explicit rules (chess, poker, video games). This is what most people think "play" means. But it's just one type.
+
+2. LUDIC ACTIVITIES - Less structured play (bouncing a ball, playing with toys, horseplay). You test boundaries, experiment with physics, discover possibilities. Looser rules.
+
+3. BEING PLAYFUL - Playful attitude applied to non-play contexts (playing dumb, playful banter, "play on words"). Play seeps into everything, transforming ordinary activities.
+
+TRANSFORMATIVE PLAY
+
+Some play is so powerful it transforms the structures within which it operates. Zimmerman calls this "transformative play" (Salen & Zimmerman, 2004, p. 305).
+
+Playful slang ("cool," "sick," "lit") starts as rule-breaking but enters the dictionary, becoming standard. The play transforms the structure. "Play" originally meant physical exercise (Old English *plegian*). Then someone playfully applied it to machinery (14th century), theater (16th century), music (17th century), media technology (20th century). Each extension was strange—then became normal.
+
+WHY PLAY RESISTS DEFINITION
+
+Any rigid definition would contradict play's nature. Play is *characterized by* free movement, boundary-testing, creative exploration. A definition that rigidly constrained it would kill what makes it play.
+
+Caillois understood this. His four categories (agon, alea, mimicry, ilinx) map play's territory without pinning it down (Caillois, 1961). Huizinga described play's qualities but refused to constrain it completely (Huizinga, 1938).
+
+THE JOURNEY COMPLETE
+
+The "Finish the Phrase" quest revealed that life domains already have ludic structures—that's why game language describes them naturally.
+
+The "Language Domains" quest revealed that language itself is playful, that human cognition is ludic, that thinking is creative exploration.
+
+This quest revealed that play itself is definable only as "free movement within rigid structure"—and this pattern appears everywhere, from gears to grammar, from chess to theater to technology.
+
+You've discovered what Huizinga argued in 1938: we are Homo Ludens. Not because we sometimes play games. But because play—this dance between freedom and structure—is the fundamental pattern through which we engage with reality, create meaning, use language, and understand ourselves.
+
+Huizinga called it the "magic circle"—that special space where play happens (Huizinga, 1938, p. 10). But your quest proved something deeper: the magic circle isn't separate from ordinary life. It's woven throughout it.
+
+You've been inside it all along.
+
+---
+
+REFERENCES:
+Caillois, R. (1961). Man, Play and Games (M. Barash, Trans.). University of Illinois Press.
+Huizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.
+Salen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.
+Wittgenstein, L. (1953). Philosophical Investigations (G. E. M. Anscombe, Trans.). Blackwell.
+
+FURTHER READING:
+Hans, J. S. (1981). The Play of the World. University of Massachusetts Press.
+Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
+      ),
+    type: QuestType.TextInput,
+    correctInputs: [
+      "play in the steering wheel",
+      "free play",
+      "play in the gears",
+      "play of light",
+      "mechanical play",
+      "play a role",
+      "stage play",
+      "play rehearsal",
+      "playwright",
+      "play a character",
+      "play piano",
+      "play guitar",
+      "play by ear",
+      "play an instrument",
+      "play music",
+      "play acting",
+      "play possum",
+      "play dumb",
+      "playing games",
+      "play along",
+      "play a video",
+      "press play",
+      "hit play",
+      "playback",
+      "replay",
+      "auto-play",
+      "autoplay",
+      "joc în direcție",
+      "joc mecanic",
+      "joc liber",
+      "joc de lumini",
+      "joc în angrenaje",
+      "a juca un rol",
+      "piesă de teatru",
+      "a-și juca rolul",
+      "spectacol teatral",
+      "dramaturg",
+      "a juca la pian",
+      "a juca la chitară",
+      "a cânta din ureche",
+      "a interpreta muzică",
+      "a se juca pe instrumente",
+      "a cânta la",
+      "a juca teatru",
+      "joc prefăcut",
+      "a se preface",
+      "a juca la cacealma",
+      "a juca murdar",
+      "a reda un video",
+      "a apăsa play",
+      "redare",
+      "reluare",
+      "redare automată",
+      "playback",
+    ],
+    typoTolerance: 2,
+  },
+  {
+    id:"ritual_play",
+    image: "/quest_icons/t1q4.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
+  },
+  {
     id: "play_to_survive",
+    image: "/quest_icons/t2q1.svg",
     brief: (t) =>
       t(
         "play_to_survive.brief",
@@ -119,6 +514,7 @@ Caillois, R. (1961). Man, Play and Games`,
   },
   {
     id: "the_learning_ladder",
+    image: "/quest_icons/t2q2.svg",
     brief: (t) =>
       t(
         "the_learning_ladder.brief",
@@ -285,6 +681,7 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
   },
   {
     id: "beyond_the_game",
+    image: "/quest_icons/t2q3.svg",
     brief: (t) =>
       t(
         "beyond_the_game.brief",
@@ -515,7 +912,17 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
     ],
   },
   {
+    id: "test_text",
+    image: "/quest_icons/t2q4.svg",
+    brief: () => 'Type "Cats/Dogs are cool!" to complete this quest.',
+    debrief: () => "Congrats! You like animals.\n![](https://www.publicdomainpictures.net/pictures/180000/velka/cat-1464103447LmK.jpg)",
+    type: QuestType.TextInput,
+    correctInputs: ["Cats are cool!", "Dogs are cool!"],
+    typoTolerance: 2,
+  },
+  {
     id: "who_do_you_become",
+    image: "/quest_icons/t3q1.svg",
     brief: (t) =>
       t(
         "who_do_you_become.brief",
@@ -712,6 +1119,7 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
   },
   {
     id: "the_fellowship_of_selves",
+    image: "/quest_icons/t3q2.svg",
     brief: (t) =>
       t(
         "the_fellowship_of_selves.brief",
@@ -869,6 +1277,7 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
   },
   {
     id: "the_safe_space_for_transformation",
+    image: "/quest_icons/t3q3.svg",
     brief: (t) =>
       t(
         "the_safe_space_for_transformation.brief",
@@ -1042,386 +1451,43 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
     ],
   },
   {
-    id: "finish_the_phrase",
-    brief: (t) =>
-      t(
-        "finish_the_phrase.brief",
-        `Complete this common expression by filling in the missing word. Think about phrases you've heard in conversations about work, relationships, or everyday decisions.
-
-**play the ________**
-
-(Something you do in social situations)`,
-      ),
-    debrief: (t) =>
-      t(
-        "finish_the_phrase.debrief",
-        `# THE HIDDEN GAME IN EVERYDAY LIFE
-
-You just completed a phrase about relationships, decisions, or social strategy—yet it borrowed its words from games. Not occasionally. Constantly and naturally.
-
-This isn't decorative language. It's evidence.
-
-In 1938, Dutch historian Johan Huizinga published Homo Ludens (literally "Man the Player") arguing that play isn't something added to human culture—play *is* the foundation of human culture (Huizinga, 1938). We don't just play games; we live through game-like structures. Our language proves it.
-
-When someone says "the ball is in your court" during a business negotiation, they're revealing that negotiation itself has a ludic structure: alternating turns, clear rules about whose move it is, strategies for winning. The game language works because the situation *is* game-like.
-
-French sociologist Roger Caillois identified four fundamental categories of play that structure human experience (Caillois, 1961):
-
-- AGON (Competition): "game changer," "ahead of the game"—the drive to prove superiority through fair contest
-
-- ALEA (Chance): "roll the dice," "hedge your bets"—submitting to fate while managing uncertainty
-
-- MIMICRY (Role-playing): "play the fool," "poker face"—adopting identities and performing roles
-
-- ILINX (Vertigo): "play with fire"—seeking the thrill of losing control within safe boundaries
-
-Game designers Eric Zimmerman and Katie Salen captured this pattern: "Play is free movement within a more rigid structure" (Salen & Zimmerman, 2004, p. 304). A chess player finds creative moves within rigid rules. A negotiator finds clever strategies within business protocols. A romantic "playing the field" explores freedom within dating's social norms.
-
-The structure is the same. That's why the language is the same.
-
-When we say someone is "gaming the system," we're recognizing that systems have game-like rules that can be exploited. When we talk about "moving the goalposts," we're acknowledging that social rules—like game rules—can be changed unfairly.
-
-We don't play games to escape life. Life already contains games. The ancient Greeks had no word separating "play" from "games" from "music" from "education"—they used one word, *paidia*, for all of it (Huizinga, 1938).
-
-Your language just revealed the ludic structure hidden in plain sight.
-
----
-
-REFERENCES:
-Caillois, R. (1961). Man, Play and Games (M. Barash, Trans.). University of Illinois Press.
-Huizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.
-Salen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.
-
-FURTHER READING:
-Borstelmann, N. (2020). Homo Ludens 2.0: Play, Media and Identity. Amsterdam University Press.
-Henricks, T. S. (2015). Play and the Human Condition. University of Illinois Press.`,
-      ),
-    type: QuestType.TextInput,
-    correctInputs: [
-      "game",
-      "field",
-      "fool",
-      "victim",
-      "joc",
-      "terenul",
-      "mâinile",
-      "norocul",
-      "viața",
-      "viitorul",
-      "cariera",
-      "reputația",
-      "șansele",
-      "regulile",
-      "față",
-      "mișcare",
-    ],
-    typoTolerance: 1,
+    id: "final_transformation",
+    image: "/quest_icons/t3q4.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
   },
   {
-    id: "language_domains",
-    brief: (t) =>
-      t(
-        "language_domains.brief",
-        `Think about different aspects of life—deception, power, failure, romance, risk, strategy.
-
-Write ONE expression that uses game or play language from any of these domains. Draw from your own memory—phrases you've heard people say or that you use yourself.
-
-Examples: "poker face" (deception), "hold all the cards" (power), "game over" (failure), "play the field" (romance), "roll the dice" (risk), "game plan" (strategy)`,
-      ),
-    debrief: (t) =>
-      t(
-        "language_domains.debrief",
-        `# THE PLAYFUL MIND
-
-You just searched through human life experience and found game language describing it.
-
-This reveals something fundamental about how minds work.
-
-THE RATIONALIST MISTAKE
-
-For centuries, Western philosophy claimed the human mind is fundamentally rational—a logic machine that calculates outcomes and makes decisions (Descartes, 1637/1998). Play was considered a distraction from "real" thinking.
-
-But your quest proves otherwise.
-
-When you think about romance, you don't just calculate compatibility. You "play the field," "play hard to get," engage in "love games." When facing deception, you don't just analyze truth probability. You "play along," "call bluffs," maintain a "poker face."
-
-Cognitive linguists George Lakoff and Mark Johnson demonstrated that human thought is fundamentally metaphorical (Lakoff & Johnson, 1980). We understand abstract concepts—time, love, argument, ideas—by mapping them onto concrete experiences. Crucially, these metaphors aren't just describing thoughts. They're *creating* them.
-
-When you think about arguments as war ("defend your position," "attack that claim"), you literally think differently than if you thought about arguments as dance. The metaphor shapes the cognition.
-
-And one of our most powerful cognitive metaphors is play.
-
-LANGUAGE PLAYING WITH ITSELF
-
-Look at what happened to the word "play" itself:
-- Originally: movement, exercise (Old English *plegian*)
-- Then: free movement in machinery (14th century)
-- Then: theatrical performance (16th century)
-- Then: recreational games (16th century)
-- Then: musical performance (17th century)
-- Now: all of these plus dozens more
-
-The word *played* across contexts, finding new freedoms within language's structures. This enacts Zimmerman's definition: "free movement within a more rigid structure" (Salen & Zimmerman, 2004, p. 304).
-
-Language isn't a rigid code. It's a playground.
-
-Children learning language don't memorize rules—they play with sounds, test boundaries, invent words (Vygotsky, 1978). Poets exploit ambiguities and create novel combinations. Even ordinary speakers constantly engage in wordplay and metaphorical innovation.
-
-This contradicts the computational theory of mind from the 1950s—the idea that brains are computers running algorithms (Fodor, 1975). If true, language would be unambiguous and literal. But it's not. It plays.
-
-German philosopher Friedrich Schiller wrote: "Man only plays when he is in the fullest sense of the word a human being, and he is only fully a human being when he plays" (Schiller, 1795/2004, p. 80).
-
-Your quest revealed this truth. You collected an expression and found play woven into it.
-
-This isn't because we occasionally use game metaphors. It's because human cognition itself is ludic. We understand abstract domains by mapping them onto play structures. We process uncertainty through game-like scenarios. We solve problems by playing with possibilities.
-
-The game expressions you collected aren't decoration. They're evidence of how thought works. We are Homo Ludens—the playing species.
-
----
-
-REFERENCES:
-Descartes, R. (1637/1998). Discourse on Method and Meditations on First Philosophy (D. A. Cress, Trans.). Hackett Publishing.
-Fodor, J. A. (1975). The Language of Thought. Harvard University Press.
-Lakoff, G., & Johnson, M. (1980). Metaphors We Live By. University of Chicago Press.
-Schiller, F. (1795/2004). On the Aesthetic Education of Man (R. Snell, Trans.). Dover Publications.
-Vygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Harvard University Press.
-
-FURTHER READING:
-Cook, G. (2000). Language Play, Language Learning. Oxford University Press.
-Pinker, S. (1994). The Language Instinct: How the Mind Creates Language. William Morrow.`,
-      ),
-    type: QuestType.TextInput,
-    correctInputs: [
-      "poker face",
-      "play dumb",
-      "play along",
-      "call someone's bluff",
-      "call their bluff",
-      "call your bluff",
-      "play possum",
-      "card up your sleeve",
-      "hold all the cards",
-      "move the goalposts",
-      "play into someone's hands",
-      "trump card",
-      "power play",
-      "throw in the towel",
-      "drop the ball",
-      "game over",
-      "strike out",
-      "down for the count",
-      "play the field",
-      "play hard to get",
-      "make a play for",
-      "player",
-      "love game",
-      "play with fire",
-      "roll the dice",
-      "bet your bottom dollar",
-      "all in",
-      "play it safe",
-      "long shot",
-      "play your cards right",
-      "game plan",
-      "chess game",
-      "gaming the system",
-      "ahead of the game",
-      "game changer",
-      "the ball is in your court",
-      "față de poker",
-      "a juca teatru",
-      "joc prefăcut",
-      "a prinde cu cărțile în mână",
-      "a juca la cacealma",
-      "a juca murdar",
-      "a juca la două capete",
-      "a avea atuuri în mână",
-      "a schimba regulile jocului",
-      "a face jocul cuiva",
-      "joc de putere",
-      "a fi la mâna cuiva",
-      "a ieși din joc",
-      "jocul nu merită lumânarea",
-      "a scoate din joc",
-      "jocurile sunt făcute",
-      "a da cu bâta-n baltă",
-      "a se juca cu sentimentele cuiva",
-      "jocul seducției",
-      "jucător",
-      "a se juca de-a v-ați ascunselea",
-      "a juca cu focul",
-      "a-și juca norocul",
-      "a pune în joc",
-      "a-și pune capul în joc",
-      "joc periculos",
-      "a-și juca viața",
-      "a da cărțile pe față",
-      "a-i descoperi jocul",
-      "a juca pe două fronturi",
-      "a-și joca ultima carte",
-      "joc de interese",
-      "joc politic",
-      "joc diplomatic",
-      "joc dublu",
-      "joc triplu",
-    ],
-    typoTolerance: 2,
+    id: "track4_quest1",
+    image: "/quest_icons/t4q1.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
   },
   {
-    id: "the_breadth_of_play",
-    brief: (t) =>
-      t(
-        "the_breadth_of_play.brief",
-        `The word "play" appears in many surprising contexts beyond games. Think broadly—from machinery to music to technology to theater.
-
-Write ONE expression using "play" or "game" that is NOT about recreational games.
-
-Examples: "play in the steering wheel" (mechanical), "play a role" (theatrical), "play piano" (musical), "press play" (media), "play acting" (deception)`,
-      ),
-    debrief: (t) =>
-      t(
-        "the_breadth_of_play.debrief",
-        `# THE DEFINITION OF PLAY ITSELF
-
-You just traced "play" into a context beyond recreational games—maybe machinery, theater, music, deception, or technology.
-
-This reveals something profound: "play" is remarkably hard to define. But this difficulty isn't a problem—it's the point.
-
-Most words have stable meanings. A "chair" is a chair. But "play" sprawls across domains with nothing in common: a child playing tag, an actor playing Hamlet, a musician playing Chopin, free movement in gears, pressing a button to start video, strategic deception, light shimmering on water.
-
-Philosopher Ludwig Wittgenstein argued that "game" and "play" are "family resemblance" concepts—there's no single feature shared by all instances, just overlapping similarities (Wittgenstein, 1953). Some games have winners; some don't. Some require skill; some are pure chance.
-
-But Eric Zimmerman found a unifying structure beneath this diversity.
-
-THE CORE DEFINITION
-
-In Rules of Play, Zimmerman and Salen offer this formulation:
-
-"Play is free movement within a more rigid structure." (Salen & Zimmerman, 2004, p. 304)
-
-Look at your expression through this lens:
-
-- MECHANICAL PLAY: A gear has "play" when there's slack allowing free movement within the mechanism's rigid structure
-
-- THEATRICAL PLAY: An actor has interpretive freedom within the rigid structure of script and stage
-
-- MUSICAL PLAY: A musician explores expression within the rigid structure of notation and instrument
-
-- GAME PLAY: Chess players discover endless possibilities within chess's rigid 64-square structure
-
-- MEDIA PLAYBACK: Pressing "play" releases free movement of video within its rigid timeline
-
-- LINGUISTIC PLAY: "Playing dumb" finds freedom within rigid social expectations
-
-In every case: FREEDOM WITHIN CONSTRAINT. Movement within boundaries. Possibility within structure.
-
-This definition is recursive—it applies to itself. The word "play" exhibits free movement (across all these contexts) within the rigid structure of language. "Play" itself plays.
-
-THREE TYPES OF PLAY
-
-Zimmerman identifies three categories:
-
-1. GAME PLAY - Playing games with explicit rules (chess, poker, video games). This is what most people think "play" means. But it's just one type.
-
-2. LUDIC ACTIVITIES - Less structured play (bouncing a ball, playing with toys, horseplay). You test boundaries, experiment with physics, discover possibilities. Looser rules.
-
-3. BEING PLAYFUL - Playful attitude applied to non-play contexts (playing dumb, playful banter, "play on words"). Play seeps into everything, transforming ordinary activities.
-
-TRANSFORMATIVE PLAY
-
-Some play is so powerful it transforms the structures within which it operates. Zimmerman calls this "transformative play" (Salen & Zimmerman, 2004, p. 305).
-
-Playful slang ("cool," "sick," "lit") starts as rule-breaking but enters the dictionary, becoming standard. The play transforms the structure. "Play" originally meant physical exercise (Old English *plegian*). Then someone playfully applied it to machinery (14th century), theater (16th century), music (17th century), media technology (20th century). Each extension was strange—then became normal.
-
-WHY PLAY RESISTS DEFINITION
-
-Any rigid definition would contradict play's nature. Play is *characterized by* free movement, boundary-testing, creative exploration. A definition that rigidly constrained it would kill what makes it play.
-
-Caillois understood this. His four categories (agon, alea, mimicry, ilinx) map play's territory without pinning it down (Caillois, 1961). Huizinga described play's qualities but refused to constrain it completely (Huizinga, 1938).
-
-THE JOURNEY COMPLETE
-
-The "Finish the Phrase" quest revealed that life domains already have ludic structures—that's why game language describes them naturally.
-
-The "Language Domains" quest revealed that language itself is playful, that human cognition is ludic, that thinking is creative exploration.
-
-This quest revealed that play itself is definable only as "free movement within rigid structure"—and this pattern appears everywhere, from gears to grammar, from chess to theater to technology.
-
-You've discovered what Huizinga argued in 1938: we are Homo Ludens. Not because we sometimes play games. But because play—this dance between freedom and structure—is the fundamental pattern through which we engage with reality, create meaning, use language, and understand ourselves.
-
-Huizinga called it the "magic circle"—that special space where play happens (Huizinga, 1938, p. 10). But your quest proved something deeper: the magic circle isn't separate from ordinary life. It's woven throughout it.
-
-You've been inside it all along.
-
----
-
-REFERENCES:
-Caillois, R. (1961). Man, Play and Games (M. Barash, Trans.). University of Illinois Press.
-Huizinga, J. (1938). Homo Ludens: A Study of the Play-Element in Culture. Beacon Press.
-Salen, K., & Zimmerman, E. (2004). Rules of Play: Game Design Fundamentals. MIT Press.
-Wittgenstein, L. (1953). Philosophical Investigations (G. E. M. Anscombe, Trans.). Blackwell.
-
-FURTHER READING:
-Hans, J. S. (1981). The Play of the World. University of Massachusetts Press.
-Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
-      ),
-    type: QuestType.TextInput,
-    correctInputs: [
-      "play in the steering wheel",
-      "free play",
-      "play in the gears",
-      "play of light",
-      "mechanical play",
-      "play a role",
-      "stage play",
-      "play rehearsal",
-      "playwright",
-      "play a character",
-      "play piano",
-      "play guitar",
-      "play by ear",
-      "play an instrument",
-      "play music",
-      "play acting",
-      "play possum",
-      "play dumb",
-      "playing games",
-      "play along",
-      "play a video",
-      "press play",
-      "hit play",
-      "playback",
-      "replay",
-      "auto-play",
-      "autoplay",
-      "joc în direcție",
-      "joc mecanic",
-      "joc liber",
-      "joc de lumini",
-      "joc în angrenaje",
-      "a juca un rol",
-      "piesă de teatru",
-      "a-și juca rolul",
-      "spectacol teatral",
-      "dramaturg",
-      "a juca la pian",
-      "a juca la chitară",
-      "a cânta din ureche",
-      "a interpreta muzică",
-      "a se juca pe instrumente",
-      "a cânta la",
-      "a juca teatru",
-      "joc prefăcut",
-      "a se preface",
-      "a juca la cacealma",
-      "a juca murdar",
-      "a reda un video",
-      "a apăsa play",
-      "redare",
-      "reluare",
-      "redare automată",
-      "playback",
-    ],
-    typoTolerance: 2,
+    id: "track4_quest2",
+    image: "/quest_icons/t4q2.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
+  },
+  {
+    id: "track4_quest3",
+    image: "/quest_icons/t4q3.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
+  },
+  {
+    id: "track4_quest4",
+    image: "/quest_icons/t4q4.svg",
+    brief: () => "Scan the QR to complete this quest.",
+    debrief: () => "Congrats! You scanned the QR.",
+    type: QuestType.Scannable,
+    scanToken: "test",
   },
 ];
