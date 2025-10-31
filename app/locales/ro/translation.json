@@ -57,10 +57,11 @@
   },
   "home": {
     "empty_save_instruction": "<0>Selectează o provocare pentru a începe.</0><1>Completează-le pe toate pentru un premiu de la recepție.</1>",
+    "language_switch": "Română",
     "reset_progress": {
-      "open": ""
+      "open": "Resetează progresul"
     },
-    "title": ""
+    "title": "The Art of the Game"
   },
   "language_domains": {
     "brief": "Gândește-te la diferite aspecte ale vieții—înșelăciune, putere, eșec, romantism, risc, strategie.\n\nScrie O expresie care folosește limbaj legat de joc sau joacă din oricare dintre aceste domenii. Apelează la propria memorie—expresii pe care le-ai auzit sau pe care le folosești tu însuți.\n\nExemple: \"față de poker\" (înșelăciune), \"a avea atuuri în mână\" (putere), \"jocul nu merită lumânarea\" (eșec), \"a se juca cu sentimentele\" (romantism), \"a juca cu focul\" (risc), \"a da cărțile pe față\" (strategie)",

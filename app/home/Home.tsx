@@ -1,5 +1,5 @@
 import { Fragment } from "react/jsx-runtime";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import Rulers from "~/components/Rulers";
 import { mockQuests, quests } from "~/content/quests";
 import { Link } from "~/lib/fakeTransitionType";
@@ -72,6 +72,9 @@ export function Home() {
     [saveGame],
   );
 
+  const [_, i18n] = useTranslation()
+  const lang = i18n.resolvedLanguage;
+
   return (
     <div className="font-sans grid grid-rows-[88px_1fr_20px] justify-items-stretch w-full h-full overflow-hidden p-8 pb-20 sm:p-20">
       <div className="row-start-1 flex flex-row justify-center items-start mb-4">
@@ -124,6 +127,22 @@ export function Home() {
       </div>
       <footer className="row-start-3 pt-16 flex gap-[24px] flex-wrap items-center justify-center">
         {!isEmptySave && <ResetSaveGame />}
+            <button
+              type="button"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              onClick={() => {
+                const newLang = lang === 'en' ? 'ro' : 'en';
+                // biome-ignore lint/suspicious/noDocumentCookie: I don't need a cookie lib for this
+                document.cookie = `i18next=${newLang}; path=/`;
+                i18n.changeLanguage(newLang);
+              }}
+            >
+              {lang === "en" ? "🇬🇧" : (lang === "ro" ? "🇷🇴" : lang)}
+              {" "}
+              <Trans i18nKey="home.language_switch">
+                English
+              </Trans>
+            </button>
         {process.env.NODE_ENV !== "production" && (
           <Fragment>
             <button

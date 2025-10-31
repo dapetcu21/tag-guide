@@ -58,6 +58,7 @@ interface Resources {
     },
     "home": {
       "empty_save_instruction": "<0>Select any quest to begin.</0><1>Complete all for a prize at the reception.</1>",
+      "language_switch": "English",
       "reset_progress": {
         "open": "Reset progress"
       },
