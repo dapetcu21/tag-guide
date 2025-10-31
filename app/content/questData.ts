@@ -1913,12 +1913,59 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
   {
     id: "final_transformation",
     image: "/quest_icons/t3q4.svg",
-    brief: (t) => 
+    brief: (t) =>
       t (
-        "track3_quest4.brief", 
+        "track3_quest4.brief",
       "Go to the LABORATORY room and take a sheet of paper from the Q3-B bin. Write your answer to the quest your were given by a fellow player. Lastly, scan the QR code.",
       ),
-    debrief: () => "Congrats! You scanned the QR.",
+    debrief: (t) =>
+      t(
+        "final_transformation.debrief",
+        `# PLAY AS SOCIAL RITUAL
+
+You just completed a quest designed by another player. Someone you'll likely never meet created this challenge—and you performed it. This is social structure emerging through play.
+
+THE SOLIDIFICATION OF SOCIAL ROLES
+
+When communities gather to play repeatedly, roles crystallize. Sociologist Émile Durkheim observed that ritual transforms individuals into collectives, reinforcing social order through shared performance (Durkheim, 1912/1995). Gaming guilds, sports teams, and larp groups exhibit this pattern: raid leaders emerge, healers specialize, tanks anchor—roles that begin as mechanical necessity become social identity.
+
+Social psychologist Henri Tajfel demonstrated that even arbitrary group categories create powerful in-group loyalty and identity (Tajfel & Turner, 1979). His "minimal group paradigm" showed people favor their group after mere random assignment. Gaming amplifies this: shared raids, coordinated strategies, and collective victories forge communities where roles become identity. You're not just playing a healer—you're "the guild healer." The role becomes who you are within that social structure.
+
+Communities of practice scholar Etienne Wenger describes how shared activities create identity through "mutual engagement, joint enterprise, and shared repertoire" (Wenger, 1998). Speedrunning communities, esports teams, tabletop gaming groups—each develops specialized knowledge, insider language, and recognized expertise. These aren't just people who play together; they're social structures where participation defines membership and competence determines status.
+
+THE LIBERATORY PARADOX
+
+But play's relationship to social structure is double-edged. The same mechanism that solidifies roles also dissolves them.
+
+Nordic larp researcher Jonaya Kemper introduces "wyrding the self"—using roleplay to resist what Audre Lorde called the "mythical norm," society's invisible standard against which all are measured (Kemper, 2020). When marginalized players inhabit characters with power, confidence, or authority society denies them, they practice liberation. The character provides "alibi"—narrative permission to attempt actions their assigned social position forbids.
+
+Sarah Lynne Bowman identifies this as "emancipatory bleed"—the liberatory feeling when players successfully resist systematic oppression within the game and carry that resistance outward (Bowman, 2018). A player discovers that confidence isn't innate; it's performed and practiced. Another learns that social constraints aren't natural law but arbitrary rules that can be challenged.
+
+Game designer Avery Alder's framework of "belonging outside belonging" captures this tension: games create spaces where players belong through participation while simultaneously existing outside normative social structures (Alder, 2017). You're both within the community (following its rules, accepting its roles) and outside conventional society (experimenting with identities society forbids).
+
+THE RITUAL YOU JUST PERFORMED
+
+This quest embodied this paradox. You accepted a role—quest-completer—in a social structure created by players. You followed rules established by community practice. You performed a ritual that connects you to fellow players through shared experience.
+
+But you also experienced liberation. Another player's imagination constrained you—and freed you. Their quest gave you permission to explore parts of the exhibition you might have skipped, think thoughts you hadn't considered, practice behaviors you don't typically perform.
+
+Play simultaneously binds us to social structures and offers escape from them. It creates communities where we find belonging—and spaces where we practice liberation from the roles those very communities might impose.
+
+---
+
+REFERENCES:
+Alder, A. (2017). Belonging Outside Belonging [Game design framework]. Buried Without Ceremony.
+Bowman, S. L. (2018). Immersion and Shared Imagination in Role-Playing Games. In J. P. Zagal & S. Deterding (Eds.), Role-Playing Game Studies: Transmedia Foundations (pp. 379-394). Routledge.
+Durkheim, É. (1995). The Elementary Forms of Religious Life (K. E. Fields, Trans.). Free Press. (Original work published 1912)
+Kemper, J. (2020). Wyrding the self: Using navigational play to resist systematic oppression in larp. Nordic Larp. https://nordiclarp.org/2020/05/18/wyrding-the-self/
+Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. In W. G. Austin & S. Worchel (Eds.), The Social Psychology of Intergroup Relations (pp. 33-47). Brooks/Cole.
+Wenger, E. (1998). Communities of Practice: Learning, Meaning, and Identity. Cambridge University Press.
+
+FURTHER READING:
+Anderson, B. (1983). Imagined Communities: Reflections on the Origin and Spread of Nationalism. Verso.
+Goffman, E. (1959). The Presentation of Self in Everyday Life. Anchor Books.
+Putnam, R. D. (2000). Bowling Alone: The Collapse and Revival of American Community. Simon & Schuster.`,
+      ),
     type: QuestType.Scannable,
     scanToken: "t3q4",
   },
