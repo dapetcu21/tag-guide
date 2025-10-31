@@ -17,7 +17,14 @@ const freeQuestions = quests
   .filter((q) => q.type === QuestType.Questions)
   .flatMap((q) =>
     q.questions
-      .filter((que) => que.correctAnswer == null)
+      .filter((que) => {
+        // Questions with answers array check for missing correctAnswer
+        if ('answers' in que && que.answers) {
+          return que.correctAnswer == null;
+        }
+        // Questions with correctInputs check if correctInputs is undefined (free text)
+        return que.correctInputs == null;
+      })
       .map((que) => [q, que]),
   );
 
@@ -72,7 +79,8 @@ export function serializeSave(save: SaveGame): ArrayBuffer {
       question.id
     ];
     if (answer != null) freeQuestionAnsweredBytes[i >> 3] |= 1 << (i & 7);
-    freeQuestionBytes[i >> 2] |= (answer ?? 0) << ((i & 3) << 1);
+    const numericAnswer = typeof answer === 'number' ? answer : 0;
+    freeQuestionBytes[i >> 2] |= numericAnswer << ((i & 3) << 1);
   }
 
   return buffer;
@@ -136,6 +144,8 @@ export function deserializeSave(buffer: ArrayBuffer): SaveGame {
     if (quest.type === QuestType.Questions) {
       for (const question of quest.questions) {
         if (
+          'answers' in question &&
+          question.answers &&
           question.correctAnswer != null &&
           save.quests?.[quest.id]?.isCompleted
         ) {
