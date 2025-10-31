@@ -19,6 +19,7 @@ export type Question = {
   | {
       answers?: undefined;
       correctInputs?: Array<string>; // Omit to allow free answer
+      typoTolerance: number; // Number of allowable mistyped characters
     }
 );
 

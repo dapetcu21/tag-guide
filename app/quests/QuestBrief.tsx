@@ -54,6 +54,7 @@ export default function QuestBrief(_: Route.ComponentProps) {
         <div className="mt-4">
           <QuestInput
             correctInputs={quest.correctInputs}
+            typoTolerance={quest.typoTolerance}
             isCompleted={questSaveGame.isCompleted}
             solution={questSaveGame.solution}
             setSolution={(solution) =>

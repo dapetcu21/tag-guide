@@ -21,16 +21,16 @@ const normalizeInput = (s: string): string =>
 function validateInput(
   input: string,
   correctInputs: Array<string>,
+  typoTolerance: number // Max allowed mistaken characters
 ): number | null {
   const normalizedInput = normalizeInput(input);
-  const treshold = 3; // Max allowed mistaken characters
 
   const [_, bestIndex] = correctInputs.reduce(
     (acc, variant, currentIndex) => {
       const distance = leven(normalizedInput, normalizeInput(variant));
       return distance < acc[0] ? [distance, currentIndex] : acc;
     },
-    [treshold + 1, -1],
+    [(typoTolerance ?? 3) + 1, -1],
   );
 
   return bestIndex >= 0 ? bestIndex : null;
@@ -54,11 +54,13 @@ export function getSolution(
 export function QuestInput({
   isCompleted,
   correctInputs,
+  typoTolerance,
   solution,
   setSolution,
 }: {
   isCompleted: boolean;
   correctInputs: Array<string> | undefined;
+  typoTolerance: number;
   solution: QuestSolution | undefined;
   setSolution: (solution: number | string) => void;
 }) {
@@ -71,6 +73,7 @@ export function QuestInput({
       <QuestInputEditing
         initialValue={isCompleted ? getSolution(correctInputs, solution) : ""}
         correctInputs={correctInputs}
+        typoTolerance={typoTolerance}
         setSolution={setSolution}
         onSubmit={handleSubmit}
       />
@@ -99,11 +102,13 @@ const handleFocus: FocusEventHandler<HTMLInputElement> = (e) => {
 export function QuestInputEditing({
   initialValue,
   correctInputs,
+  typoTolerance,
   setSolution,
   onSubmit,
 }: {
   initialValue: string;
   correctInputs: Array<string> | undefined;
+  typoTolerance: number;
   setSolution: (solution: number | string) => void;
   onSubmit: () => void;
 }) {
@@ -119,7 +124,7 @@ export function QuestInputEditing({
       evt.preventDefault();
 
       const solution: string | number | null =
-        correctInputs == null ? value : validateInput(value, correctInputs);
+        correctInputs == null ? value : validateInput(value, correctInputs, typoTolerance);
 
       const isValid = solution !== null;
       setIsValid(isValid);
@@ -129,7 +134,7 @@ export function QuestInputEditing({
         onSubmit();
       }
     },
-    [correctInputs, value, setSolution, onSubmit],
+    [correctInputs, typoTolerance, value, setSolution, onSubmit],
   );
 
   return (

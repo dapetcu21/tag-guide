@@ -148,6 +148,7 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
         <div className="mt-4">
           <QuestInput
             correctInputs={question.correctInputs}
+            typoTolerance={question.typoTolerance}
             isCompleted={solution != null}
             solution={solution}
             setSolution={setSolution}
