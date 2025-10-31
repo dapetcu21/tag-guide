@@ -59,16 +59,19 @@ Henricks, T. S. (2015). Play and the Human Condition. University of Illinois Pre
         id: "t1q1i1",
         text: (t) => t("finish_the_phrase.q1.text", 'play the _________ (something you do in social situations)'),
         correctInputs: ["game", "field", "fool", "victim", "joc", "terenul", "mâinile", "norocul", "viața", "viitorul", "cariera", "reputația", "șansele", "regulile", "față", "mișcare", "race card", "gallery", "odds", "part", "teatru", "un rol", "pe nervii cuiva", "fair-play", "murdar", "pe două fronturi", "la două capete", "rolul"],
+        typoTolerance: 2,
       },
       {
         id: "t1q1i2",
         text: (t) => t("finish_the_phrase.q2.text", 'the ball is in your _________ (about whose turn it is)'),
         correctInputs: ["court", "hands", "terenul", "terenul tău", "teren"],
+        typoTolerance: 2,
       },
       {
         id: "t1q1i3",
         text: (t) => t("finish_the_phrase.q3.text", 'roll the _________ (about taking a risk)'),
         correctInputs: ["dice", "zaruri", "zarurile"],
+        typoTolerance: 2,
       }
     ]
   },
@@ -591,21 +594,25 @@ Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
         id: "t1q3i1",
         text: (t) => t("the_breadth_of_play.q1.text", 'MECHANICAL - An expression about movement or slack in machines'),
         correctInputs: ["play in the steering wheel", "free play", "play in the gears", "play of light", "mechanical play", "play in machinery", "play of emotions", "slack in the mechanism", "clearance", "backlash", "loose play", "steering play", "joc de lumini", "joc în direcție", "joc liber"],
+        typoTolerance: 2,
       },
       {
         id: "t1q3i2",
         text: (t) => t("the_breadth_of_play.q2.text", 'THEATRICAL - An expression about acting or performance'),
         correctInputs: ["play a role", "stage play", "theatre play", "play rehersal", "playwright", "play a character", "radio play", "screen play", "screenplay", "miracle play", "mystery play", "passion play", "morality play", "play production", "play rehearsal", "theater play", "play a part", "role play", "play acting", "a juca teatru", "a juca un rol", "a-și juca rolul", "a juca într-o piesă", "a juca într-un film", "a juca într-un serial", "a juca pe scenă", "a juca live", "joc teatral", "piesă de teatru"],
+        typoTolerance: 2,
       },
       {
         id: "t1q3i3",
         text: (t) => t("the_breadth_of_play.q3.text", 'MUSICAL - An expression about music or dancing'),
         correctInputs: ["play the piano", "play piano", "play guitar", "play by ear", "hai la joc", "jocul horei", "play an instrument", "joacă bine", "play music", "play violin", "play drums", "play flute", "play saxophone", "play trumpet", "play bass", "play keyboard", "play organ", "play harmonica", "play accordion", "play cello", "play viola", "play clarinet", "play trombone", "play tuba", "play harp", "play banjo", "play ukulele", "play mandolin", "play a song", "play a tune", "play a melody", "play a piece", "play the violin", "play the guitar", "play the drums", "play the flute", "a juca o melodie", "a juca la chitară", "a juca la pian", "a juca la vioară", "a juca la flaut", "a juca la tobe", "a juca la saxofon", "a juca la trompetă", "a juca la orgă", "a juca într-o orchestră", "a juca într-o trupă", "a juca într-un concert", "a cânta la pian", "a cânta la chitară", "a cânta la vioară"],
+        typoTolerance: 2,
       },
       {
         id: "t1q3i4",
         text: (t) => t("the_breadth_of_play.q4.text", 'DECEPTION - An expression meaning "pretending" or "fake behavior"'),
         correctInputs: ["play possum", "play dumb", "playing games", "play along", "a juca teatru", "a juca murdar", "a juca la cacealma", "play the fool", "play fast and loose", "play both ends against the middle", "play hooky", "play favorites", "play dirty", "play acting", "play the victim", "play the race card", "played for a fool", "play around", "play it cool", "poker face", "play a part", "play a role", "play innocent", "play coy", "play pretend", "joc prefăcut", "a se juca cu sentimentele cuiva", "față de poker", "a avea o față de poker", "a se juca de-a v-ați ascunselea", "a juca pe nervii cuiva", "a juca un rol", "joc la cacealma", "a juca la două capete"],
+        typoTolerance: 2,
       }
     ]
   },

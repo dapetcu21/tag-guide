@@ -40,6 +40,7 @@ export const mockQuests: Array<Quest> = [
         id: "q3",
         text: () => 'Type "meow" to continue',
         correctInputs: ["meow"],
+        typoTolerance: 2,
       },
     ],
   },
