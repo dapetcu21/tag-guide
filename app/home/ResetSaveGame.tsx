@@ -73,7 +73,7 @@ export function ResetSaveGame() {
                 <button
                   type="button"
                   onClick={confirmDialog}
-                  className="inline-flex w-full justify-center rounded-md bg-orange px-3 py-2 text-sm font-semibold text-white hover:bg-red-400 sm:ml-3 sm:w-auto"
+                  className="inline-flex w-full justify-center bg-orange px-3 py-2 text-sm font-semibold text-white hover:bg-red-400 sm:ml-3 sm:w-auto"
                 >
                   <Trans i18nKey="home.reset_progress.confirm">
                     Reset progress
@@ -83,7 +83,7 @@ export function ResetSaveGame() {
                   type="button"
                   data-autofocus
                   onClick={closeDialog}
-                  className="mt-3 inline-flex w-full justify-center rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-white/20 sm:mt-0 sm:w-auto"
+                  className="mt-3 inline-flex w-full justify-center bg-teal px-3 py-2 text-sm font-semibold text-white hover:bg-teal/80 sm:mt-0 sm:w-auto"
                 >
                   <Trans i18nKey="home.reset_progress.cancel">Cancel</Trans>
                 </button>
