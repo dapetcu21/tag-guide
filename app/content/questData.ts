@@ -694,13 +694,17 @@ Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
       }
     ]
   },
-  {
-    id:"ritual_play",
+    {
+    id: "t2q4",
     image: "/quest_icons/t1q4.svg",
-    brief: () => "Scan the QR to complete this quest.",
-    debrief: () => "Congrats! You scanned the QR.",
+   brief: (t) => 
+      t (
+        "track1_quest4.brief", 
+      "Go to the LABORATORY room and take a sheet of paper from the Q1-B bin. Write your answer to the quest your were given by a fellow player. Lastly, scan the QR code.",
+      ),
+    debrief: () => "Congrats! You like animals.\n![](https://www.publicdomainpictures.net/pictures/180000/velka/cat-1464103447LmK.jpg)",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t1q4",
   },
   {
     id: "play_to_survive",
@@ -1219,13 +1223,16 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
     ],
   },
   {
-    id: "test_text",
+    id: "t2q4",
     image: "/quest_icons/t2q4.svg",
-    brief: () => 'Type "Cats/Dogs are cool!" to complete this quest.',
+   brief: (t) => 
+      t (
+        "track2_quest4.brief", 
+      "Go to the LABORATORY room and take a sheet of paper from the Q2-B bin. Write your answer to the quest your were given by a fellow player. Lastly, scan the QR code.",
+      ),
     debrief: () => "Congrats! You like animals.\n![](https://www.publicdomainpictures.net/pictures/180000/velka/cat-1464103447LmK.jpg)",
-    type: QuestType.TextInput,
-    correctInputs: ["Cats are cool!", "Dogs are cool!"],
-    typoTolerance: 2,
+    type: QuestType.Scannable,
+    scanToken: "t2q4",
   },
   {
     id: "who_do_you_become",
@@ -1760,41 +1767,61 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
   {
     id: "final_transformation",
     image: "/quest_icons/t3q4.svg",
-    brief: () => "Scan the QR to complete this quest.",
+    brief: (t) => 
+      t (
+        "track3_quest4.brief", 
+      "Go to the LABORATORY room and take a sheet of paper from the Q3-B bin. Write your answer to the quest your were given by a fellow player. Lastly, scan the QR code.",
+      ),
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t3q4",
   },
   {
     id: "track4_quest1",
     image: "/quest_icons/t4q1.svg",
-    brief: () => "Scan the QR to complete this quest.",
+    brief: (t) => 
+      t (
+        "track4_quest1.brief", 
+      "Go to the LABORATORY room and take a sheet of paper from the Q1-A bin. Write a challenge for a fellow future player, in which you prompt them to find an idiom or use of language of words either connected to games, or in the lexical families of game or play. Then in the bottom of the paper, write upside down in small letters potential answers to your challenge. Lastly, scan the QR code and leave the sheet of paper in bin Q1-B.",
+      ),
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t4q1",
   },
   {
     id: "track4_quest2",
     image: "/quest_icons/t4q2.svg",
-    brief: () => "Scan the QR to complete this quest.",
+    brief: (t) => 
+      t (
+        "track4_quest2.brief", 
+        "Go to the LABORATORY room and take a sheet of paper from the Q2-A bin. Write 2 questions with 3 potential answers each, whose answers one cand find somewhere in the exhibition. Then in the bottom of the paper, write upside down in small letters the correct answers to each of them. Lastly, scan the QR code and leave the sheet of paper in bin Q2-B.",
+      ),
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t4q2",
   },
   {
     id: "track4_quest3",
     image: "/quest_icons/t4q3.svg",
-    brief: () => "Scan the QR to complete this quest.",
+    brief: (t) => 
+      t (
+        "track4_quest3.brief", 
+        "Go to the LABORATORY room and take a sheet of paper from the Q3-A bin. Challenge a player to play a game in the exhibition. Write afterwards two questions in which you ask the player to express something about their feelings or thoughts connected to their experience with the game. Try to raise dillemas of meaningful reflection. Lastly, scan the QR code and leave the sheet of paper in bin Q3-B.",
+      ),
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t4q3",
   },
   {
     id: "track4_quest4",
     image: "/quest_icons/t4q4.svg",
-    brief: () => "Scan the QR to complete this quest.",
+    brief: (t) => 
+      t (
+        "track4_quest4.brief", 
+        "Go to the LABORATORY room and take a sheet of paper from the Q4-A bin. Tell us there of a game, existing or of your design, that you think would have fit well in TAG. Answer the other questions regarding your experience with this game and the exhibition. Lastly, scan the QR code and leave the sheet of paper in bin Q4-B.",
+      ),
     debrief: () => "Congrats! You scanned the QR.",
     type: QuestType.Scannable,
-    scanToken: "test",
+    scanToken: "t4q4",
   },
 ];
