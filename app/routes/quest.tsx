@@ -7,5 +7,5 @@ export default function QuestComponent({ params }: Route.ComponentProps) {
 
   if (quest == null) throw new Error("Quest not found");
 
-  return <QuestPage quest={quest} />;
+  return <QuestPage quest={quest} key={quest.id} />;
 }

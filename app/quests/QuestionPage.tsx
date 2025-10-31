@@ -117,7 +117,7 @@ export default function QuestionPage({ params }: Route.ComponentProps) {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div key={question.id}>
       <QuestMarkdown text={question.text(t)} />
       {question.answers !== undefined && (
         <div className="w-full flex flex-col items-stretch gap-2 my-2">

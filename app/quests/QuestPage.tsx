@@ -249,7 +249,7 @@ export function QuestPage({ quest }: { quest: Quest }) {
     for (const question of quest.questions) {
       if (!isQuestionAvailable(question, questSaveGame)) return false;
 
-      if (question.correctAnswer != null && solution?.[question.id] == null)
+      if ((question.answers == null || question.correctAnswer != null) && solution?.[question.id] == null)
         return false;
     }
 
