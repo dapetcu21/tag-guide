@@ -57,6 +57,7 @@
   },
   "home": {
     "empty_save_instruction": "<0>Selectează o provocare pentru a începe.</0><1>Completează-le pe toate pentru un premiu de la recepție.</1>",
+    "language_emoji": "🇷🇴",
     "language_switch": "Română",
     "reset_progress": {
       "body": "Resetarea progresului va șterge orice progres ai făcut înspre rezolvarea provocărilor. Ești sigur că vrei să resetezi progresul? Această acțiune este ireversibilă și va trebui să faci provocările din nou.",

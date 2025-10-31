@@ -137,7 +137,9 @@ export function Home() {
                 i18n.changeLanguage(newLang);
               }}
             >
-              {lang === "en" ? "🇬🇧" : (lang === "ro" ? "🇷🇴" : lang)}
+              <Trans i18nKey="home.language_emoji">
+                🇬🇧
+              </Trans>
               {" "}
               <Trans i18nKey="home.language_switch">
                 English
