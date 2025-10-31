@@ -1,22 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 227 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
-    <g transform="matrix(1,0,0,1,-437.319,-792.018)">
-        <g id="Frames">
-        </g>
-        <g id="Icons">
-            <g transform="matrix(-1,0,0,1,1023.35,219.777)">
-                <rect x="498.308" y="597.366" width="26.735" height="26.491" style="fill:none;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(-1,0,0,1,1177.35,219.777)">
-                <rect x="575.308" y="597.366" width="26.735" height="26.491" style="fill:none;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(1,0,0,1,631.563,989.499)">
-                <path d="M0,-125.856L-162.368,-125.856L-81.184,0L0,-125.856ZM0,-125.856L0.005,-125.856L0,-125.856ZM-9.175,-120.856L-81.184,-9.224L-153.193,-120.856L-9.175,-120.856Z" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(-0.948443,0.316948,0.316948,0.948443,625.897,968.625)">
-                <path d="M78.085,-171.202C103.417,-162.715 124.599,-142.856 133.719,-115.566C149.141,-69.418 124.233,-19.507 78.085,-4.086C31.938,11.336 -17.973,-13.573 -33.395,-59.72C-42.514,-87.011 -37.527,-115.615 -22.388,-137.626" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 263">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g>
+      <rect class="cls-2" x=".5" y=".5" width="262" height="262"/>
+      <g>
+        <rect class="cls-1" x="79.26" y="45.32" width="26.74" height="26.49"/>
+        <rect class="cls-1" x="156.26" y="45.32" width="26.74" height="26.49"/>
+        <path d="m203.34,96.82l-72.01,111.63L59.33,96.82h144.02m9.18-5h0,0Zm0,0H50.15l81.18,125.86,81.18-125.86h0Z"/>
+        <path class="cls-1" d="m78.53,59.18c-21.34,16.08-35.13,41.63-35.13,70.4,0,48.66,39.44,88.1,88.1,88.1s88.1-39.44,88.1-88.1c0-28.77-13.8-54.32-35.13-70.4"/>
+      </g>
     </g>
+  </g>
 </svg>

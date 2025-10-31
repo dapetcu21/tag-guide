@@ -1,43 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 271 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
-    <g transform="matrix(1,0,0,1,-1130.21,-1154)">
-        <g id="Frames">
-        </g>
-        <g id="Icons">
-            <g transform="matrix(0,-1,-1,0,1165.08,1263.25)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(-1,0,0,1,2530.86,1079.55)">
-                <rect x="1229.1" y="144.733" width="72.651" height="71.987" style="fill:none;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(0,-1,-1,0,1340.08,1177.25)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(0,-1,-1,0,1190.08,1177.25)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(0,-1,-1,0,1364.08,1263.25)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(1,0,0,1,1190.32,1328.88)">
-                <path d="M0,-143.331L130.968,-12.363C143.331,0 163.374,0 175.736,-12.363C188.099,-24.725 188.099,-44.769 175.736,-57.131" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(0.707107,0.707107,0.707107,-0.707107,1228.49,1232.35)">
-                <path d="M-18.011,-43.484L104.978,-43.484" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(0.707107,0.707107,0.707107,-0.707107,1299.73,1161.11)">
-                <path d="M-18.011,-43.484L104.978,-43.484" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(-0.707107,0.707107,0.707107,0.707107,1299.73,1355.34)">
-                <path d="M-104.978,-43.484L18.011,-43.484" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(-0.707107,0.707107,0.707107,0.707107,1228.49,1284.1)">
-                <path d="M-104.978,-43.484L18.011,-43.484" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(1,0,0,1,1340.34,1328.88)">
-                <path d="M0,-143.331L-130.968,-12.363C-143.331,0 -163.374,0 -175.736,-12.363C-188.099,-24.725 -188.099,-44.769 -175.736,-57.131" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 263">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g>
+      <rect class="cls-2" x=".5" y=".5" width="262" height="262"/>
+      <g>
+        <circle cx="31.25" cy="145.71" r="8.25"/>
+        <rect class="cls-1" x="95.27" y="98.49" width="72.65" height="71.99"/>
+        <circle cx="206.25" cy="59.71" r="8.25"/>
+        <circle cx="56.25" cy="59.71" r="8.25"/>
+        <circle cx="230.25" cy="145.71" r="8.25"/>
+        <path class="cls-1" d="m56.49,59.75l130.97,130.97c12.36,12.36,32.41,12.36,44.77,0h0c12.36-12.36,12.36-32.41,0-44.77"/>
+        <line class="cls-1" x1="51.18" y1="124.57" x2="138.14" y2="211.54"/>
+        <line class="cls-1" x1="122.42" y1="53.33" x2="209.39" y2="140.3"/>
+        <line class="cls-1" x1="209.39" y1="124.57" x2="122.42" y2="211.54"/>
+        <line class="cls-1" x1="138.14" y1="53.33" x2="51.18" y2="140.3"/>
+        <path class="cls-1" d="m206.51,59.75L75.54,190.72c-12.36,12.36-32.41,12.36-44.77,0h0c-12.36-12.36-12.36-32.41,0-44.77"/>
+      </g>
     </g>
+  </g>
 </svg>

@@ -1,22 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 227 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
-    <g transform="matrix(1,0,0,1,-75.6089,-802.946)">
-        <g id="Frames">
-        </g>
-        <g id="Icons">
-            <g transform="matrix(1,0,0,1,269.853,986.571)">
-                <path d="M0,-125.856L-162.368,-125.856L-81.184,0L0,-125.856ZM0,-125.856L0.005,-125.856L0,-125.856ZM-9.175,-120.856L-81.184,-9.224L-153.193,-120.856L-9.175,-120.856Z" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(-0.948443,0.316948,0.316948,0.948443,264.188,965.697)">
-                <path d="M78.086,-171.202C103.418,-162.715 124.6,-142.856 133.72,-115.566C149.142,-69.418 124.234,-19.507 78.086,-4.086C31.939,11.335 -17.973,-13.572 -33.395,-59.72C-42.514,-87.01 -37.526,-115.615 -22.387,-137.626" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(0,-1,-1,0,135.583,820.071)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-            <g transform="matrix(0,-1,-1,0,242.583,820.071)">
-                <path d="M-8.25,-8.25C-12.806,-8.25 -16.5,-4.556 -16.5,0C-16.5,4.556 -12.806,8.25 -8.25,8.25C-3.694,8.25 0,4.556 0,0C0,-4.556 -3.694,-8.25 -8.25,-8.25" style="fill-rule:nonzero;"/>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 263">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g>
+      <rect class="cls-2" x=".5" y=".5" width="262" height="262"/>
+      <g>
+        <path d="m203.34,93.89l-72.01,111.63L59.33,93.89h144.02m9.18-5h0,0Zm0,0H50.15l81.18,125.86,81.18-125.86h0Z"/>
+        <path class="cls-1" d="m78.53,56.25c-21.34,16.08-35.13,41.63-35.13,70.4,0,48.66,39.44,88.1,88.1,88.1s88.1-39.44,88.1-88.1c0-28.77-13.8-54.32-35.13-70.4"/>
+        <circle cx="78.25" cy="56.5" r="8.25"/>
+        <circle cx="185.25" cy="56.5" r="8.25"/>
+      </g>
     </g>
+  </g>
 </svg>

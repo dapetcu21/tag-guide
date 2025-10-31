@@ -1,16 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 233 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:10;">
-    <g transform="matrix(1,0,0,1,-72.499,-79.1033)">
-        <g id="Frames">
-        </g>
-        <g id="Icons">
-            <g transform="matrix(1,0,0,1,280.042,104.228)">
-                <path d="M0,141.059L-91.209,0L-182.418,141.059L0,141.059Z" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:5px;"/>
-            </g>
-            <g transform="matrix(1,0,0,1,235.35,245.787)">
-                <path d="M0,-69L-93.035,-69L-46.518,0L0,-69ZM0,-69L0.005,-69L0,-69ZM-9.401,-64L-46.518,-8.944L-83.634,-64L-9.401,-64Z" style="fill-rule:nonzero;"/>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 263">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g>
+      <rect class="cls-2" x=".5" y=".5" width="262" height="262"/>
+      <g>
+        <polygon class="cls-1" points="222.71 201.78 131.5 60.72 40.29 201.78 222.71 201.78"/>
+        <path d="m168.62,138.28l-37.12,55.06-37.12-55.06h74.23m9.4-5h0,0Zm0,0h-93.04l46.52,69,46.52-69h0Z"/>
+      </g>
     </g>
+  </g>
 </svg>
