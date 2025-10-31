@@ -59,7 +59,11 @@
     "empty_save_instruction": "<0>Selectează o provocare pentru a începe.</0><1>Completează-le pe toate pentru un premiu de la recepție.</1>",
     "language_switch": "Română",
     "reset_progress": {
-      "open": "Resetează progresul"
+      "body": "Resetarea progresului va șterge orice progres ai făcut înspre rezolvarea provocărilor. Ești sigur că vrei să resetezi progresul? Această acțiune este ireversibilă și va trebui să faci provocările din nou.",
+      "cancel": "Anulează",
+      "confirm": "Resetează progresul",
+      "open": "Resetează progresul",
+      "title": "Resetează progresul"
     },
     "title": "The Art of the Game"
   },
@@ -104,16 +108,16 @@
     }
   },
   "quest": {
-    "continue": "",
-    "debrief": "",
+    "continue": "Continuă",
+    "debrief": "Concluzie",
     "input": {
-      "edit": "",
-      "submit": ""
+      "edit": "Editează",
+      "submit": "Confirmă"
     }
   },
   "scan": {
-    "close": "",
-    "open": ""
+    "close": "Închide",
+    "open": "Scanează cod QR"
   },
   "the_breadth_of_play": {
     "brief": "Cuvântul \"joc\" sau \"a juca\" apare în multe contexte surprinzătoare dincolo de jocuri. Gândește larg—de la mecanisme la muzică la tehnologie la teatru.\n\nScrie O expresie folosind \"joc\" sau \"a juca\" care NU este despre jocuri recreative.\n\nExemple: \"joc în direcție\" (mecanic), \"a juca un rol\" (teatral), \"a juca la pian\" (muzical), \"a apăsa play\" (media), \"a juca teatru\" (înșelăciune)",

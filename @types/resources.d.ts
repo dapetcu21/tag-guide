@@ -60,7 +60,11 @@ interface Resources {
       "empty_save_instruction": "<0>Select any quest to begin.</0><1>Complete all for a prize at the reception.</1>",
       "language_switch": "English",
       "reset_progress": {
-        "open": "Reset progress"
+        "body": "Resetting your progress will delete any progress you made towards solving the quests. Are you sure you want to reset your progress? There is no way to undo this action save for completing the quests again.",
+        "cancel": "Cancel",
+        "confirm": "Reset progress",
+        "open": "Reset progress",
+        "title": "Reset progress"
       },
       "title": "The Art of the Game"
     },
