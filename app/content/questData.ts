@@ -7,11 +7,7 @@ export const quests: Array<Quest> = [
     brief: (t) =>
       t(
         "finish_the_phrase.brief",
-        `Complete this common expression by filling in the missing word. Think about phrases you've heard in conversations about work, relationships, or everyday decisions.
-
-**play the ________**
-
-(Something you do in social situations)`,
+        `Complete this series of common expression by filling in the missing word. Think about phrases you've heard in conversations about work, relationships, or everyday decisions.`,
       ),
     debrief: (t) =>
       t(
@@ -57,26 +53,27 @@ FURTHER READING:
 Borstelmann, N. (2020). Homo Ludens 2.0: Play, Media and Identity. Amsterdam University Press.
 Henricks, T. S. (2015). Play and the Human Condition. University of Illinois Press.`,
       ),
-    type: QuestType.TextInput,
-    correctInputs: [
-      "game",
-      "field",
-      "fool",
-      "victim",
-      "joc",
-      "terenul",
-      "mâinile",
-      "norocul",
-      "viața",
-      "viitorul",
-      "cariera",
-      "reputația",
-      "șansele",
-      "regulile",
-      "față",
-      "mișcare",
-    ],
-    typoTolerance: 1,
+    type: QuestType.Questions,
+    questions: [
+      {
+        id: "t1q1i1",
+        text: () => 'play the _________ (something you do in social situations)',
+        correctInputs: ["game", "field", "fool", "victim", "joc", "terenul", "mâinile", "norocul", "viața", "viitorul", "cariera", "reputația", "șansele", "regulile", "față", "mișcare"],
+        typoTolerence: 2,
+      },
+      {
+        id: "t1q1i2",
+        text: () => 'the ball is in your _________ (about whose turn it is)',
+        correctInputs: ["court", "hands"],
+        typoTolerence: 2,
+      },
+      {
+        id: "t1q1i3",
+        text: () => 'roll the _________ (about taking a risk)',
+        correctInputs: ["dice"],
+        typoTolerence: 2,
+      }
+    ]
   },
   {
     id: "language_domains",
@@ -237,9 +234,7 @@ Pinker, S. (1994). The Language Instinct: How the Mind Creates Language. William
         "the_breadth_of_play.brief",
         `The word "play" appears in many surprising contexts beyond games. Think broadly—from machinery to music to technology to theater.
 
-Write ONE expression using "play" or "game" that is NOT about recreational games.
-
-Examples: "play in the steering wheel" (mechanical), "play a role" (theatrical), "play piano" (musical), "press play" (media), "play acting" (deception)`,
+Write ONE expression using "play" or "game" that is NOT about recreational games, for each of the categories below.`
       ),
     debrief: (t) =>
       t(
@@ -328,64 +323,33 @@ FURTHER READING:
 Hans, J. S. (1981). The Play of the World. University of Massachusetts Press.
 Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
       ),
-    type: QuestType.TextInput,
-    correctInputs: [
-      "play in the steering wheel",
-      "free play",
-      "play in the gears",
-      "play of light",
-      "mechanical play",
-      "play a role",
-      "stage play",
-      "play rehearsal",
-      "playwright",
-      "play a character",
-      "play piano",
-      "play guitar",
-      "play by ear",
-      "play an instrument",
-      "play music",
-      "play acting",
-      "play possum",
-      "play dumb",
-      "playing games",
-      "play along",
-      "play a video",
-      "press play",
-      "hit play",
-      "playback",
-      "replay",
-      "auto-play",
-      "autoplay",
-      "joc în direcție",
-      "joc mecanic",
-      "joc liber",
-      "joc de lumini",
-      "joc în angrenaje",
-      "a juca un rol",
-      "piesă de teatru",
-      "a-și juca rolul",
-      "spectacol teatral",
-      "dramaturg",
-      "a juca la pian",
-      "a juca la chitară",
-      "a cânta din ureche",
-      "a interpreta muzică",
-      "a se juca pe instrumente",
-      "a cânta la",
-      "a juca teatru",
-      "joc prefăcut",
-      "a se preface",
-      "a juca la cacealma",
-      "a juca murdar",
-      "a reda un video",
-      "a apăsa play",
-      "redare",
-      "reluare",
-      "redare automată",
-      "playback",
-    ],
-    typoTolerance: 2,
+    type: QuestType.Questions,
+    questions: [
+      {
+        id: "t1q3i1",
+        text: () => 'MECHANICAL - An expression about movement or slack in machines',
+        correctInputs: ["play in the steering wheel", "free play", "play in the gears", "play of light", "mechanical play"],
+        typoTolerence: 2,
+      },
+      {
+        id: "t1q3i2",
+        text: () => 'THEATRICAL - An expresion about acting or performance',
+        correctInputs: ["play a role", "stage play", "theatre play", "play rehersal", "playwright", "play a character"],
+        typoTolerence: 2,
+      },
+      {
+        id: "t1q3i3",
+        text: () => 'MUSICAL - An expression about music or dancing',
+        correctInputs: ["play the piano", "play piano", "play guitar", "play by ear", "hai la joc", "jocul horei", "play an instrument", "joacă bine", "play music"],
+        typoTolerence: 4,
+      },
+      {
+        id: "t1q3i4",
+        text: () => 'DECEPTION - An expression meaning "pretending" or "fake behavior"',
+        correctInputs: ["play possum", "play dumb", "playing games", "play along", "a juca teatru", "a juca murdar", "a juca la cacealma", "a juca murdar"],
+        typoTolerence: 4,
+      }
+    ]
   },
   {
     id:"ritual_play",
