@@ -119,8 +119,8 @@ export function Home() {
         {isEmptySave && (
           <div className="text-center flex flex-col self-center items-center max-w-xs">
             <Trans i18nKey="home.empty_save_instruction">
-              <div>Select any quest to begin.</div>
-              <div>Complete all for a prize at the reception.</div>
+              <p className="mt-4">Select any quest to begin.</p>
+              <p className="mt-2">Complete all for a prize at the reception.</p>
             </Trans>
           </div>
         )}
