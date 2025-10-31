@@ -78,7 +78,13 @@ export function QuestInput({
 
   return (
     <div>
-      <div>{getSolution(correctInputs, solution)}</div>
+      <div className="text-orange">
+        {"❝"}
+        <span className="text-midnight">
+          {getSolution(correctInputs, solution)}
+        </span>
+        {"❞"}
+      </div>
       <QuestButton onClick={handleEditClick}>
         <Trans i18nKey="quest.input.edit">Edit</Trans>
       </QuestButton>
