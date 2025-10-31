@@ -1,6 +1,7 @@
+import { useParams } from "react-router";
 import CollectibleCard from "~/components/CollectibleCard";
-import type { Route } from "./+types/card";
 
-export default function CardPage({ params }: Route.ComponentProps) {
-  return <CollectibleCard scanToken={params.token} printable />;
+export default function CardPage() {
+  const params = useParams<{ token: string }>();
+  return <CollectibleCard scanToken={params.token!} printable />;
 }
