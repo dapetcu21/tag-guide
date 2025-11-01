@@ -1357,15 +1357,15 @@ Play each game for at least 10 minutes. Experience what it feels like to inhabit
         "who_do_you_become.debrief",
         `# THE MASK AS MIRROR
 
-You just experienced mimicry—one of play's four fundamental categories identified by Roger Caillois (Caillois, 2001). When you became Geralt tracking monsters or Ivan confronting his curse, you engaged in the same act as ancient ritual dancers and theater performers across millennia: temporarily setting aside your everyday identity to explore what it feels like to be someone else.
+You just experienced mimicry, one of play's four fundamental categories identified by Roger Caillois (Caillois, 2001). When you became Geralt tracking monsters or Ivan confronting his curse, you engaged in the same act as ancient ritual dancers and theater performers across millennia: temporarily setting aside your everyday identity to explore what it feels like to be someone else.
 
 But the character isn't just costume. It's alibi.
 
 Role-playing games researcher Sarah Lynne Bowman describes alibi as a "protective frame" allowing players to explore aspects of themselves they might not feel safe expressing otherwise (Bowman et al., 2023). The character provides permission: "I'm just seeing what Geralt would do" becomes cover for testing courage you haven't shown, expressing emotions you've kept hidden.
 
-Your first answer reveals how you use this alibi. If you felt completely different from yourself, the character became full escape—sometimes necessary to see ourselves clearly. If you felt like discovering hidden parts, you experienced what Nordic larp calls "bleed"—when boundaries between player and character become permeable (Bowman, 2015). The character's feelings bleed into yours; transformation happens here.
+Your first answer reveals how you use this alibi. If you felt completely different from yourself, the character became full escape, sometimes necessary to see ourselves clearly. If you felt like discovering hidden parts, you experienced what Nordic larp calls "bleed", when boundaries between player and character become permeable (Bowman, 2015). The character's feelings bleed into yours; transformation happens here.
 
-Your second answer is key. When you identified a quality you'd bring back from the character, you revealed your shadow—psychologist Carl Jung's term for unexpressed aspects of ourselves (Jung, 1968). Not bad parts—unexpressed parts. The hero's courage. The warrior's strength. Games offer a laboratory for shadow work: we can try on these qualities where stakes are imaginary but feelings are real.
+Your second answer is key. When you identified a quality you'd bring back from the character, you revealed your shadow, psychologist Carl Jung's term for unexpressed aspects of ourselves (Jung, 1968). Not bad parts but unexpressed parts. The hero's courage. The warrior's strength. Games offer a laboratory for shadow work: we can try on these qualities where stakes are imaginary but feelings are real.
 
 Theater director Keith Johnstone observed: "In a play, you can be serious without anybody thinking you ARE serious" (Johnstone, 1979, p. 93). Games go further: you discover you were serious all along, but needed permission to find out.
 
@@ -1556,17 +1556,17 @@ Explore the character creation/selection process in each game. Try playing as di
 
 Carl Jung proposed that within each psyche exists not one self, but many—archetypes, universal patterns woven into human consciousness (Jung, 1968). The Hero. The Sage. The Caregiver. The Rebel. When Dungeons & Dragons formalized "character classes" in 1974—Fighter, Cleric, Magic-User, Thief—they translated these ancient patterns into game mechanics.
 
-Your first answer reveals how you relate to this inner multiplicity. If you always play the same type, you've found your dominant archetype—familiar and comfortable. But Jung warned against over-identifying with a single pattern, calling it "inflation" (Jung, 1968). The warrior who cannot be vulnerable. The sage who cannot act.
+Your first answer reveals how you relate to this inner multiplicity. If you always play the same type, you've found your dominant archetype, familiar and comfortable. But Jung warned against over-identifying with a single pattern, calling it "inflation" (Jung, 1968). The warrior who cannot be vulnerable. The sage who cannot act.
 
-If you want to play them all, you're experiencing what Jung called "individuation"—integrating these aspects into a complete self (Jung, 1968). Nordic larp's "playing to lose" illuminates this: players deliberately choose uncomfortable character types—the aggressive player as gentle healer, the intellectual as brutal warrior—to explore exiled qualities (Montola & Stenros, 2010).
+If you want to play them all, you're pursuing the inner yearn for what Jung called "individuation", integrating these aspects into a complete self (Jung, 1968).
 
-Your third answer reveals the gap between authentic and adapted selves. We learn certain roles to survive and belong—Jung's "persona," the mask we show the world (Jung, 1968). This adaptation isn't false, but sometimes the persona becomes prison.
+Your third answer reveals the gap between authentic and adapted selves. We learn certain roles to survive and belong, Jung's "persona," the mask we show the world (Jung, 1968). This adaptation isn't false, but sometimes the persona becomes prison.
 
-Games reveal this gap. When you play the rogue after years as the responsible caregiver, the leader after hiding in the background, the warrior after avoiding conflict—you're recovering parts life hasn't let you express.
+Games reveal this gap. When you play the rogue after years as the responsible caregiver, the leader after hiding in the background, the warrior after avoiding conflict, you're recovering parts life hasn't let you express.
 
-Researcher Kjell Hedgard Hugaas describes "identity bleed"—when role-playing shifts how we understand ourselves (Hugaas, 2024). A player realizes confidence isn't a trait you have; it's behavior you practice. Another discovers cruelty and kindness coexist in everyone—we choose which to act on.
+Researcher Kjell Hedgard Hugaas describes "identity bleed": when role-playing shifts how we understand ourselves (Hugaas, 2024). A player realizes confidence isn't a trait you have; it's behavior you practice. Another discovers cruelty and kindness coexist in everyone: we choose which to act on.
 
-The standard adventuring party requires Tank, Healer, DPS, and Controller—a mechanical necessity that mirrors psychological truth. A complete person needs all these capacities: endurance, nurturing, assertion, influence. Life demands we specialize. Games invite us to remember we contain multitudes.
+Life demands we specialize and formulate to self and others a narrative of a singural, specific, unchanging and socially adjusted identity. Games invite us to remember we contain multitudes.
 
 ---
 
@@ -1712,9 +1712,9 @@ Engage deeply with these challenging scenarios. Allow yourself to feel the weigh
         "the_safe_space_for_transformation.debrief",
         `# THE MAGIC CIRCLE AS SACRED SPACE
 
-Historian Johan Huizinga described the "magic circle"—the boundary separating play from ordinary life where normal rules suspend and new possibilities emerge (Huizinga, 1955). Within this circle, consequences disconnect from material reality. But games offer more than consequence-free experimentation. They offer a "transformative container"—a safe yet challenging space for encountering parts of ourselves that daily life has no room for (Bowman et al., 2023).
+Historian Johan Huizinga described the "magic circle": the boundary separating play from ordinary life where normal rules suspend and new possibilities emerge (Huizinga, 1955). Within this circle, consequences disconnect from material reality. But games offer more than consequence-free experimentation. They offer a "transformative container", a safe yet challenging space for encountering parts of ourselves that daily life has no room for (Bowman et al., 2023).
 
-You experienced bleed—the most studied concept in Nordic larp theory. Kjell Hedgard Hugaas identifies three types (Hugaas, 2019):
+You might have experienced bleed (or maybe if you will play these gamescat home for longer you will), the most studied concept in Nordic larp theory. Kjell Hedgard Hugaas identifies three types (2019):
 
 **EMOTIONAL BLEED:** The character's feelings become yours. Playing Papers, Please, denying desperate refugees, you feel genuine guilt—not because YOU did wrong, but because the boundary between you and the character dissolved.
 
@@ -1722,19 +1722,19 @@ You experienced bleed—the most studied concept in Nordic larp theory. Kjell He
 
 **MEMETIC BLEED:** Game ideas change how you think. Papers, Please doesn't just simulate bureaucratic cruelty—it makes you see that complicity everywhere afterward. It rewrites your understanding of systems, power, and moral compromise.
 
-If experiences stay with you for days, you're experiencing significant bleed. This isn't a bug—it's the feature. The magic circle is permeable by design, letting game experiences safely infiltrate and transform daily life.
+If experiences stay with you for days, you're experiencing significant bleed. The magic circle is permeable by design, letting game experiences safely infiltrate and transform daily life.
 
-Psychotherapist Elektra Diakolambrianou uses role-playing games clinically for their "safe-enough" containers (Diakolambrianou & Bowman, 2023). The game provides structure—"just playing"—while allowing genuine vulnerability. You explore difficult emotions through scenarios where you can pause, debrief, or stop when it becomes too much. This is "therapeutic distance" (Landy, 1994): not the real problem, so you can examine it without being overwhelmed, but real enough that insights transfer.
+Psychotherapist Elektra Diakolambrianou uses role-playing games clinically for their "safe-enough" containers (Diakolambrianou & Bowman, 2023). The game provides structure ("just playing") while allowing genuine vulnerability. You explore difficult emotions through scenarios where you can pause, debrief, or stop when it becomes too much. This is "therapeutic distance" (Landy, 1994): not the real problem, so you can examine it without being overwhelmed, but real enough that insights transfer.
 
 Research consistently shows participants reporting lasting changes from transformative role-playing: perspective shifts, shadow integration, increased empathy, greater self-awareness (Bowman, 2010; Stark, 2012; Hugaas, 2024).
 
 But transformation isn't automatic. It requires intentionality and integration work (Bowman et al., 2023). The game reveals—you must recognize. The game challenges—you must reflect. The game offers new ways of being—you must carry them across the threshold into daily life.
 
-The ritual structure of play—entering the circle, undergoing trials, exiting transformed—mirrors initiation ceremonies across cultures (Turner, 1969). The shaman enters trance. The initiate enters wilderness. The player enters the game. All return changed—if they do the integration work.
+The ritual structure of play, entering the circle, undergoing trials, exiting transformed, mirrors initiation ceremonies across cultures (Turner, 1969). The shaman enters trance. The initiate enters wilderness. The player enters the game. All return changed if they do the integration work.
 
 This debrief is that work. What did you discover about your values? What did you learn about your capacity for ruthlessness or mercy? What aspects of yourself did the game let you safely explore?
 
-These games weren't entertainment. They were mirrors—sometimes flattering, sometimes damning, always revealing. Now you know who you are when stakes feel real but consequences aren't. Which is, perhaps, who you've always been underneath the roles life demanded you play.
+These games weren't entertainment. They were mirrors: sometimes flattering, sometimes damning, always revealing. Now you know who you are when stakes feel real but consequences aren't. Which is, perhaps, who you've always been underneath the roles life demanded you play.
 
 ---
 
@@ -1883,19 +1883,19 @@ You just completed a quest designed by another player. Someone you'll likely nev
 
 THE SOLIDIFICATION OF SOCIAL ROLES
 
-When communities gather to play repeatedly, roles crystallize. Sociologist Émile Durkheim observed that ritual transforms individuals into collectives, reinforcing social order through shared performance (Durkheim, 1912/1995). Gaming guilds, sports teams, and larp groups exhibit this pattern: raid leaders emerge, healers specialize, tanks anchor—roles that begin as mechanical necessity become social identity.
+When communities gather to play repeatedly, roles crystallize. Sociologist Émile Durkheim observed that ritual transforms individuals into collectives, reinforcing social order through shared performance (Durkheim, 1912/1995). Gaming guilds, sports teams, and larp groups exhibit this pattern: raid leaders emerge, healers specialize, tanks anchor: roles that begin as mechanical necessity become social identity.
 
-Social psychologist Henri Tajfel demonstrated that even arbitrary group categories create powerful in-group loyalty and identity (Tajfel & Turner, 1979). His "minimal group paradigm" showed people favor their group after mere random assignment. Gaming amplifies this: shared raids, coordinated strategies, and collective victories forge communities where roles become identity. You're not just playing a healer—you're "the guild healer." The role becomes who you are within that social structure.
+Social psychologist Henri Tajfel demonstrated that even arbitrary group categories create powerful in-group loyalty and identity (Tajfel & Turner, 1979). His "minimal group paradigm" showed people favor their group after mere random assignment. Gaming amplifies this: shared raids, coordinated strategies, and collective victories forge communities where roles become identity. The role within the game becomes who you are within that social structure.
 
-Communities of practice scholar Etienne Wenger describes how shared activities create identity through "mutual engagement, joint enterprise, and shared repertoire" (Wenger, 1998). Speedrunning communities, esports teams, tabletop gaming groups—each develops specialized knowledge, insider language, and recognized expertise. These aren't just people who play together; they're social structures where participation defines membership and competence determines status.
+Communities of practice scholar Etienne Wenger describes how shared activities create identity through "mutual engagement, joint enterprise, and shared repertoire" (Wenger, 1998). Speedrunning communities, esports teams, tabletop gaming groups, each develops specialized knowledge, insider language, and recognized expertise. These aren't just people who play together; they're social structures where participation defines membership and competence determines status.
 
 THE LIBERATORY PARADOX
 
 But play's relationship to social structure is double-edged. The same mechanism that solidifies roles also dissolves them.
 
-Nordic larp researcher Jonaya Kemper introduces "wyrding the self"—using roleplay to resist what Audre Lorde called the "mythical norm," society's invisible standard against which all are measured (Kemper, 2020). When marginalized players inhabit characters with power, confidence, or authority society denies them, they practice liberation. The character provides "alibi"—narrative permission to attempt actions their assigned social position forbids.
+Nordic larp researcher Jonaya Kemper introduces "wyrding the self": using roleplay to resist what Audre Lorde called the "mythical norm," society's invisible standard against which all are measured (Kemper, 2020). When marginalized players inhabit characters with power, confidence, or authority society denies them, they practice liberation. The character provides "alibi", narrative permission to attempt actions their assigned social position forbids.
 
-Sarah Lynne Bowman identifies this as "emancipatory bleed"—the liberatory feeling when players successfully resist systematic oppression within the game and carry that resistance outward (Bowman, 2018). A player discovers that confidence isn't innate; it's performed and practiced. Another learns that social constraints aren't natural law but arbitrary rules that can be challenged.
+Sarah Lynne Bowman identifies this as "emancipatory bleed", the liberatory feeling when players successfully resist systematic oppression within the game and carry that resistance outward (Bowman, 2018). A player discovers that confidence isn't innate; it's performed and practiced. Another learns that social constraints aren't natural law but arbitrary rules that can be challenged.
 
 Game designer Avery Alder's framework of "belonging outside belonging" captures this tension: games create spaces where players belong through participation while simultaneously existing outside normative social structures (Alder, 2017). You're both within the community (following its rules, accepting its roles) and outside conventional society (experimenting with identities society forbids).
 
@@ -1903,9 +1903,9 @@ THE RITUAL YOU JUST PERFORMED
 
 This quest embodied this paradox. You accepted a role—quest-completer—in a social structure created by players. You followed rules established by community practice. You performed a ritual that connects you to fellow players through shared experience.
 
-But you also experienced liberation. Another player's imagination constrained you—and freed you. Their quest gave you permission to explore parts of the exhibition you might have skipped, think thoughts you hadn't considered, practice behaviors you don't typically perform.
+But you also experienced liberation. Their quest gave you permission to explore parts of the exhibition you might have skipped, think thoughts you hadn't considered, practice behaviors you don't typically perform.
 
-Play simultaneously binds us to social structures and offers escape from them. It creates communities where we find belonging—and spaces where we practice liberation from the roles those very communities might impose.
+Play simultaneously binds us to social structures and offers escape from them. It creates communities where we find belonging and spaces where we practice liberation from the roles those very communities might impose.
 
 ---
 
@@ -1938,37 +1938,35 @@ Putnam, R. D. (2000). Bowling Alone: The Collapse and Revival of American Commun
         "track4_quest1.debrief",
         `# THE MAKER'S IMPULSE
 
-You just designed a quest for a stranger. You transformed from player into maker—and discovered the secret: playing games and making games are the same impulse.
+You just designed a quest for a stranger. You transformed from player into maker and discovered the secret: playing games and making games are the same impulse.
 
 THE CREATIVE CORE OF PLAY
 
-Evolutionary psychologist Peter Gray describes play as fundamentally creative practice. His research demonstrates that curiosity drives knowledge acquisition while play develops skills—and crucially, these aren't separate processes (Gray, 2013). When children engage in free play, they're not just consuming experiences; they're constantly iterating, testing, and creating novel variations.
+Evolutionary psychologist Peter Gray describes play as fundamentally creative practice. His research demonstrates that curiosity drives knowledge acquisition while play develops skills. Crucially, these aren't separate processes (Gray, 2013). When children engage in free play, they're not just consuming experiences; they're constantly iterating, testing, and creating novel variations.
 
-Developmental psychologist Lev Vygotsky observed that all advanced play contains elements of rule-creation. Even toddlers playing "house" aren't merely imitating—they're actively designing social systems, negotiating rules, and authoring scenarios (Vygotsky, 1978). Play is proto-design.
+Developmental psychologist Lev Vygotsky observed that all advanced play contains elements of rule-creation. Even toddlers playing "house" aren't merely imitating, they're actively designing social systems, negotiating rules, and authoring scenarios (Vygotsky, 1978). Play is proto-design.
 
 Cognitive research confirms this connection. A Michigan State University study of 491 twelve-year-olds found that video game playing correlated strongly with creativity across all measures—drawing, storytelling, problem-solving—regardless of game genre or player demographics (Jackson et al., 2012). The researchers concluded that the creative thinking required to navigate game systems transfers directly to creative production.
 
-Recent neuroscience strengthens this link. Studies on gaming and brain plasticity show that game interaction enhances cognitive flexibility, pattern recognition, and the capacity to generate novel solutions—the exact cognitive mechanisms underlying creative production (Bavelier et al., 2012). Playing games doesn't just inspire making; it trains the neural pathways required for design.
+Recent neuroscience strengthens this link. Studies on gaming and brain plasticity show that game interaction enhances cognitive flexibility, pattern recognition, and the capacity to generate novel solutions, the exact cognitive mechanisms underlying creative production (Bavelier et al., 2012). Playing games doesn't just inspire making; it trains the neural pathways required for design.
 
 THE MINECRAFT-ROBLOX PHENOMENON
 
-The explosive success of creation-focused games provides historical proof of this maker's impulse. Minecraft, launched in 2009, didn't succeed despite being "incomplete"—it succeeded because it was incomplete. By providing tools rather than objectives, creator Markus "Notch" Persson unleashed millions of players-turned-designers (Duncan, 2011).
+The explosive success of creation-focused games provides historical proof of this maker's impulse. Minecraft, launched in 2009, by providing tools rather than objectives, unleashed millions of players-turned-designers (Duncan, 2011).
 
 But Minecraft is merely prologue to Roblox's revelation. Founded in 2006 by David Baszucki explicitly as a platform for user-created games, Roblox has produced over 50 million games—not pieces of user-generated content, but actual games, each with mechanics, rules, and designed experiences (Baszucki, 2020). By 2025, Roblox hosts 12.3 million monthly active creators and has paid out billions to developers through its DevEx program (Roblox Corporation, 2025).
 
-Consider the scale: over half of Roblox's top-performing games in 2025 were created by solo developers or small teams, many of them teenagers (Takahashi, 2025). These aren't hobbyists dabbling—75% of Roblox creators are under 24, spending an average of 9.2 hours weekly building and testing their games. They're designers.
+Consider the scale: over half of Roblox's top-performing games in 2025 were created by solo developers or small teams, many of them teenagers (Takahashi, 2025). 75% of Roblox creators are under 24, spending an average of 9.2 hours weekly building and testing their games. They're designers.
 
 THE PSYCHOLOGICAL IMPERATIVE
 
-Why do players become makers? Social psychologist Mihaly Csikszentmihalyi's concept of "autotelic personality" provides insight. Those who achieve flow states don't simply seek to repeat pleasurable experiences—they seek to understand and recreate the mechanisms that produced those experiences (Csikszentmihalyi, 1990). Playing a brilliant game creates the drive to understand how that brilliance was designed.
+Why do players become makers? Social psychologist Mihaly Csikszentmihalyi's concept of "autotelic personality" provides insight. Those who achieve flow states don't simply seek to repeat pleasurable experiences, they seek to understand and recreate the mechanisms that produced those experiences (Csikszentmihalyi, 1990). Playing a brilliant game creates the drive to understand how that brilliance was designed.
 
-Sociologist Richard Sennett argues that craftsmanship emerges from "the desire to do a job well for its own sake" (Sennett, 2008, p. 9). Players who spend thousands of hours in games develop craftsman's knowledge—intimate familiarity with mechanics, systems, and design patterns. This knowledge demands expression through making.
-
-The "IKEA effect" provides additional evidence. Research by Norton, Mochon, and Ariely (2012) demonstrates that people value self-created objects far more than identical objects created by others—even when their creations are objectively inferior. The same cognitive bias drives players to create games: the act of making is intrinsically rewarding independent of outcome quality.
+Sociologist Richard Sennett argues that craftsmanship emerges from "the desire to do a job well for its own sake" (Sennett, 2008, p. 9). Players who spend thousands of hours in games develop craftsman's knowledge, intimate familiarity with mechanics, systems, and design patterns. This knowledge demands expression through making.
 
 YOUR QUEST AS EVIDENCE
 
-You just experienced this impulse firsthand. You played our games, absorbed their patterns, identified their design principles—then felt compelled to create. Not because we forced you, but because play naturally generates the desire to make.
+You just experienced this impulse firsthand. You played our games, absorbed their patterns, identified their design principles, then agreed to create because play naturally generates the desire to make.
 
 Game designer Frank Lantz captures this perfectly: "Games are the aesthetic form of the condition that we find ourselves in. A universe that is fundamentally plastic, fundamentally under our control" (Lantz, 2019, p. 156). When we play, we discover that rules can be changed, systems can be redesigned, experiences can be authored. And once we know that, the impulse to make becomes irresistible.
 
@@ -2013,15 +2011,15 @@ You just designed quiz questions about game knowledge. But where does that knowl
 
 THE 1990s CRYSTALLIZATION
 
-Throughout the 1980s, people made games, but "game design" as a distinct craft didn't exist. Programmers programmed, artists drew, and somewhere in the intersection, games emerged. Sid Meier created Civilization (1991), but he didn't call himself a "game designer"—he was a programmer who made software (Meier, 2020).
+Throughout the 1980s, people made games, but "game design" as a distinct craft didn't exist. Programmers programmed, artists drew, and somewhere in the intersection, games emerged. Sid Meier created Civilization (1991), but he didn't call himself a "game designer", he was a programmer who made software (Meier, 2020).
 
-Everything changed in the 1990s. The decade's technological explosion—3D graphics, CD-ROM storage, networked multiplayer—created complexity that demanded specialization. Making Doom (1993) required different expertise than making Space Invaders (1978). Someone needed to orchestrate how mechanics, narrative, visuals, and player experience cohered. That someone became "the game designer."
+Everything changed in the 1990s. The decade's technological explosion created complexity that demanded specialization. Making Doom (1993) required different expertise than making Space Invaders (1978). Someone needed to orchestrate how mechanics, narrative, visuals, and player experience cohered. That someone became "the game designer."
 
-Will Wright's SimCity (1989) and The Sims (2000) demonstrated that game design could be *about* something beyond mechanical challenge—systems modeling, emergent narrative, sandbox creativity. Shigeru Miyamoto's work on Super Mario 64 (1996) established spatial design principles that would define 3D gaming. These weren't just programmers anymore; they were architects of experience.
+Will Wright's SimCity (1989) and The Sims (2000) demonstrated that game design could be *about* something beyond mechanical challenge: systems modeling, emergent narrative, sandbox creativity. Shigeru Miyamoto's work on Super Mario 64 (1996) established spatial design principles that would define 3D gaming. They became architects of experience.
 
 DEFINING THE DISCIPLINE
 
-Game design is the practice of creating the rules, mechanics, and structures that define interactive play experiences—orchestrating what players can do, what they should do, and what happens when they do it. But this simple definition conceals extraordinary complexity.
+Game design is the practice of creating the rules, mechanics, and structures that define interactive play experiences, orchestrating what players can do, what they should do, and what happens when they do it. But this simple definition conceals extraordinary complexity.
 
 Katie Salen and Eric Zimmerman's foundational text *Rules of Play* (2004) established game design as analyzing the relationship between rules (the mechanics), play (the interaction), and culture (the meaning). Their work demonstrated that game design required synthesizing insights from computer science, psychology, narrative theory, systems thinking, and art.
 
@@ -2029,7 +2027,7 @@ THE ACADEMIC ESTABLISHMENT
 
 The academic legitimization of game design studies began in the 1990s but exploded in the 2000s. DigiPen Institute of Technology (founded 1988) pioneered game-specific education. Carnegie Mellon established its Entertainment Technology Center in 1998. The University of Southern California launched its Interactive Media & Games Division in 2002. New York University's Game Center opened in 2008 (Freyermuth, 2015).
 
-By 2013, game studies had crystallized as an academic discipline with its own journals (*Game Studies*, *Games and Culture*), conferences (DiGRA, CHI Play), and theoretical frameworks (Planells, 2013). Programs emerged globally—from MIT's Comparative Media Studies to the IT University of Copenhagen's Center for Computer Games Research to China's Communication University game design programs. Even in Romania UNATC (The National University for Theatrical Arts) offers a Masters degree in Game Design.
+By 2013, game studies had crystallized as an academic discipline with its own journals (*Game Studies*, *Games and Culture*), conferences (DiGRA, CHI Play), and theoretical frameworks (Planells, 2013). Programs emerged globally: from MIT's Comparative Media Studies to the IT University of Copenhagen's Center for Computer Games Research to China's Communication University game design programs. Even in Romania UNATC (The National University for Theatrical Arts) offers a Masters degree in Game Design.
 
 Game design now has academic legitimacy: doctoral programs, tenure-track professorships, peer-reviewed research. Universities teach game design theory alongside computer science, fine art, and literature.
 
@@ -2049,9 +2047,9 @@ And many others.
 
 THE CRAFT YOU INHERITED
 
-When you designed quiz questions about games, you participated in knowledge transmission—the defining characteristic of an established discipline. Game design isn't intuitive genius anymore. It's teachable, learnable, criticizable craft with principles, methodologies, and theoretical foundations.
+When you designed quiz questions about games, you participated in knowledge transmission, the defining characteristic of an established discipline. Game design isn't intuitive genius anymore. It's teachable, learnable, criticizable craft with principles, methodologies, and theoretical foundations.
 
-You're standing on the shoulders of designers who spent the 1990s and 2000s transforming individual brilliance into collective knowledge. Every choice you made when designing your quest—difficulty balance, clear objectives, satisfying feedback—draws from decades of crystallized wisdom.
+You're standing on the shoulders of designers who spent the 1990s and 2000s transforming individual brilliance into collective knowledge. Every choice you made when designing your quest draws from decades of crystallized wisdom.
 
 ---
 
