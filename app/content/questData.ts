@@ -743,7 +743,7 @@ The early arcade games you just examined tap into this ancient learning system. 
 
 Inside a game, failure is safe. You can die and restart. You can experiment without real consequences. This is what makes games such powerful learning tools: they let you practice, fail, and improve without actual risk.
 
-Neuroscience backs this up. When you play a game and when you successfully learn something new, the same reward pathways light up in your brain (Koepp et al., 1998). That feeling of "fun" you get? It's your brain's way of saying "you're learning something useful—keep doing this!" Evolution wired us to enjoy learning through play.
+Neuroscience backs this up. When you play a game and when you successfully learn something new, the same reward pathways light up in your brain (Koepp et al., 1998). The fun of play is your brain's way of saying "you're learning something useful!" Evolution wired us to enjoy learning through play.
 
 Games, by offering clear rules and goals, quick feedback when you succeed or fail and gradual increases in difficulty are creating what the psychologist Lev Vygotsky would later call "scaffolded learning environments" (Vygotsky, 1978): structures that support you as you learn, then fade away as you master the skill.
 
@@ -856,7 +856,7 @@ Caillois, R. (1961). Man, Play and Games`,
 
 Notice what just happened? This quest was harder than the first one. You had to compare games across different eras, understand terms like "rogue-lite," and analyze how game design evolved over decades. We built on what you learned in Quest 1. You already knew how to extract information from exhibits, so now we could ask you to do something more complex with that information.
 
-This is exactly what game designers do—and psychologist Mihaly Csikszentmihalyi explained why it works. His "flow theory" shows that people are happiest and learn best when a task is perfectly balanced: not so easy that you're bored, not so hard that you're frustrated (Csikszentmihalyi, 1990). Games keep you in this sweet spot—what he called the "flow channel" - by constantly adjusting difficulty as your skills improve.
+Mihaly Csikszentmihalyi explained why it works. His "flow theory" shows that people are happiest and learn best when a task is perfectly balanced: not so easy that you're bored, not so hard that you're frustrated (1990). Games keep you in this sweet spot by constantly adjusting difficulty as your skills improve.
 
 Game designers scaffold learning by:
 * Introducing ONE new concept at a time
@@ -865,7 +865,7 @@ Game designers scaffold learning by:
 * Allowing SAFE FAILURE (you can try again without real consequences)
 * Rewarding MASTERY (that satisfying feeling when you "get it")
 
-Trinity Fusion's "rogue-lite" design brilliantly demonstrates this. You die and restart, but you're smarter each time—you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).
+Trinity Fusion's "rogue-lite" design brilliantly demonstrates this. You die and restart, but you're smarter each time as you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).
 
 Here's the remarkable part: when learning is scaffolded this way, it doesn't feel like work. It feels like play. Your brain is doing exactly what evolution designed it to do—learn through voluntary, enjoyable engagement. Game designers just figured out how to make that ladder really, really effective at keeping you climbing.
 
@@ -1021,31 +1021,27 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
         "beyond_the_game.debrief",
         `GAMES AS A MODEL FOR ALL LEARNING
 
-You've completed all three quests. Now for the uncomfortable question: if games are so good at teaching, why doesn't all learning work this way?
+If games are so good at teaching, why doesn't all learning work this way?
 
 Think about traditional education for a moment. Lectures where you sit passively for an hour. Textbooks you read weeks before the test. Exams that come with no second chances. Subjects presented in isolation from each other. Failure that's punished rather than used as feedback for improvement.
 
-This is almost the opposite of how games teach. Research by Shute and Ke (2012) shows that delayed, high-stakes assessment—the kind used in most schools—actively undermines learning compared to the immediate, low-stakes feedback games provide naturally. Games give you information right when you need it; traditional education makes you wait weeks to find out if you understood anything.
+This is almost the opposite of how games teach. Research by Shute and Ke (2012) shows that delayed, high-stakes assessment, the kind used in most schools, actively undermines learning compared to the immediate, low-stakes feedback games provide naturally. Games give you information right when you need it; traditional education makes you wait weeks to find out if you understood anything.
 
-Cognitive Load Theory explains why lectures often fail: our working memory can only handle so much information at once (Sweller, 1988). Dump too much at us, and we can't process any of it. Games naturally "chunk" information—giving you one new concept, letting you practice, then giving you the next. They do this instinctively because players quit games that overwhelm them.
+Cognitive Load Theory explains why lectures often fail: our working memory can only handle so much information at once (Sweller, 1988). Dump too much at us, and we can't process any of it. Games naturally "chunk" information. They do this instinctively because players quit games that overwhelm them.
 
 In this exhibition, each quest scaffolded the next. The difficulty increased gradually. You got immediate feedback (right or wrong answers). Failure was safe (you could try again). This is how Bloom's Taxonomy describes sophisticated learning: starting with basic knowledge and building up to synthesis and evaluation (Krathwohl, 2002).
 
 The evidence is mounting that this approach works beyond games:
 
 - Duolingo uses game mechanics (points, levels, streaks) to teach languages more effectively than traditional courses (Vesselinov & Grego, 2012)
-- Medical students learn surgery better in simulators—where they can fail safely and repeat endlessly—than through traditional apprenticeship (Seymour et al., 2002)
+- Medical students learn surgery better in simulators, where they can fail safely and repeat endlessly, than through traditional apprenticeship (Seymour et al., 2002)
 - Even this quest system gamifies museum education, turning you from a passive observer into an active learner
 
-The Romanian developers you discovered exemplify this shift. Critique Gaming's Interrogation doesn't lecture you about ethics—it makes you face ethical dilemmas and live with the consequences. Breadcrumbs Interactive's Yaga doesn't tell you about Slavic folklore—it lets you experience it. Last Tales creates spaces where you learn by solving problems together. These aren't "games that happen to teach"—they're teaching that happens through play.
+The Romanian developers you discovered exemplify this shift. Critique Gaming's Interrogation makes you face ethical dilemmas and live with the consequences. Breadcrumbs Interactive's Yaga lets you experience slavic folklore. Last Tales creates spaces where you learn by solving problems together.
 
-Rain World offers a perfect metaphor: you're simultaneously predator and prey in an ecosystem that's always slightly beyond your current ability. Every death teaches you something. The environment provides just enough support to keep you progressing. This is what Vygotsky called the "Zone of Proximal Development"—that sweet spot where you're challenged but not overwhelmed (Vygotsky, 1978). Rain World enforces this through its very structure.
+Rain World offers a perfect metaphor: you're simultaneously predator and prey in an ecosystem that's always slightly beyond your current ability. Every death teaches you something. The environment provides just enough support to keep you progressing. This is what Vygotsky called the "Zone of Proximal Development", that sweet spot where you're challenged but not overwhelmed (Vygotsky, 1978). Rain World enforces this through its very structure.
 
-Think about your answer to that last question. You recognized that your own learning was scaffolded across these three quests. This awareness—what educators call "metacognition"—is the ultimate learning goal. You didn't just learn facts about games; you learned how learning itself works. Now you can recognize these patterns in other contexts and maybe even design learning experiences yourself.
-
-The question isn't "Should we make learning more like games?"
-
-Play is humanity's original learning technology, refined across millions of years before schools existed. The question is: why did we stop using these principles when we created formal education—and can games help us remember?
+Think about your answer to that last question. You recognized that your own learning was scaffolded across these three quests. This "metacognition" is the ultimate learning goal. You didn't just learn facts about games; you learned how learning itself works. Now you can recognize these patterns in other contexts and maybe even design learning experiences yourself.
 
 Games don't just teach content. They teach how learning works. That's their revolutionary contribution.
 
@@ -1255,13 +1251,13 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
 
 Here's the uncomfortable question: You just completed a quest designed by a stranger. You walked to a room, found a paper, solved someone else's challenge, and scanned a code. Nobody paid you. Nobody forced you. You chose to do work.
 
-Meanwhile, millions of people spend evenings grinding in Civilization, optimizing factory layouts in Factorio, managing spreadsheets in EVE Online, perfecting crop rotations in Stardew Valley—doing activities that resemble tedious work. The same people who procrastinate on email respond instantly to raid notifications. The same people who avoid learning new skills grind for hundreds of hours to master competitive games.
+Meanwhile, millions of people spend evenings grinding in Civilization, optimizing factory layouts in Factorio, managing spreadsheets in EVE Online, perfecting crop rotations in Stardew Valley, doing activities that resemble tedious work. The same people who procrastinate on email respond instantly to raid notifications. The same people who avoid learning new skills grind for hundreds of hours to master competitive games.
 
 What's happening here?
 
 THE PARADOX OF VOLUNTARY WORK
 
-Game designer Jane McGonigal observed that reality is broken in specific, diagnosable ways (McGonigal, 2011). Games aren't popular because they offer escape from work—they're popular because they offer better work. When people are unemployed or stuck in meaningless jobs, they don't abandon work entirely. They migrate to games where work feels rewarding.
+Game designer Jane McGonigal observed that reality is broken in specific, diagnosable ways (McGonigal, 2011). Games aren't popular because they offer escape from work, they're popular because they offer better work. When people are unemployed or stuck in meaningless jobs, they don't abandon work entirely. They migrate to games where work feels rewarding.
 
 McGonigal identified what games provide that reality often doesn't:
 
@@ -1269,19 +1265,19 @@ McGonigal identified what games provide that reality often doesn't:
 
 **Immediate feedback:** Games tell you instantly whether you succeeded. Real work makes you wait weeks or months to learn if your effort mattered.
 
-**Voluntary participation:** You chose to play. Even when games are hard—especially when they're hard—you're there by choice. Most work isn't.
+**Voluntary participation:** You chose to play. Even when games are hard (especially when they're hard) you're there by choice. Most work isn't.
 
-Notice what happened in this quest system. A fellow player created a challenge. You accepted it voluntarily. You got immediate feedback (you either solved it or didn't). You knew exactly what success meant. This quest—and every quest in this exhibition—structures work the way games do. That's why you're still here.
+Notice what happened in this quest system. A fellow player created a challenge. You accepted it voluntarily. You got immediate feedback (you either solved it or didn't). You knew exactly what success meant. That's why you're still here.
 
 THE ART OF AGENCY
 
-Philosopher C. Thi Nguyen offers a deeper explanation. Games, he argues, are art in the medium of agency (Nguyen, 2019). Game designers don't just create stories or visuals—they sculpt the structure of your decision-making. They specify your goals, constrain your abilities, and shape what counts as success. When you play, you temporarily submerge yourself in that alternate agency.
+Philosopher C. Thi Nguyen offers a deeper explanation. Games, he argues, are art in the medium of agency (Nguyen, 2019). Game designers sculpt the structure of your decision-making. They specify your goals, constrain your abilities, and shape what counts as success. When you play, you temporarily submerge yourself in that alternate agency.
 
 This is profound. In life, you have vague, conflicting goals: be happy, be successful, be a good person, earn money, help others. How do you optimize for all that simultaneously? You can't. It's paralyzing.
 
-Games offer something radical: clarity. When you play chess, your goal is singular—checkmate. When you play a role-playing game, you know exactly what your character values. Nguyen calls this "striated agency"—agency with clear boundaries and structures. You inhabit a temporary self designed for decisive action.
+Games offer something radical: clarity. When you play chess, your goal is singular—checkmate. When you play a role-playing game, you know exactly what your character values. Nguyen calls this "striated agency": agency with clear boundaries and structures. You inhabit a temporary self designed for decisive action.
 
-This explains the grinding paradox. Grinding isn't fun because it's easy—it's satisfying because you know exactly what you're working toward and can measure progress clearly. Every monster killed increments the experience bar. Every resource gathered brings you closer to the upgrade. Compare this to "working hard at your career"—what's the experience bar? When do you level up? The feedback is muddy, delayed, ambiguous.
+This explains the grinding paradox. Grinding isn't fun because it's easy. Washing dishes is also easy. It's satisfying because you know exactly what you're working toward and can measure progress clearly. Every monster killed increments the experience bar. Every resource gathered brings you closer to the upgrade. Compare this to "working hard at your career". What's the experience bar? When do you level up? The feedback is muddy, delayed, ambiguous.
 
 THE HUNGER FOR ORDER
 
@@ -1289,7 +1285,7 @@ Roger Caillois distinguished between paidia (chaotic, improvised play) and ludus
 
 Modern work often fails to provide this. Your promotion depends on office politics. Your salary reflects credential inflation, geographic luck, and who you know more than what you accomplish. Success is opaque.
 
-Games deliver the ludic structure Caillois described humans hunger for: explicit rules, measurable progress, rewards proportional to effort. When reality denies us this, we seek it in games.
+Games deliver the ludic structure Caillois described humans hunger for: explicit rules, measurable progress, rewards proportional to effort. Merit is a myth of modernity that reality crushes but gaims satisfy. When reality denies us this, we seek it in games.
 
 Psychologists Edward Deci and Richard Ryan formalized this as Self-Determination Theory (Ryan & Deci, 2000). Humans need three things for intrinsic motivation:
 
@@ -1314,8 +1310,7 @@ They reveal that humans are willing to work incredibly hard—but only when:
 - Progress is measurable
 - Competence develops visibly
 - Effort reliably yields results
-
-The popularity of grinding games—games where you do spreadsheet optimization, resource management, and repetitive tasks—proves humans don't hate work. We hate meaningless work. We hate ambiguous work. We hate work where we can't see impact.
+t.
 
 McGonigal asked: If games can mobilize this much voluntary effort, this much learning, this much persistence—what if we redesigned reality using the same principles (McGonigal, 2011)? Not "gamifying" with points and badges, but fundamentally restructuring work, education, and social systems to provide what games already give: clarity, feedback, autonomy, competence, meaning.
 
