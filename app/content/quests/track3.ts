@@ -93,7 +93,7 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
               "I feel like I'm discovering hidden parts of who I am",
             ),
         ],
-        scanToken: "witcher3",
+        scanToken: "w3",
       },
       {
         id: "witcher_quality",
@@ -129,7 +129,6 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
               "Deeply yearn to embody one quality",
             ),
         ],
-        scanToken: "witcher3",
       },
       {
         id: "yaga_feeling",
@@ -165,7 +164,7 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
               "I feel like I'm discovering hidden parts of who I am",
             ),
         ],
-        scanToken: "yaga",
+        scanToken: "int",
       },
       {
         id: "yaga_quality",
@@ -201,7 +200,6 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
               "Deeply yearn to embody one quality",
             ),
         ],
-        scanToken: "yaga",
       },
     ],
   },
@@ -289,7 +287,7 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
               "I want to play them ALL—every type calls to something in me",
             ),
         ],
-        scanToken: "oblivion",
+        scanToken: "obv",
       },
       {
         id: "resonance",
@@ -325,7 +323,6 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
               "Profoundly—this character type feels like meeting myself",
             ),
         ],
-        scanToken: "oblivion",
       },
       {
         id: "real_life_class",
@@ -361,7 +358,7 @@ Nephew, M. (2006). Playing with identity: Unconscious desire and role-playing ga
               "Constantly—I feel trapped in the wrong archetype",
             ),
         ],
-        scanToken: "west_of_loathing",
+        scanToken: "wol",
       },
     ],
   },
@@ -466,7 +463,7 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
               "Profoundly—I saw myself in a completely new way",
             ),
         ],
-        scanToken: "papers_please",
+        scanToken: "pp",
       },
       {
         id: "lingering",
@@ -502,7 +499,7 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
               "They become part of how I understand myself and the world",
             ),
         ],
-        scanToken: "this_war_of_mine",
+        scanToken: "twom",
       },
       {
         id: "transformative_potential",
@@ -538,7 +535,6 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
               "Definitely—games are a powerful space for real transformation",
             ),
         ],
-        scanToken: "this_war_of_mine",
       },
     ],
   },
