@@ -21,7 +21,7 @@ export const track2Quests: Array<Quest> = [
 
 # PLAY AS NATURE'S TEACHING TOOL
 
-Play is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination. Even octopuses explore their environment through playful manipulation (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.
+Play is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.
 
 The early arcade games you just examined tap into this ancient learning system. Ms. PAC-MAN teaches spatial awareness as you track ghost patterns. BurgerTime teaches cause and effect—step here, ingredient falls there. Lock 'N' Chase teaches evasion and pursuit.
 
@@ -136,7 +136,7 @@ Caillois, R. (1961). Man, Play and Games`,
     debrief: (t) =>
       t(
         "the_learning_ladder.debrief",
-        `**TL;DR:** Game designers are learning architects who keep you in "flow" by scaffolding challenges—introducing concepts gradually, providing immediate feedback, and balancing difficulty so learning feels like play.
+        `**TL;DR:** Game designers are learning architects who keep you in "flow" by scaffolding challenges: introducing concepts gradually, providing immediate feedback, and balancing difficulty so learning feels like play.
 
 # DESIGNERS AS LEARNING ARCHITECTS
 
@@ -151,9 +151,9 @@ Game designers scaffold learning by:
 * Allowing SAFE FAILURE (you can try again without real consequences)
 * Rewarding MASTERY (that satisfying feeling when you "get it")
 
-Trinity Fusion's "rogue-lite" design brilliantly demonstrates this. You die and restart, but you're smarter each time as you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, with scaffolding that doesn't interrupt gameplay, enhances both learning and enjoyment (Barzilai & Blau, 2014).
+Trinity Fusion's "rogue-lite" design brilliantly demonstrates this. You die and restart, but you're smarter each time as you've learned enemy patterns, level layouts, and strategies. The game resets, but your knowledge persists. Research shows this kind of structured challenge, enhances both learning and enjoyment (Barzilai & Blau, 2014).
 
-Here's the remarkable part: when learning is scaffolded this way, it doesn't feel like work. It feels like play. Your brain is doing exactly what evolution designed it to do—learn through voluntary, enjoyable engagement. Game designers just figured out how to make that ladder really, really effective at keeping you climbing.
+Here's the remarkable part: when learning is scaffolded this way, it doesn't feel like work. It feels like play. Your brain is doing exactly what evolution designed it to do: learn through voluntary, enjoyable engagement. Game designers just figured out how to make that ladder really, really effective at keeping you climbing.
 
 ---
 
@@ -363,27 +363,27 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
           (t) =>
             t(
               "beyond_the_game.q1.a1",
-              "Ms. PAC-MAN (1981), BurgerTime (1982), Papers Please (2013), Stray (2022)",
+              "Ms. PAC-MAN, BurgerTime, Papers Please, Stray",
             ),
           (t) =>
             t(
               "beyond_the_game.q1.a2",
-              "BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022), Papers Please (2013)",
+              "BurgerTime, Ms. PAC-MAN, Stray, Papers Please",
             ),
           (t) =>
             t(
               "beyond_the_game.q1.a3",
-              "Papers Please (2013), BurgerTime (1982), Ms. PAC-MAN (1981), Stray (2022)",
+              "Papers Please, BurgerTime, Ms. PAC-MAN, Stray",
             ),
           (t) =>
             t(
               "beyond_the_game.q1.a4",
-              "Stray (2022), Papers Please (2013), Ms. PAC-MAN (1981), BurgerTime (1982)",
+              "Stray, Papers Please, Ms. PAC-MAN, BurgerTime",
             ),
           (t) =>
             t(
               "beyond_the_game.q1.a5",
-              "BurgerTime (1982), Papers Please (2013), Ms. PAC-MAN (1981), Stray (2022)",
+              "BurgerTime, Papers Please, Ms. PAC-MAN, Stray",
             ),
         ],
         correctAnswer: 0,
@@ -535,7 +535,7 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
     debrief: (t) =>
       t(
         "track2_quest4.debrief",
-        `**TL;DR:** We work harder in games than real life because games provide what reality often denies—clear goals, immediate feedback, voluntary participation, and measurable progress—revealing that broken work structures, not human laziness, are the problem.
+        `**TL;DR:** We work harder in games than real life because games provide what reality often denies: clear goals, immediate feedback, voluntary participation, and measurable progress. This reveals that broken work structures, not human laziness, are the problem.
 
 # WHY WE WORK HARDER IN GAMES THAN LIFE
 

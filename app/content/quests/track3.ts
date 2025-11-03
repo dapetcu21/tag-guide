@@ -228,11 +228,11 @@ Explore the character creation/selection process in each game. Try playing as di
 
 # THE PARTY OF ONE
 
-Carl Jung proposed that within each psyche exists not one self, but many—archetypes, universal patterns woven into human consciousness (Jung, 1968). The Hero. The Sage. The Caregiver. The Rebel. When Dungeons & Dragons formalized "character classes" in 1974—Fighter, Cleric, Magic-User, Thief—they translated these ancient patterns into game mechanics.
+Carl Jung proposed that within each psyche exists not one self, but many—archetypes, universal patterns woven into human consciousness (Jung, 1968). The Hero. The Sage. The Caregiver. The Rebel. When Dungeons & Dragons formalized "character classes" in 1974 (Fighter, Cleric, Magic-User, Thief) they translated these ancient patterns into game mechanics.
 
 Your first answer reveals how you relate to this inner multiplicity. If you always play the same type, you've found your dominant archetype, familiar and comfortable. But Jung warned against over-identifying with a single pattern, calling it "inflation" (Jung, 1968). The warrior who cannot be vulnerable. The sage who cannot act.
 
-If you want to play them all, you're pursuing the inner yearn for what Jung called "individuation", integrating these aspects into a complete self (Jung, 1968).
+If you want to play them all, or you have periods in which you find yourself yearning to play something unfamiliar, you're pursuing the inner yearn for what Jung called "individuation", integrating these aspects into a complete self (Jung, 1968).
 
 Your third answer reveals the gap between authentic and adapted selves. We learn certain roles to survive and belong, Jung's "persona," the mask we show the world (Jung, 1968). This adaptation isn't false, but sometimes the persona becomes prison.
 
@@ -384,7 +384,7 @@ Engage deeply with these challenging scenarios. Allow yourself to feel the weigh
     debrief: (t) =>
       t(
         "the_safe_space_for_transformation.debrief",
-        `**TL;DR:** The magic circle creates a "safe-enough" transformative container where game experiences bleed into real life—emotional, procedural, and memetic insights that persist and change how you understand yourself and the world.
+        `**TL;DR:** The magic circle creates a "safe-enough" transformative container where game experiences bleed into real life: emotional, procedural, and memetic insights that persist and change how you understand yourself and the world.
 
 # THE MAGIC CIRCLE AS SACRED SPACE
 
@@ -392,7 +392,7 @@ Historian Johan Huizinga described the "magic circle": the boundary separating p
 
 You might have experienced bleed (or maybe if you will play these gamescat home for longer you will), the most studied concept in Nordic larp theory. Kjell Hedgard Hugaas identifies three types (2019):
 
-**EMOTIONAL BLEED:** The character's feelings become yours. Playing Papers, Please, denying desperate refugees, you feel genuine guilt—not because YOU did wrong, but because the boundary between you and the character dissolved.
+**EMOTIONAL BLEED:** The character's feelings become yours. Playing Papers, Please, denying desperate refugees, you feel genuine guilt
 
 **PROCEDURAL BLEED:** Game behaviors transfer to real life. After This War of Mine, you notice resource scarcity differently, consider moral compromises more carefully. The game taught your mind new patterns.
 
@@ -404,13 +404,13 @@ Psychotherapist Elektra Diakolambrianou uses role-playing games clinically for t
 
 Research consistently shows participants reporting lasting changes from transformative role-playing: perspective shifts, shadow integration, increased empathy, greater self-awareness (Bowman, 2010; Stark, 2012; Hugaas, 2024).
 
-But transformation isn't automatic. It requires intentionality and integration work (Bowman et al., 2023). The game reveals—you must recognize. The game challenges—you must reflect. The game offers new ways of being—you must carry them across the threshold into daily life.
+But transformation isn't automatic. It requires intentionality and integration work (Bowman et al., 2023). The game reveals but you must recognize. The game challenges but you must reflect. The game offers new ways of being but you must carry them across the threshold into daily life.
 
 The ritual structure of play, entering the circle, undergoing trials, exiting transformed, mirrors initiation ceremonies across cultures (Turner, 1969). The shaman enters trance. The initiate enters wilderness. The player enters the game. All return changed if they do the integration work.
 
-This debrief is that work. What did you discover about your values? What did you learn about your capacity for ruthlessness or mercy? What aspects of yourself did the game let you safely explore?
+What did you discover about your values? What did you learn about your capacity for ruthlessness or mercy? What aspects of yourself did the game let you safely explore?
 
-These games weren't entertainment. They were mirrors: sometimes flattering, sometimes damning, always revealing. Now you know who you are when stakes feel real but consequences aren't. Which is, perhaps, who you've always been underneath the roles life demanded you play.
+These games were mirrors: sometimes flattering, sometimes damning, always revealing. Now you know who you are when stakes feel real but consequences aren't. Which is, perhaps, who you've always been underneath the roles life demanded you play.
 
 ---
 
@@ -557,7 +557,7 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
 
 # PLAY AS SOCIAL RITUAL
 
-You just completed a quest designed by another player. Someone you'll likely never meet created this challenge—and you performed it. This is social structure emerging through play.
+You just completed a quest designed by another player. Someone you'll likely never meet created this challenge and you performed it. This is social structure emerging through play.
 
 THE SOLIDIFICATION OF SOCIAL ROLES
 
@@ -565,7 +565,7 @@ When communities gather to play repeatedly, roles crystallize. Sociologist Émil
 
 Social psychologist Henri Tajfel demonstrated that even arbitrary group categories create powerful in-group loyalty and identity (Tajfel & Turner, 1979). His "minimal group paradigm" showed people favor their group after mere random assignment. Gaming amplifies this: shared raids, coordinated strategies, and collective victories forge communities where roles become identity. The role within the game becomes who you are within that social structure.
 
-Communities of practice scholar Etienne Wenger describes how shared activities create identity through "mutual engagement, joint enterprise, and shared repertoire" (Wenger, 1998). Speedrunning communities, esports teams, tabletop gaming groups, each develops specialized knowledge, insider language, and recognized expertise. These aren't just people who play together; they're social structures where participation defines membership and competence determines status.
+Communities of practice scholar Etienne Wenger describes how shared activities create identity through "mutual engagement, joint enterprise, and shared repertoire" (Wenger, 1998). Speedrunning communities, esports teams, tabletop gaming groups, each develops specialized knowledge, insider language, and recognized expertise. These become social structures where participation defines membership and competence determines status.
 
 THE LIBERATORY PARADOX
 
@@ -579,9 +579,9 @@ Game designer Avery Alder's framework of "belonging outside belonging" captures 
 
 THE RITUAL YOU JUST PERFORMED
 
-This quest embodied this paradox. You accepted a role—quest-completer—in a social structure created by players. You followed rules established by community practice. You performed a ritual that connects you to fellow players through shared experience.
+This quest embodied this paradox. You accepted a role (that of player) in a social structure created by other players. You followed rules established by community practice. You performed a ritual that connects you to fellow players through shared experience.
 
-But you also experienced liberation. Their quest gave you permission to explore parts of the exhibition you might have skipped, think thoughts you hadn't considered, practice behaviors you don't typically perform.
+But you also experienced liberation. Their quest gave you permission to explore parts of the exhibition you might have skipped or thought about being not the kind of thing you would like, you got to think thoughts you hadn't considered, practice behaviors you don't typically perform.
 
 Play simultaneously binds us to social structures and offers escape from them. It creates communities where we find belonging and spaces where we practice liberation from the roles those very communities might impose.
 
