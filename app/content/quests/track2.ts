@@ -17,7 +17,9 @@ export const track2Quests: Array<Quest> = [
     debrief: (t) =>
       t(
         "play_to_survive.debrief",
-        `# PLAY AS NATURE'S TEACHING TOOL
+        `**TL;DR:** Play is evolution's teaching tool—animals (including humans) learn survival skills through low-stakes playful practice where failure is safe, creating scaffolded learning environments long before schools existed.
+
+# PLAY AS NATURE'S TEACHING TOOL
 
 Play is older than human civilisation. Long before we built schools or wrote textbooks, animals were learning through play. Wolf pups wrestle to practice hunting. Dolphins toss objects to develop coordination. Even octopuses explore their environment through playful manipulation (Burghardt, 2005). Play allows animals (including humans) to practice survival skills in low-stakes situations where mistakes are not tragic.
 
@@ -134,7 +136,9 @@ Caillois, R. (1961). Man, Play and Games`,
     debrief: (t) =>
       t(
         "the_learning_ladder.debrief",
-        `# DESIGNERS AS LEARNING ARCHITECTS
+        `**TL;DR:** Game designers are learning architects who keep you in "flow" by scaffolding challenges—introducing concepts gradually, providing immediate feedback, and balancing difficulty so learning feels like play.
+
+# DESIGNERS AS LEARNING ARCHITECTS
 
 Notice what just happened? This quest was harder than the first one. You had to compare games across different eras, understand terms like "rogue-lite," and analyze how game design evolved over decades. We built on what you learned in Quest 1. You already knew how to extract information from exhibits, so now we could ask you to do something more complex with that information.
 
@@ -301,7 +305,9 @@ Mayer, R. E. (2014). Computer Games for Learning: An Evidence-Based Approach. MI
     debrief: (t) =>
       t(
         "beyond_the_game.debrief",
-        `GAMES AS A MODEL FOR ALL LEARNING
+        `**TL;DR:** Games reveal that traditional education is designed backwards—games naturally provide immediate feedback, safe failure, and gradual challenge, creating effective learning that feels voluntary rather than mandatory.
+
+# GAMES AS A MODEL FOR ALL LEARNING
 
 If games are so good at teaching, why doesn't all learning work this way?
 
@@ -529,7 +535,9 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
     debrief: (t) =>
       t(
         "track2_quest4.debrief",
-        `# WHY WE WORK HARDER IN GAMES THAN LIFE
+        `**TL;DR:** We work harder in games than real life because games provide what reality often denies—clear goals, immediate feedback, voluntary participation, and measurable progress—revealing that broken work structures, not human laziness, are the problem.
+
+# WHY WE WORK HARDER IN GAMES THAN LIFE
 
 Here's the uncomfortable question: You just completed a quest designed by a stranger. You walked to a room, found a paper, solved someone else's challenge, and scanned a code. Nobody paid you. Nobody forced you. You chose to do work.
 

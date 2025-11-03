@@ -17,7 +17,9 @@ export const track1Quests: Array<Quest> = [
     debrief: (t) =>
       t(
         "finish_the_phrase.debrief",
-        `# THE HIDDEN GAME IN EVERYDAY LIFE
+        `**TL;DR:** Game language infiltrates everyday speech because relationships, decisions, and social interactions follow game-like structures—we don't just talk about life using game metaphors, life itself is organized through play.
+
+# THE HIDDEN GAME IN EVERYDAY LIFE
 
 You just completed phrases about relationships, decisions, or social strategy using words borrowed from games.
 
@@ -90,7 +92,9 @@ Examples: "poker face" (deception), "hold all the cards" (power), "game over" (f
     debrief: (t) =>
       t(
         "language_domains.debrief",
-        `# THE PLAYFUL MIND
+        `**TL;DR:** Language itself is play—puns, metaphors, and wordplay aren't decorations but the fundamental way thought works, discovering connections and generating meaning through ludic combination.
+
+# THE PLAYFUL MIND
 
 You just searched through human life experience and found game language describing it.
 
@@ -583,7 +587,9 @@ Write ONE expression using "play" or "game" that is NOT about recreational games
     debrief: (t) =>
       t(
         "the_breadth_of_play.debrief",
-        `# THE DEFINITION OF PLAY ITSELF
+        `**TL;DR:** Play is "free movement within a more rigid structure"—this definition unifies mechanical slack, theatrical performance, musical expression, and game strategy, revealing that play isn't a separate activity but a fundamental pattern woven throughout reality.
+
+# THE DEFINITION OF PLAY ITSELF
 
 You just traced "play" into contexts beyond recreational games.
 
@@ -678,7 +684,9 @@ Sutton-Smith, B. (1997). The Ambiguity of Play. Harvard University Press.`,
     debrief: (t) =>
       t(
         "ritual_play.debrief",
-        `# THE PERMEABLE BOUNDARY
+        `**TL;DR:** Play and the sacred aren't opposites—they're twins sharing the same liminal space, transformative rules, and binding power, which is why ancient cultures used one word for ritual and play.
+
+# THE PERMEABLE BOUNDARY
 
 You've traced play through everyday language, across cognitive domains, into machinery and music and theater. Now confront the most provocative claim: play and the sacred aren't opposites. They're twins.
 

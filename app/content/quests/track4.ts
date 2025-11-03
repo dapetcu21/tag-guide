@@ -17,7 +17,9 @@ export const track4Quests: Array<Quest> = [
     debrief: (t) =>
       t(
         "track4_quest1.debrief",
-        `# THE MAKER'S IMPULSE
+        `**TL;DR:** Playing games and making games are the same impulse—play naturally generates the desire to understand and recreate the mechanisms that produced the experience, transforming players into makers.
+
+# THE MAKER'S IMPULSE
 
 You just designed a quest for a stranger. You transformed from player into maker and discovered the secret: playing games and making games are the same impulse.
 
@@ -86,7 +88,9 @@ Papert, S. (1980). Mindstorms: Children, Computers, and Powerful Ideas. Basic Bo
     debrief: (t) =>
       t(
         "track4_quest2.debrief",
-        `# THE EMERGENCE OF A DISCIPLINE
+        `**TL;DR:** Game design crystallized from intuitive craft into an academic discipline in the 1990s-2000s, developing theoretical frameworks (flow theory, MDA, core loops) that make it teachable, learnable, and criticizable.
+
+# THE EMERGENCE OF A DISCIPLINE
 
 You just designed quiz questions about game knowledge. But where does that knowledge come from? Who decided that game design is something that can be known, studied, taught?
 
@@ -164,7 +168,9 @@ Juul, J. (2005). Half-Real: Video Games between Real Rules and Fictional Worlds.
     debrief: (t) =>
       t(
         "track4_quest3.debrief",
-        `# BEFORE COMMODIFICATION: GAMES AS FOLK ART
+        `**TL;DR:** For 5000 years games were folk art—communally created, freely shared, evolved collectively like language or song—until post-1970 commodification turned them into industrial products, though folk game creation persists online.
+
+# BEFORE COMMODIFICATION: GAMES AS FOLK ART
 
 You just designed a quest that will be played by strangers, freely shared, owned by no one. You participated in an ancient tradition: the communal, non-commodified creation of games.
 
@@ -247,7 +253,9 @@ Suits, B. (1978). The Grasshopper: Games, Life and Utopia. University of Toronto
     debrief: (t) =>
       t(
         "track4_quest4.debrief",
-        `# FROM SPECTACLE TO CO-CREATION
+        `**TL;DR:** Museums are shifting from passive viewing to participatory co-creation, recognizing games as legitimate culture and designing exhibitions where visitors don't just observe but actively play, make, and transform together.
+
+# FROM SPECTACLE TO CO-CREATION
 
 You just completed this exhibition's final quest. But look at what you did: you didn't merely view our games, you played them. You didn't just read about play, you designed new play. This shift from passive consumption to participatory creation represents a revolution in how museums understand their purpose.
 

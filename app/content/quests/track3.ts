@@ -25,7 +25,9 @@ Play each game for at least 10 minutes. Experience what it feels like to inhabit
     debrief: (t) =>
       t(
         "who_do_you_become.debrief",
-        `# THE MASK AS MIRROR
+        `**TL;DR:** Role-playing provides "alibi"—characters give permission to explore aspects of yourself you might not feel safe expressing otherwise, revealing your shadow self through the mask.
+
+# THE MASK AS MIRROR
 
 You just experienced mimicry, one of play's four fundamental categories identified by Roger Caillois (Caillois, 2001). When you became Geralt tracking monsters or Ivan confronting his curse, you engaged in the same act as ancient ritual dancers and theater performers across millennia: temporarily setting aside your everyday identity to explore what it feels like to be someone else.
 
@@ -222,7 +224,9 @@ Explore the character creation/selection process in each game. Try playing as di
     debrief: (t) =>
       t(
         "the_fellowship_of_selves.debrief",
-        `# THE PARTY OF ONE
+        `**TL;DR:** We contain multiple archetypal selves—warrior, sage, rebel, caregiver—and games let us practice being the types that life hasn't let us express, integrating our inner multiplicity.
+
+# THE PARTY OF ONE
 
 Carl Jung proposed that within each psyche exists not one self, but many—archetypes, universal patterns woven into human consciousness (Jung, 1968). The Hero. The Sage. The Caregiver. The Rebel. When Dungeons & Dragons formalized "character classes" in 1974—Fighter, Cleric, Magic-User, Thief—they translated these ancient patterns into game mechanics.
 
@@ -380,7 +384,9 @@ Engage deeply with these challenging scenarios. Allow yourself to feel the weigh
     debrief: (t) =>
       t(
         "the_safe_space_for_transformation.debrief",
-        `# THE MAGIC CIRCLE AS SACRED SPACE
+        `**TL;DR:** The magic circle creates a "safe-enough" transformative container where game experiences bleed into real life—emotional, procedural, and memetic insights that persist and change how you understand yourself and the world.
+
+# THE MAGIC CIRCLE AS SACRED SPACE
 
 Historian Johan Huizinga described the "magic circle": the boundary separating play from ordinary life where normal rules suspend and new possibilities emerge (Huizinga, 1955). Within this circle, consequences disconnect from material reality. But games offer more than consequence-free experimentation. They offer a "transformative container", a safe yet challenging space for encountering parts of ourselves that daily life has no room for (Bowman et al., 2023).
 
@@ -547,7 +553,9 @@ Kemper, J. (2017). The battle of Primrose Park: Playing for emancipatory bleed i
     debrief: (t) =>
       t(
         "final_transformation.debrief",
-        `# PLAY AS SOCIAL RITUAL
+        `**TL;DR:** Play paradoxically both solidifies social roles (creating in-group identity and community) and liberates us from them (providing alibi to resist systematic oppression and practice new identities).
+
+# PLAY AS SOCIAL RITUAL
 
 You just completed a quest designed by another player. Someone you'll likely never meet created this challenge—and you performed it. This is social structure emerging through play.
 
