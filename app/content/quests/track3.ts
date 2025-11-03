@@ -18,26 +18,26 @@ export const track3Quests: Array<Quest> = [
 - The Witcher 3 (play as Geralt of Rivia, monster hunter)
 
 **INDIES SPOTLIGHT section:**
-- Yaga (play as Ivan, a cursed one-handed blacksmith)
+- Interrogation (play as a police officer in a noir world)
 
 Play each game for at least 10 minutes. Experience what it feels like to inhabit these characters. Then scan the QR codes displayed on screen or on the game's info panels.`,
       ),
     debrief: (t) =>
       t(
         "who_do_you_become.debrief",
-        `**TL;DR:** Role-playing provides "alibi"—characters give permission to explore aspects of yourself you might not feel safe expressing otherwise, revealing your shadow self through the mask.
+        `**TL;DR:** Role-playing provides "alibi": becoming a character gives you permission to explore aspects of yourself you might not feel safe expressing otherwise, revealing your shadow self through the mask.
 
 # THE MASK AS MIRROR
 
-You just experienced mimicry, one of play's four fundamental categories identified by Roger Caillois (Caillois, 2001). When you became Geralt tracking monsters or Ivan confronting his curse, you engaged in the same act as ancient ritual dancers and theater performers across millennia: temporarily setting aside your everyday identity to explore what it feels like to be someone else.
+You just experienced mimicry, one of play's four fundamental categories identified by Roger Caillois (1961). When you became Geralt or the detective, you engaged in the same act as ancient ritual dancers and theater performers: temporarily setting aside your everyday identity to explore what it feels like to be someone else.
 
-But the character isn't just costume. It's alibi.
+The character became for you an alibi.
 
 Role-playing games researcher Sarah Lynne Bowman describes alibi as a "protective frame" allowing players to explore aspects of themselves they might not feel safe expressing otherwise (Bowman et al., 2023). The character provides permission: "I'm just seeing what Geralt would do" becomes cover for testing courage you haven't shown, expressing emotions you've kept hidden.
 
-Your first answer reveals how you use this alibi. If you felt completely different from yourself, the character became full escape, sometimes necessary to see ourselves clearly. If you felt like discovering hidden parts, you experienced what Nordic larp calls "bleed", when boundaries between player and character become permeable (Bowman, 2015). The character's feelings bleed into yours; transformation happens here.
+If you felt like discovering hidden parts, you experienced what Nordic larp calls "bleed", when boundaries between player and character become permeable (Bowman, 2015). The character's feelings bleed into yours; transformation happens here.
 
-Your second answer is key. When you identified a quality you'd bring back from the character, you revealed your shadow, psychologist Carl Jung's term for unexpressed aspects of ourselves (Jung, 1968). Not bad parts but unexpressed parts. The hero's courage. The warrior's strength. Games offer a laboratory for shadow work: we can try on these qualities where stakes are imaginary but feelings are real.
+ When you identified a quality you'd bring back from the character, you revealed your shadow, psychologist Carl Jung's term for unexpressed aspects of ourselves (Jung, 1968). Not bad parts but unexpressed parts. The hero's courage. The warrior's strength. Games offer a laboratory for shadow work: we can try on these qualities in a space in which stakes are imaginary but feelings are real.
 
 Theater director Keith Johnstone observed: "In a play, you can be serious without anybody thinking you ARE serious" (Johnstone, 1979, p. 93). Games go further: you discover you were serious all along, but needed permission to find out.
 
@@ -136,7 +136,7 @@ Montola, M., & Stenros, J. (Eds.). (2010). Nordic Larp. Stockholm, Sweden: Fëa 
         text: (t) =>
           t(
             "who_do_you_become.yaga_feeling.text",
-            "When you play as Yaga's Ivan, which of these feelings is STRONGEST?",
+            "When you play as the detective in Interrogation, which of these feelings is STRONGEST?",
           ),
         answers: [
           (t) =>

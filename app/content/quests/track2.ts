@@ -535,17 +535,13 @@ Young, M. F., Slota, S., Cutter, A. B., Jalette, G., Mullin, G., Lai, B., ... & 
     debrief: (t) =>
       t(
         "track2_quest4.debrief",
-        `**TL;DR:** We work harder in games than real life because games provide what reality often denies: clear goals, immediate feedback, voluntary participation, and measurable progress. This reveals that broken work structures, not human laziness, are the problem.
+        `**TL;DR:** We work harder in games than real life because games provide what reality often denies us: clear goals, immediate feedback, voluntary participation, and measurable progress. This reveals that broken work structures, not human laziness, are the problem.
 
-# WHY WE WORK HARDER IN GAMES THAN LIFE
+# WHY WE WORK HARDER IN GAMES THAN IN LIFE
 
 Here's the uncomfortable question: You just completed a quest designed by a stranger. You walked to a room, found a paper, solved someone else's challenge, and scanned a code. Nobody paid you. Nobody forced you. You chose to do work.
 
 Meanwhile, millions of people spend evenings grinding in Civilization, optimizing factory layouts in Factorio, managing spreadsheets in EVE Online, perfecting crop rotations in Stardew Valley, doing activities that resemble tedious work. The same people who procrastinate on email respond instantly to raid notifications. The same people who avoid learning new skills grind for hundreds of hours to master competitive games.
-
-What's happening here?
-
-THE PARADOX OF VOLUNTARY WORK
 
 Game designer Jane McGonigal observed that reality is broken in specific, diagnosable ways (McGonigal, 2011). Games aren't popular because they offer escape from work, they're popular because they offer better work. When people are unemployed or stuck in meaningless jobs, they don't abandon work entirely. They migrate to games where work feels rewarding.
 
@@ -563,9 +559,9 @@ THE ART OF AGENCY
 
 Philosopher C. Thi Nguyen offers a deeper explanation. Games, he argues, are art in the medium of agency (Nguyen, 2019). Game designers sculpt the structure of your decision-making. They specify your goals, constrain your abilities, and shape what counts as success. When you play, you temporarily submerge yourself in that alternate agency.
 
-This is profound. In life, you have vague, conflicting goals: be happy, be successful, be a good person, earn money, help others. How do you optimize for all that simultaneously? You can't. It's paralyzing.
+In life, you have vague, conflicting goals: be happy, be successful, be a good person, earn money, help others. How do you optimize for all that simultaneously? You can't. It's paralyzing.
 
-Games offer something radical: clarity. When you play chess, your goal is singular—checkmate. When you play a role-playing game, you know exactly what your character values. Nguyen calls this "striated agency": agency with clear boundaries and structures. You inhabit a temporary self designed for decisive action.
+Games offer something radical: clarity. When you play chess, your goal is singular—checkmate.
 
 This explains the grinding paradox. Grinding isn't fun because it's easy. Washing dishes is also easy. It's satisfying because you know exactly what you're working toward and can measure progress clearly. Every monster killed increments the experience bar. Every resource gathered brings you closer to the upgrade. Compare this to "working hard at your career". What's the experience bar? When do you level up? The feedback is muddy, delayed, ambiguous.
 
@@ -575,38 +571,19 @@ Roger Caillois distinguished between paidia (chaotic, improvised play) and ludus
 
 Modern work often fails to provide this. Your promotion depends on office politics. Your salary reflects credential inflation, geographic luck, and who you know more than what you accomplish. Success is opaque.
 
-Games deliver the ludic structure Caillois described humans hunger for: explicit rules, measurable progress, rewards proportional to effort. Merit is a myth of modernity that reality crushes but gaims satisfy. When reality denies us this, we seek it in games.
+Games deliver the ludic structure Caillois described humans hunger for: explicit rules, measurable progress, rewards proportional to effort. Merit is a myth of modernity that reality crushes but games satisfy. When reality denies us this, we seek it in games.
 
 Psychologists Edward Deci and Richard Ryan formalized this as Self-Determination Theory (Ryan & Deci, 2000). Humans need three things for intrinsic motivation:
 
 **Competence:** The experience of mastery and skill development. Games provide constant competence feedback through difficulty curves and progression systems.
 
-**Autonomy:** Acting with volition and choice. Even grinding feels autonomous because you chose to do it. Mandatory work, even if easier, feels oppressive.
+**Autonomy:** Acting with volition and choice. Mandatory work feels oppressive as it robs us of the ability to decide how we want to achieve goals given to us. 
 
 **Relatedness:** Meaningful connection to others. Multiplayer games and shared challenges (like this quest system) fulfill this.
 
-When work provides these three elements, it doesn't feel like work. When it doesn't, even easy tasks feel draining. Games reliably deliver all three. Reality often delivers none.
-
 THE DIAGNOSIS
 
-You've completed three quests showing how games teach through safe failure, scaffolding, and flow. This final quest reveals something darker: games teach so effectively because they fix everything broken about how reality structures work and learning.
-
-Games aren't escape. They're diagnosis.
-
-They reveal that humans are willing to work incredibly hard—but only when:
-- Goals are clear
-- Feedback is immediate
-- Participation is voluntary
-- Progress is measurable
-- Competence develops visibly
-- Effort reliably yields results
-t.
-
-McGonigal asked: If games can mobilize this much voluntary effort, this much learning, this much persistence—what if we redesigned reality using the same principles (McGonigal, 2011)? Not "gamifying" with points and badges, but fundamentally restructuring work, education, and social systems to provide what games already give: clarity, feedback, autonomy, competence, meaning.
-
-This quest system did exactly that. A stranger challenged you. You accepted. You solved it. You're reading this. That's volunteer work structured like a game—and it worked.
-
-The question isn't why people work hard in games. The question is: why doesn't reality work this way? And now that you've experienced the difference, can you go back to pretending broken work is normal?
+If games can mobilize this much voluntary effort, this much learning, this much persistence—what if we redesigned reality using the same principles (McGonigal, 2011)? Not "gamifying" with points and badges, but fundamentally restructuring work, education, and social systems to provide what games already give: clarity, feedback, autonomy, competence, meaning.
 
 ---
 

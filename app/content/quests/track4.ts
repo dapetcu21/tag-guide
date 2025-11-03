@@ -17,13 +17,11 @@ export const track4Quests: Array<Quest> = [
     debrief: (t) =>
       t(
         "track4_quest1.debrief",
-        `**TL;DR:** Playing games and making games are the same impulse—play naturally generates the desire to understand and recreate the mechanisms that produced the experience, transforming players into makers.
+        `**TL;DR:** Playing games and making games are born of the same impulse: play naturally generates the desire to understand and recreate the mechanisms that produced the experience, transforming players into makers.
 
 # THE MAKER'S IMPULSE
 
-You just designed a quest for a stranger. You transformed from player into maker and discovered the secret: playing games and making games are the same impulse.
-
-THE CREATIVE CORE OF PLAY
+You just designed a quest for a stranger.
 
 Evolutionary psychologist Peter Gray describes play as fundamentally creative practice. His research demonstrates that curiosity drives knowledge acquisition while play develops skills. Crucially, these aren't separate processes (Gray, 2013). When children engage in free play, they're not just consuming experiences; they're constantly iterating, testing, and creating novel variations.
 
