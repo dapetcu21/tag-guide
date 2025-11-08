@@ -36,7 +36,7 @@ export default function Editor() {
   const { lang } = useParams<{ lang: string }>();
   const initialStrings = use(
     useMemo(() => import(`../locales/${lang}/translation.json`), [lang]),
-  );
+  ).default;
   const [strings, setStrings] = useState(initialStrings);
 
   const paths = useMemo(() => {
