@@ -23,6 +23,7 @@ export default [
     ? []
     : prefix("/dev", [
         route("qr-list", "dev/qrList.tsx"),
+        route("editor/:lang", "dev/editor.tsx"),
         ...prefix("card", [
           index("dev/cardIndex.tsx"),
           route(":token", "dev/card.tsx"),

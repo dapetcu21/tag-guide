@@ -1,6 +1,6 @@
 @reference "../app.css";
 
-.quest-body {
+.quest-body, .wmde-markdown {
   h1 {
     @apply mt-4;
     @apply text-impact;
